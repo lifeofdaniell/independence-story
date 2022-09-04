@@ -8,7 +8,7 @@ export const getManifest = (manifest) => {
     name: (manifest && manifest.name) || name,
     short_name: (manifest && manifest.short_name) || shortName,
     description: (manifest && manifest.description) || description,
-    background_color: '#ffffff',
+    background_color: '#57867d',
     theme_color: '#57867d',
     lang: 'en'
   }

@@ -27,7 +27,7 @@ export default (meta) => {
     {
       name: 'theme-color',
       property: 'theme-color',
-      content: '#ffffff'
+      content: '#57867d'
     },
     {
       name: 'viewport',
