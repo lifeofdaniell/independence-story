@@ -1,10 +1,6 @@
 a {
   color: inherit;
 }
-.cursor,
-.c-cursor__dot {
-  pointer-events: none;
-}
 body:hover .cursor {
   opacity: 1;
 }
@@ -61,16 +57,4 @@ body:before {
 }
 .letter-bg {
   pointer-events: none;
-}
-.skeleton-wrapper.green > .skeleton-flex > .slide-skeleton {
-  border-color: #bde7be;
-}
-.skeleton-wrapper.white > .skeleton-flex > .slide-skeleton {
-  border-color: #ffffff;
-}
-.skeleton-wrapper.black > .skeleton-flex > .slide-skeleton {
-  border-color: #000000;
-}
-.skeleton-wrapper.dark-cyan > .skeleton-flex > .slide-skeleton {
-  border-color: #57867d;
 }

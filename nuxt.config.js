@@ -20,7 +20,7 @@ export default {
   },
 
   css: [],
-  plugins: [],
+  plugins: ['@/plugins/animations'],
   components: ['@/components/global', '@/components/includes'],
 
   buildModules: ['@nuxtjs/eslint-module'],

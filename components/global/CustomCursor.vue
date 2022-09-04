@@ -5,3 +5,10 @@
     </div>
   </div>
 </template>
+
+<style scoped>
+.cursor,
+.c-cursor__dot {
+  pointer-events: none;
+}
+</style>

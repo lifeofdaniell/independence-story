@@ -13,8 +13,8 @@
             🇳🇬
           </div>
         </nuxt-link>
-        <div class="category-btn">
-          <div class="category-icon">
+        <div class="category-btn" @click="toggleMenu">
+          <div class="category-icon" :class="menuOpen ? 'active' : ''">
             <img
               alt=""
               class="icon-img"
@@ -22,7 +22,7 @@
               src="/assets/images/Group.svg" />
           </div>
           <div class="category-text">
-            Select a category
+            {{ menuOpen ? 'Back To Home' : 'Select a category' }}
           </div>
         </div>
         <div class="volume-btn">
@@ -41,3 +41,24 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  computed: {
+    menuOpen() {
+      return this.$store.getters.menuState
+    }
+  },
+
+  methods: {
+    toggleMenu() {
+      this.$store.commit('toggleMenu', !this.menuOpen)
+    }
+  }
+}
+</script>
+
+<style>
+.category-icon.active {
+  width: 0px;
+}
+</style>
