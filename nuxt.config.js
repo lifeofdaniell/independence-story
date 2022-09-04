@@ -21,7 +21,7 @@ export default {
 
   css: [],
   plugins: [],
-  components: true,
+  components: ['@/components/global', '@/components/includes'],
 
   buildModules: ['@nuxtjs/eslint-module'],
 
