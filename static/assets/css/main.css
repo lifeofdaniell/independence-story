@@ -1,12 +1,6 @@
 a {
   color: inherit;
 }
-body:hover .cursor {
-  opacity: 1;
-}
-body:hover .c-cursor__dot {
-  opacity: 1;
-}
 body:before {
   content: '';
   z-index: 10000;
@@ -57,4 +51,23 @@ body:before {
 }
 .letter-bg {
   pointer-events: none;
+}
+.has-scroll-smooth body {
+  overflow: hidden !important;
+}
+
+.has-scroll-smooth .js-locomotive {
+  min-height: 100vh !important;
+  width: 100% !important;
+}
+
+@media screen and (min-width: 991px) {
+  .scroller {
+    width: 100%;
+    position: fixed;
+  }
+
+  .c-scrollbar {
+    display: none;
+  }
 }

@@ -7,7 +7,10 @@ export default {
   ssr: false,
 
   env: {
-    siteURL: process.env.SITE_URL
+    siteURL: process.env.SITE_URL,
+    baseURL: process.env.BASE_URL,
+    mediaURL: process.env.MEDIA_URL,
+    token: process.env.TOKEN
   },
 
   target: 'static',
@@ -20,7 +23,11 @@ export default {
   },
 
   css: [],
-  plugins: ['@/plugins/animations'],
+  plugins: [
+    '@/plugins/prototype',
+    '@/plugins/components',
+    '@/plugins/locomotive'
+  ],
   components: ['@/components/global', '@/components/includes'],
 
   buildModules: ['@nuxtjs/eslint-module'],
@@ -32,7 +39,7 @@ export default {
   modules: ['@nuxtjs/axios', '@nuxtjs/pwa'],
 
   axios: {
-    baseURL: '/'
+    baseURL: process.env.BASE_URL
   },
 
   pwa: {

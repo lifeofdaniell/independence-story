@@ -13,7 +13,12 @@
             🇳🇬
           </div>
         </nuxt-link>
-        <div class="category-btn" @click="toggleMenu">
+        <!-- v-if="!loaderOpen" -->
+        <div
+          class="category-btn"
+          @click="toggleMenu"
+          @mouseout="hoverOut"
+          @mouseover="hoverIn">
           <div class="category-icon" :class="menuOpen ? 'active' : ''">
             <img
               alt=""
@@ -25,7 +30,7 @@
             {{ menuOpen ? 'Back To Home' : 'Select a category' }}
           </div>
         </div>
-        <div class="volume-btn">
+        <div class="volume-btn" @mouseout="hoverOut" @mouseover="hoverIn">
           <div class="volume-text">
             Volume On
           </div>
@@ -46,12 +51,24 @@ export default {
   computed: {
     menuOpen() {
       return this.$store.getters.menuState
+    },
+
+    loaderOpen() {
+      return this.$store.getters.loadingState
     }
   },
 
   methods: {
     toggleMenu() {
       this.$store.commit('toggleMenu', !this.menuOpen)
+    },
+
+    hoverIn() {
+      this.$store.commit('toggleHover', true)
+    },
+
+    hoverOut() {
+      this.$store.commit('toggleHover', false)
     }
   }
 }

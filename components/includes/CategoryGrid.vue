@@ -85,7 +85,7 @@
               loading="lazy"
               src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
           </div>
-          <div class="column-img__block">
+          <div class="column-img__block center">
             <img
               alt=""
               class="img"

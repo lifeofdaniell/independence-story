@@ -1,14 +1,26 @@
 <template>
   <div>
-    <Loader v-if="false" />
+    <CustomCursor />
     <Nav />
+    <transition
+      :css="false"
+      @before-enter="menuBEnter"
+      @enter="menuEnter"
+      @leave="menuLeave">
+      <Menu v-if="menuOpen" />
+    </transition>
+    <!---
+    <transition :css="false" @leave="loaderLeave">
+      <Loader v-if="loaderOpen" />
+    </transition>
+
     <transition
       :css="false"
       @before-enter="beforeEnter"
       @enter="enter"
       @leave="leave">
-      <Menu v-if="menuOpen" />
-    </transition>
+      <Nuxt />
+    </transition> -->
     <Nuxt />
   </div>
 </template>
@@ -18,6 +30,9 @@ export default {
   computed: {
     menuOpen() {
       return this.$store.getters.menuState
+    },
+    loaderOpen() {
+      return this.$store.getters.loadingState
     }
   },
 
@@ -27,63 +42,82 @@ export default {
     }
   },
 
+  mounted() {
+    this.attachEvents()
+  },
+
   methods: {
     closeMenu() {
       this.$store.commit('toggleMenu', false)
     },
 
-    beforeEnter(el) {
+    beforeEnter(el) {},
+
+    enter(el, done) {},
+
+    leave(el) {},
+
+    menuBEnter(el) {
       this.$gsap.set(el, {
         yPercent: 100
       })
     },
 
-    enter(el, done) {
+    menuEnter(el, done) {
       this.$gsap.to(el, {
         yPercent: 0,
-        duration: 0.8,
-        ease: 'power2.inOut'
+        duration: 1.15,
+        ease: 'power4.out'
       })
-      /*       this.$gsap.to(
-        '.c-menu__link',
-        {
-          y: 0,
-          autoAlpha: 1,
-          stagger: 0.1
-        },
-        '<+0.1'
-      )
-      this.$gsap.to(
-        '.c-menu__sub-link',
-        {
-          duration: 0.75,
-          y: 0,
-          autoAlpha: 1
-        },
-        '<+0.75'
-      )
-      this.$gsap.to(
-        '.c-menu__social-link',
-        {
-          ease: 'power1',
-          autoAlpha: 1,
-          stagger: 0.15,
-          onComplete: done
-        },
-        '<+0.3'
-      )
-  */
     },
 
-    leave(el, done) {
+    menuLeave(el, done) {
       this.$gsap.to(el, {
         yPercent: -100,
-        // duration: 0.75,
-        // ease: 'Sine.easeInOut'
-        duration: 0.8,
-        ease: 'power2.inOut',
+        duration: 1.15,
+        ease: 'power4.out',
         onComplete: done
       })
+    },
+
+    loaderLeave(el, done) {
+      this.$gsap.to('.c-loader__inner', {
+        autoAlpha: 0,
+        duration: 1
+      })
+      this.$gsap.to(
+        '.c-loader__period',
+        {
+          autoAlpha: 0,
+          duration: 1
+        },
+        '>'
+      )
+      this.$gsap.to(
+        el,
+        {
+          autoAlpha: 0,
+          duration: 3,
+          onComplete: done
+        },
+        '>'
+      )
+    },
+
+    attachEvents() {
+      const links = document.querySelectorAll('a')
+      links.forEach((link) => {
+        link.addEventListener('mouseover', this.hoverIn)
+        link.addEventListener('mouseout', this.hoverOut)
+      })
+    },
+
+    hoverIn() {
+      this.$store.commit('toggleHover', true)
+    },
+
+    hoverOut() {
+      this.$store.commit('toggleHover', false)
     }
   }
 }

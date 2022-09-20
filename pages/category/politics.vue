@@ -1,171 +1,267 @@
 <template>
   <div>
-    <div class="l-section dark-cyan">
-      <div class="l-container">
-        <div class="category-hero">
-          <div class="category-header small">
-            <div>Politics</div>
-          </div>
-          <div class="storyline-header">
-            <div>Nigeria gains Independence</div>
-          </div>
-          <div class="header-img__wrapper">
-            <div class="storyline-subheader top">
-              <div>October 1st, 1960</div>
+    <!-- <CategoryGrid /> -->
+    <div class="scroller">
+      <div class="l-section dark-cyan">
+        <div class="l-container">
+          <div class="category-hero">
+            <div class="category-header small">
+              <div>Politics</div>
             </div>
-            <div class="header-img__block">
-              <img
-                alt=""
-                class="header-img center"
-                loading="lazy"
-                src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" /><img
+            <div class="storyline-header">
+              <div>Nigeria gains Independence</div>
+            </div>
+            <div class="header-img__wrapper">
+              <div class="storyline-subheader top">
+                <div>October 1st, 1960</div>
+              </div>
+              <div class="header-img__block">
+                <img
+                  alt=""
+                  class="header-img center"
+                  loading="lazy"
+                  src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
+                <img
                   alt=""
                   class="header-img small left"
                   loading="lazy"
-                  src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" /><img
-                    alt=""
-                    class="header-img small right"
-                    loading="lazy"
-                    src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
-            </div>
-            <div class="storyline-subheader">
-              <div>
-                Millions of Nigerians poured out to the streets in celebration
-                of a new dawn. On this day, Nigeria was born.
+                  src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
+                <img
+                  alt=""
+                  class="header-img small right"
+                  loading="lazy"
+                  src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
+              </div>
+              <div class="storyline-subheader">
+                <div>
+                  Millions of Nigerians poured out to the streets in celebration
+                  of a new dawn. On this day, Nigeria was born.
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="c-timeline__wrapper">
-          <div class="c-timeline">
-            <div class="timeline-blip__wrapper">
-              <div class="timeline-blip">
-                <div class="blip-inner"></div>
-              </div>
-              <div class="timeline-date">
+          <div class="c-timeline__wrapper">
+            <timeline
+              img-src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg">
+              <template #timeline-date>
                 October 1st, 1963
-              </div>
-            </div>
-            <div class="c-timeline__inner">
-              <div class="timeline-text__wrapper">
-                <h2 class="timeline-header">
-                  The First Republic
-                </h2>
-                <div class="timeline-subheader">
-                  <h4 class="timeline-text no-margin">
-                    Although we had gained Independence, there was still the
-                    heavy influence of the British monarchy in Nigeria.
-                  </h4>
-                </div>
-              </div>
-              <div class="timeline-detail__block">
-                <div class="timeline-img__block">
-                  <img
-                    alt=""
-                    class="img"
-                    loading="lazy"
-                    src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
-                </div>
-                <div class="timeline-subheader bottom">
-                  <h4 class="timeline-text no-margin">
-                    Under President Nnamdi Azikiwe’s regime, Nigeria became a
-                    republic. Thus, we became solely responsible for our own
-                    future.
-                  </h4>
-                </div>
-              </div>
-              <div class="line vertical"></div>
-              <div class="line horizontal"></div>
-            </div>
-            <div class="line straight"></div>
-          </div>
-          <div class="c-timeline">
-            <div class="timeline-blip__wrapper align-right">
-              <div class="timeline-blip">
-                <div class="blip-inner"></div>
-              </div>
-              <div class="timeline-date">
+              </template>
+              <template #timeline-header>
+                The First Republic
+              </template>
+              <template #timeline-text>
+                Although we had gained Independence, there was still the heavy
+                influence of the British monarchy in Nigeria.
+              </template>
+              <template #timeline-subtext>
+                Under President Nnamdi Azikiwe’s regime, Nigeria became a
+                republic. Thus, we became solely responsible for our own future.
+              </template>
+            </timeline>
+
+            <timeline
+              img-src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
+              reversed>
+              <template #timeline-date>
                 January 15th, 1966
-              </div>
-            </div>
-            <div class="c-timeline__inner inverse">
-              <div class="timeline-text__wrapper">
-                <h2 class="timeline-header">
-                  First Military Coup
-                </h2>
-                <div class="timeline-subheader">
-                  <h4 class="timeline-text no-margin">
-                    The military coup marked the end of the first republic and
-                    the defining moment for what would be a series of
-                    unfortunate events.
-                  </h4>
-                </div>
-              </div>
-              <div class="timeline-detail__block inverse">
-                <div class="timeline-img__block">
-                  <img
-                    alt=""
-                    class="img"
-                    loading="lazy"
-                    src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
-                </div>
-                <div class="timeline-subheader bottom right">
-                  <h4 class="timeline-text no-margin">
-                    It led to the death of many political leaders, including
-                    Nigeria’s first and only Prime Minister, Abubakar Tafawa
-                    Balewa.
-                  </h4>
-                </div>
-              </div>
-              <div class="line vertical right"></div>
-              <div class="line horizontal right"></div>
-            </div>
-            <div class="line straight"></div>
-          </div>
-          <div class="c-timeline">
-            <div class="timeline-blip__wrapper">
-              <div class="timeline-blip">
-                <div class="blip-inner"></div>
-              </div>
-              <div class="timeline-date">
+              </template>
+              <template #timeline-header>
+                First Military Coup
+              </template>
+              <template #timeline-text>
+                The military coup marked the end of the first republic and the
+                defining moment for what would be a series of unfortunate
+                events.
+              </template>
+              <template #timeline-subtext>
+                It led to the death of many political leaders, including
+                Nigeria’s first and only Prime Minister, Abubakar Tafawa Balewa.
+              </template>
+            </timeline>
+
+            <timeline
+              img-src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg">
+              <template #timeline-date>
                 May 30, 1967
-              </div>
-            </div>
-            <div class="c-timeline__inner">
-              <div class="timeline-text__wrapper">
-                <h2 class="timeline-header wide">
-                  Biafran Civil War Breaks out
-                </h2>
-                <div class="timeline-subheader">
-                  <h4 class="timeline-text no-margin">
-                    Tensions in Northern and South-Eastern Nigeria led to the
-                    Igbos demanding secession and the breakout of a civil war.
-                  </h4>
-                </div>
-              </div>
-              <div class="timeline-detail__block">
-                <div class="timeline-img__block">
-                  <img
-                    alt=""
-                    class="img"
-                    loading="lazy"
-                    src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
-                </div>
-                <div class="timeline-subheader bottom">
-                  <h4 class="timeline-text no-margin">
-                    The war was fought between Nigeria and the Republic of
-                    Biafrans.
-                  </h4>
-                </div>
-              </div>
-              <div class="line vertical"></div>
-              <div class="line horizontal"></div>
-            </div>
-            <div class="line straight"></div>
+              </template>
+              <template #timeline-header>
+                Biafran Civil War Breaks out
+              </template>
+              <template #timeline-text>
+                Tensions in Northern and South-Eastern Nigeria led to the Igbos
+                demanding secession and the breakout of a civil war.
+              </template>
+              <template #timeline-subtext>
+                The war was fought between Nigeria and the Republic of Biafrans.
+              </template>
+            </timeline>
           </div>
         </div>
       </div>
+      <next-section
+        category="Entertainment"
+        img-center="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
+        img-left="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
+        img-right="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
+        link="/category/entertainment">
+        <template #description>
+          We may not be winning any medals with our politics, but when it comes
+          to sports? We go big or go home.
+        </template>
+      </next-section>
     </div>
-    <NextSection />
   </div>
 </template>
+
+<script>
+export default {
+  /*   transition: {
+    name: 'category',
+    mode: 'out-in',
+    css: false,
+    appear: true,
+    enter(el, done) {
+      const tl = this.$gsap.timeline({
+        onComplete: done
+      })
+      tl.set('.column-inner', {
+        height: '250%'
+      })
+      tl.set('.column-inner.center', {
+        yPercent: 40
+      })
+      tl.set('.column-inner.reversed', {
+        yPercent: -40
+      })
+      tl.set('.column-inner.edge', {
+        yPercent: -100
+      })
+      tl.to('.column-inner', {
+        height: '100%',
+        duration: 2.5,
+        ease: 'Sine.inOut'
+      })
+      tl.to(
+        '.column-inner.center',
+        {
+          yPercent: 0,
+          duration: 2,
+          ease: 'power4.inOut'
+        },
+        '<'
+      )
+      tl.to(
+        '.column-inner.reversed',
+        {
+          yPercent: 0,
+          duration: 2,
+          ease: 'power4.inOut'
+        },
+        '<'
+      )
+      tl.to(
+        '.column-inner.edge',
+        {
+          yPercent: 21,
+          duration: 2,
+          ease: 'power4.inOut'
+        },
+        '<'
+      )
+      tl.to(
+        '.category-grid__flex',
+        {
+          scale: 2,
+          duration: 2,
+          ease: 'power4.inOut'
+        },
+        '<+1'
+      )
+      tl.to(
+        '.column-img__block',
+        {
+          autoAlpha: 0
+        },
+        '<+1.25'
+      )
+      tl.to(
+        '.column-img__block.center',
+        {
+          autoAlpha: 1
+        },
+        '<'
+      )
+      tl.to(
+        '.category-grid__flex',
+        {
+          scale: 1,
+          duration: 1,
+          ease: 'power2.out'
+        },
+        '>'
+      )
+      tl.to(
+        '.column-img__block.center',
+        {
+          height: '570px',
+          width: '530px',
+          maxHeight: '39vw',
+          maxWidth: '37vw',
+          ease: 'power2.out',
+          duration: 1.5
+        },
+        '<'
+      )
+      tl.to(
+        '.column-img__block.center',
+        {
+          rotate: 2,
+          y: 112,
+          duration: 2,
+          ease: 'power2.out'
+        },
+        '<'
+      )
+      tl.to(
+        '.category-grid',
+        {
+          autoAlpha: 0
+        },
+        '>'
+      )
+      tl.from(
+        '.header-img.small.right',
+        {
+          x: '50vw',
+          rotate: -70,
+          duration: 1,
+          ease: 'power2.out'
+        },
+        '<'
+      )
+      tl.from(
+        '.header-img.small.left',
+        {
+          x: '-55vw',
+          rotate: 70,
+          duration: 1,
+          ease: 'power2.out'
+        },
+        '<+0.2'
+      )
+    },
+    beforeLeave(el) {},
+    leave(el) {}
+  } */
+
+  mounted() {
+    this.$initScroll('.scroller')
+  }
+}
+</script>
+
+<style>
+.category-grid__column.alt {
+  justify-content: flex-end;
+}
+</style>
