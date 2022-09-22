@@ -1,7 +1,7 @@
 <template>
   <div>
     <CustomCursor />
-    <Nav />
+    <CategoryGrid />
     <transition
       :css="false"
       @before-enter="menuBEnter"
@@ -13,7 +13,6 @@
     <transition :css="false" @leave="loaderLeave">
       <Loader v-if="loaderOpen" />
     </transition>
-
     <transition
       :css="false"
       @before-enter="beforeEnter"
@@ -38,12 +37,27 @@ export default {
 
   watch: {
     $route(to, from) {
+      switch (to.name) {
+        case 'politics':
+          this.$store.commit('updateGridColor', 'dark-cyan')
+          break
+        case 'entertainment':
+          this.$store.commit('updateGridColor', 'green')
+          break
+        case 'sports':
+          this.$store.commit('updateGridColor', 'pastel-green')
+          break
+        case 'technology':
+          this.$store.commit('updateGridColor', 'white')
+          break
+        case 'random':
+          this.$store.commit('updateGridColor', 'black')
+          break
+        default:
+          break
+      }
       this.closeMenu()
     }
-  },
-
-  mounted() {
-    this.attachEvents()
   },
 
   methods: {
@@ -76,6 +90,7 @@ export default {
         yPercent: -100,
         duration: 1.15,
         ease: 'power4.out',
+        // autoAlpha: 0,
         onComplete: done
       })
     },
@@ -102,22 +117,6 @@ export default {
         },
         '>'
       )
-    },
-
-    attachEvents() {
-      const links = document.querySelectorAll('a')
-      links.forEach((link) => {
-        link.addEventListener('mouseover', this.hoverIn)
-        link.addEventListener('mouseout', this.hoverOut)
-      })
-    },
-
-    hoverIn() {
-      this.$store.commit('toggleHover', true)
-    },
-
-    hoverOut() {
-      this.$store.commit('toggleHover', false)
     }
   }
 }

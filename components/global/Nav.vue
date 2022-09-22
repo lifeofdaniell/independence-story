@@ -5,8 +5,10 @@
         <nuxt-link
           aria-current="page"
           class="home-link w-inline-block w--current"
-          to="/">
-          <div class="c-nav__text">
+          to="/"
+          @mouseout.native="hoverOut"
+          @mouseover.native="hoverIn">
+          <div class="c-nav__text" :class="inverse & !menuOpen ? 'black' : ''">
             Independence Day
           </div>
           <div class="flag">
@@ -21,21 +23,37 @@
           @mouseover="hoverIn">
           <div class="category-icon" :class="menuOpen ? 'active' : ''">
             <img
+              v-if="inverse & !menuOpen"
+              alt=""
+              class="icon-img"
+              loading="lazy"
+              src="/assets/images/category-black.svg" />
+            <img
+              v-else
               alt=""
               class="icon-img"
               loading="lazy"
               src="/assets/images/Group.svg" />
           </div>
-          <div class="category-text">
+          <div
+            class="category-text"
+            :class="inverse & !menuOpen ? 'black' : ''">
             {{ menuOpen ? 'Back To Home' : 'Select a category' }}
           </div>
         </div>
         <div class="volume-btn" @mouseout="hoverOut" @mouseover="hoverIn">
-          <div class="volume-text">
+          <div class="volume-text" :class="inverse & !menuOpen ? 'black' : ''">
             Volume On
           </div>
           <div class="volume-icon">
             <img
+              v-if="inverse & !menuOpen"
+              alt=""
+              class="icon-img"
+              loading="lazy"
+              src="/assets/images/volume-black.svg" />
+            <img
+              v-else
               alt=""
               class="icon-img"
               loading="lazy"
@@ -48,6 +66,13 @@
 </template>
 <script>
 export default {
+  props: {
+    inverse: {
+      type: Boolean,
+      default: false
+    }
+  },
+
   computed: {
     menuOpen() {
       return this.$store.getters.menuState
@@ -77,5 +102,10 @@ export default {
 <style>
 .category-icon.active {
   width: 0px;
+}
+.c-nav__text.black,
+.category-text.black,
+.volume-text.black {
+  color: black;
 }
 </style>

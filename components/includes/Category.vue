@@ -74,6 +74,10 @@ export default {
   },
 
   methods: {
+    closeMenu() {
+      this.$store.commit('toggleMenu', false)
+    },
+
     categoryHoverIn(e) {
       e.currentTarget.lastElementChild.classList.add('active')
       e.currentTarget.firstElementChild.firstElementChild.classList.add('show')
@@ -115,8 +119,8 @@ export default {
           return _color
         default:
           _color.categoryColor = ''
-          _color.wrapperColor = ''
-          _color.innerColor = ''
+          _color.wrapperColor = 'green'
+          _color.innerColor = 'green'
           return _color
       }
     }
@@ -143,6 +147,12 @@ export default {
 .category-img.show {
   display: flex;
   opacity: 1;
+}
+.category-header.inner.dark-cyan {
+  color: #57867d;
+}
+.category-header.inner.green {
+  color: #74e779;
 }
 .skeleton-wrapper::-webkit-scrollbar {
   display: none;

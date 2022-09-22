@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <CategoryGrid /> -->
+    <Nav />
     <div class="scroller">
       <div class="l-section dark-cyan">
         <div class="l-container">
@@ -103,7 +103,8 @@
         img-center="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
         img-left="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
         img-right="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
-        link="/category/entertainment">
+        link="/entertainment"
+        page="politics">
         <template #description>
           We may not be winning any medals with our politics, but when it comes
           to sports? We go big or go home.
@@ -115,144 +116,35 @@
 
 <script>
 export default {
-  /*   transition: {
-    name: 'category',
-    mode: 'out-in',
-    css: false,
-    appear: true,
-    enter(el, done) {
-      const tl = this.$gsap.timeline({
-        onComplete: done
-      })
-      tl.set('.column-inner', {
-        height: '250%'
-      })
-      tl.set('.column-inner.center', {
-        yPercent: 40
-      })
-      tl.set('.column-inner.reversed', {
-        yPercent: -40
-      })
-      tl.set('.column-inner.edge', {
-        yPercent: -100
-      })
-      tl.to('.column-inner', {
-        height: '100%',
-        duration: 2.5,
-        ease: 'Sine.inOut'
-      })
-      tl.to(
-        '.column-inner.center',
-        {
-          yPercent: 0,
-          duration: 2,
-          ease: 'power4.inOut'
+  transition(to, from) {
+    if (to === from) {
+      return {
+        mode: 'out-in',
+        css: false,
+        enter(el, done) {
+          this.$categoryLoad()
+          done()
+        }
+      }
+    } else {
+      return {
+        mode: 'out-in',
+        css: false,
+        beforeLeave() {
+          this.$beforeCategoryExit()
         },
-        '<'
-      )
-      tl.to(
-        '.column-inner.reversed',
-        {
-          yPercent: 0,
-          duration: 2,
-          ease: 'power4.inOut'
+        leave(el, done) {
+          this.$categoryExit(done)
         },
-        '<'
-      )
-      tl.to(
-        '.column-inner.edge',
-        {
-          yPercent: 21,
-          duration: 2,
-          ease: 'power4.inOut'
+        beforeEnter() {
+          this.$beforeCategoryReveal()
         },
-        '<'
-      )
-      tl.to(
-        '.category-grid__flex',
-        {
-          scale: 2,
-          duration: 2,
-          ease: 'power4.inOut'
-        },
-        '<+1'
-      )
-      tl.to(
-        '.column-img__block',
-        {
-          autoAlpha: 0
-        },
-        '<+1.25'
-      )
-      tl.to(
-        '.column-img__block.center',
-        {
-          autoAlpha: 1
-        },
-        '<'
-      )
-      tl.to(
-        '.category-grid__flex',
-        {
-          scale: 1,
-          duration: 1,
-          ease: 'power2.out'
-        },
-        '>'
-      )
-      tl.to(
-        '.column-img__block.center',
-        {
-          height: '570px',
-          width: '530px',
-          maxHeight: '39vw',
-          maxWidth: '37vw',
-          ease: 'power2.out',
-          duration: 1.5
-        },
-        '<'
-      )
-      tl.to(
-        '.column-img__block.center',
-        {
-          rotate: 2,
-          y: 112,
-          duration: 2,
-          ease: 'power2.out'
-        },
-        '<'
-      )
-      tl.to(
-        '.category-grid',
-        {
-          autoAlpha: 0
-        },
-        '>'
-      )
-      tl.from(
-        '.header-img.small.right',
-        {
-          x: '50vw',
-          rotate: -70,
-          duration: 1,
-          ease: 'power2.out'
-        },
-        '<'
-      )
-      tl.from(
-        '.header-img.small.left',
-        {
-          x: '-55vw',
-          rotate: 70,
-          duration: 1,
-          ease: 'power2.out'
-        },
-        '<+0.2'
-      )
-    },
-    beforeLeave(el) {},
-    leave(el) {}
-  } */
+        enter(el, done) {
+          this.$categoryReveal(done)
+        }
+      }
+    }
+  },
 
   mounted() {
     this.$initScroll('.scroller')

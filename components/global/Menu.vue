@@ -1,35 +1,16 @@
 <template>
   <div class="c-menu">
     <div ref="scroller" class="c-menu__slider">
-      <marquee-text :paused="isHoveing">
+      <marquee-text :paused="isHoveing" :repeat="4">
         <div
           class="menu-slider__inner"
           @mouseenter="isHoveing = true"
           @mouseleave="isHoveing = false">
           <category
-            category="Technology"
+            category="Politics"
+            colors="dark-cyan"
             img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
-            link="/category/politics">
-            <template #description>
-              We must warn you, it’s not exactly rosy.
-            </template>
-          </category>
-
-          <category
-            category="History"
-            colors="black"
-            img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
-            link="/category/politics">
-            <template #description>
-              We must warn you, it’s not exactly rosy.
-            </template>
-          </category>
-
-          <category
-            category="Entertainment"
-            colors="green"
-            img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
-            link="/category/politics">
+            link="/politics">
             <template #description>
               We must warn you, it’s not exactly rosy.
             </template>
@@ -39,17 +20,36 @@
             category="Sports"
             colors="pastel-green"
             img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
-            link="/category/politics">
+            link="/sports">
             <template #description>
               We must warn you, it’s not exactly rosy.
             </template>
           </category>
 
           <category
-            category="Politics"
-            colors="dark-cyan"
+            category="Technology"
             img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
-            link="/category/politics">
+            link="/technology">
+            <template #description>
+              We must warn you, it’s not exactly rosy.
+            </template>
+          </category>
+
+          <category
+            category="Entertainment"
+            colors="green"
+            img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
+            link="/entertainment">
+            <template #description>
+              We must warn you, it’s not exactly rosy.
+            </template>
+          </category>
+
+          <category
+            category="Random Facts"
+            colors="black"
+            img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
+            link="/random">
             <template #description>
               We must warn you, it’s not exactly rosy.
             </template>

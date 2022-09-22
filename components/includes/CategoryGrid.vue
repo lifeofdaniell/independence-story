@@ -1,5 +1,5 @@
 <template>
-  <div class="category-grid dark-cyan">
+  <div class="category-grid" :class="gridColor">
     <div class="category-grid__flex">
       <div class="category-grid__column">
         <div class="column-inner edge">
@@ -179,3 +179,20 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  computed: {
+    gridColor() {
+      return this.$store.getters.getGridColor
+    }
+  }
+}
+</script>
+
+<style>
+.category-grid {
+  overflow: hidden;
+  z-index: 0;
+}
+</style>

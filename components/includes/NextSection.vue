@@ -1,13 +1,20 @@
 <template>
   <div class="l-section footer">
     <div class="l-container">
-      <nuxt-link class="c-section w-inline-block" :to="link">
-        <div
+      <div class="c-section w-inline-block">
+        <nuxt-link
           class="footer-header"
-          :class="category === 'Entertainment' ? 'ent' : ''">
+          :class="[
+            category === 'Entertainment' ? 'ent' : '',
+            category === 'Random Facts' ? 'tech' : '',
+            page
+          ]"
+          :to="link"
+          @mouseout.native="hoverOut"
+          @mouseover.native="hoverIn">
           <div>{{ category }}</div>
-        </div>
-        <div class="footer-text__wrapper">
+        </nuxt-link>
+        <div class="footer-text__wrapper" :class="page">
           <div>
             <slot name="description" />
           </div>
@@ -24,7 +31,7 @@
             :src="imgCenter" />
           <img alt="" class="footer-img right" loading="lazy" :src="imgRight" />
         </div>
-      </nuxt-link>
+      </div>
     </div>
   </div>
 </template>
@@ -32,6 +39,10 @@
 <script>
 export default {
   props: {
+    page: {
+      type: String,
+      required: true
+    },
     link: {
       type: String,
       default: '/'
@@ -57,7 +68,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.imageReveal()
-    }, 1000)
+    }, 500)
   },
 
   methods: {
@@ -95,6 +106,14 @@ export default {
         },
         '<'
       )
+    },
+
+    hoverIn() {
+      this.$store.commit('toggleHover', true)
+    },
+
+    hoverOut() {
+      this.$store.commit('toggleHover', false)
     }
   }
 }
@@ -103,5 +122,47 @@ export default {
 <style scoped>
 .l-section.footer {
   margin-top: -5px;
+}
+.footer-header {
+  text-align: center;
+}
+
+.footer-header.tech {
+  font-size: 130px;
+  color: #74e779;
+}
+
+@media screen and (max-width: 991px) {
+  .footer-header.tech {
+    font-size: 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer-header.tech {
+    font-size: 65px;
+    line-height: 60px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .footer-header.tech {
+    font-size: 50px;
+    line-height: 55px;
+  }
+}
+
+.footer-text__wrapper.tech,
+.footer-header.entertainment,
+.footer-text__wrapper.entertainment,
+.footer-text__wrapper.sports {
+  color: black;
+}
+
+.footer-header.sports {
+  color: #57867d;
+}
+
+.footer-header.politics,
+.footer-header.random {
+  color: #bde7be;
 }
 </style>

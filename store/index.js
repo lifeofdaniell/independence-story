@@ -4,7 +4,8 @@ const token = process.env.token
 export const state = () => ({
   menuOpen: false,
   loading: true,
-  hover: false
+  hover: false,
+  gridColor: ''
 })
 
 export const getters = {
@@ -18,6 +19,10 @@ export const getters = {
 
   hoverState: (state) => {
     return state.hover
+  },
+
+  getGridColor: (state) => {
+    return state.gridColor
   }
 }
 
@@ -32,6 +37,10 @@ export const mutations = {
 
   toggleHover: (state, payload) => {
     state.hover = payload
+  },
+
+  updateGridColor: (state, payload) => {
+    state.gridColor = payload
   }
 }
 
