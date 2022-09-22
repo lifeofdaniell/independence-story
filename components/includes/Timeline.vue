@@ -6,18 +6,18 @@
           class="blip-inner"
           :class="addColorClass(colors).blipSmallColor"></div>
       </div>
-      <div class="timeline-date" :class="addColorClass(colors).textColor">
+      <div class="timeline-date" :class="addColorClass(colors).page">
         <slot name="timeline-date" />
       </div>
     </div>
     <div class="c-timeline__inner" :class="reversed ? 'inverse' : ''">
-      <div class="timeline-text__wrapper">
+      <div
+        class="timeline-text__wrapper"
+        :class="addColorClass(colors).revealColor">
         <h2 class="timeline-header" :class="addColorClass(colors).headerColor">
           <slot name="timeline-header" />
         </h2>
-        <div
-          class="timeline-subheader"
-          :class="addColorClass(colors).textColor">
+        <div class="timeline-subheader" :class="addColorClass(colors).page">
           <h4 class="timeline-text no-margin">
             <slot name="timeline-text" />
           </h4>
@@ -31,7 +31,7 @@
         </div>
         <div
           class="timeline-subheader bottom"
-          :class="[reversed ? 'right' : '', addColorClass(colors).textColor]">
+          :class="[reversed ? 'right' : '', addColorClass(colors).page]">
           <h4 class="timeline-text no-margin">
             <slot name="timeline-subtext" />
           </h4>
@@ -134,6 +134,7 @@ export default {
 
     addColorClass(color) {
       const _color = {
+        page: '',
         headerColor: '',
         textColor: '',
         lineColor: '',
@@ -144,6 +145,7 @@ export default {
       }
       switch (color) {
         case 'black':
+          _color.page = 'random'
           _color.lineColor = 'green'
           _color.imgColor = 'black'
           _color.revealColor = 'black'
@@ -151,6 +153,7 @@ export default {
           _color.blipSmallColor = 'green'
           return _color
         case 'pastel-green':
+          _color.page = 'sports'
           _color.headerColor = 'dark-cyan'
           _color.textColor = 'black'
           _color.lineColor = 'dark-cyan'
@@ -160,6 +163,7 @@ export default {
           _color.blipSmallColor = 'black'
           return _color
         case 'green':
+          _color.page = 'ent'
           _color.headerColor = 'black'
           _color.textColor = 'black'
           _color.lineColor = 'black'
@@ -169,6 +173,7 @@ export default {
           _color.blipSmallColor = 'green'
           return _color
         case 'white':
+          _color.page = 'tech'
           _color.headerColor = 'green'
           _color.textColor = 'black'
           _color.lineColor = 'black'
@@ -290,7 +295,7 @@ export default {
   }
 }
 
-/* Green */
+/* Ent */
 .reveal-block.green,
 .reveal-block.green {
   background-color: #74e779;
@@ -301,30 +306,31 @@ export default {
 .blip-inner.green {
   background-color: #74e779;
 }
-
-.timeline-date.black,
-.timeline-subheader.black,
+.timeline-date.ent {
+  color: black;
+  background-color: #74e779;
+}
+.timeline-subheader.ent,
 .timeline-header.black {
   color: black;
 }
+.timeline-text__wrapper.green,
+.timeline-subheader.bottom.ent,
 .timeline-img__block.green:after {
   background-color: #74e779;
 }
 
-/* Pastel Green */
+/* Sports */
 .reveal-block.pastel-green,
 .reveal-block.pastel-green {
   background-color: #bde7be;
 }
-
 .blip-inner.black {
   background-color: black;
 }
-
 .line.dark-cyan {
   background-color: #57867d;
 }
-
 .timeline-header.dark-cyan {
   color: #57867d;
 }
@@ -332,8 +338,16 @@ export default {
   background-color: #bde7be;
   border-color: #57867d;
 }
+.timeline-subheader.sports,
+.timeline-date.sports {
+  color: black;
+  background-color: #bde7be;
+}
+.timeline-text__wrapper.pastel-green {
+  background-color: #bde7be;
+}
 
-/* White */
+/* Tech */
 .reveal-block.white,
 .reveal-block.white {
   background-color: white;
@@ -344,12 +358,26 @@ export default {
   color: #74e779;
 }
 
+.timeline-subheader.tech {
+  color: black;
+}
+
+.timeline-date.tech,
+.timeline-subheader.tech {
+  color: black;
+  background-color: white;
+}
+
+.timeline-text__wrapper.white {
+  background-color: white;
+}
+
 .timeline-img__block.white:after {
   background-color: white;
   border-color: black;
 }
 
-/* Black */
+/* Random */
 .reveal-block.black,
 .reveal-block.black {
   background-color: black;
@@ -361,6 +389,16 @@ export default {
 
 .line.green {
   background-color: #74e779;
+}
+
+.timeline-date.random,
+.timeline-subheader.random {
+  color: white;
+  background-color: black;
+}
+
+.timeline-text__wrapper.black {
+  background-color: black;
 }
 
 .timeline-img__block.black:after {

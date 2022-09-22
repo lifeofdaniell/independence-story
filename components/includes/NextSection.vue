@@ -145,7 +145,7 @@ export default {
 }
 @media screen and (max-width: 479px) {
   .footer-header.tech {
-    font-size: 50px;
+    font-size: 40px;
     line-height: 55px;
   }
 }
