@@ -165,7 +165,6 @@ export default {
   color: #74e779;
 }
 
-.category-header.small,
 .storyline-subheader {
   color: black;
 }
@@ -176,5 +175,6 @@ export default {
 
 .category-header.small {
   border-color: #57867d;
+  color: #74e779;
 }
 </style>

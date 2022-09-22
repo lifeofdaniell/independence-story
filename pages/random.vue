@@ -6,7 +6,7 @@
         <div class="l-container">
           <div class="category-hero">
             <div class="category-header small">
-              <div>Random</div>
+              <div>Random Facts</div>
             </div>
             <div class="storyline-header">
               <div>Nigeria gains Independence</div>

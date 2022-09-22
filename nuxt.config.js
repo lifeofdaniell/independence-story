@@ -24,9 +24,10 @@ export default {
 
   css: [],
   plugins: [
-    '@/plugins/prototype',
     '@/plugins/components',
-    '@/plugins/locomotive'
+    '@/plugins/directives',
+    '@/plugins/locomotive',
+    '@/plugins/prototype'
   ],
   components: ['@/components/global', '@/components/includes'],
 

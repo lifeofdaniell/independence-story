@@ -1,9 +1,6 @@
 <template>
-  <div
-    ref="cursor"
-    class="c-cursor"
-    :class="[loaderOpen ? 'load' : '', hovered ? 'hovered' : '']">
-    <div class="cursor-text" :class="hovered ? 'hovered' : ''">
+  <div ref="cursor" class="c-cursor">
+    <div class="cursor-text">
       {{ loaderOpen ? 'Loading' : 'View' }}
     </div>
   </div>
@@ -58,16 +55,31 @@ export default {
   pointer-events: none;
   background-color: rgba(255, 255, 255, 0);
   z-index: 9999;
-  transition: height 300ms ease, width 300ms ease, opacity 200ms ease,
-    transform 200ms ease-out, left 300ms ease, top 300ms ease,
+  transition: transform 200ms ease-out, left 300ms ease, top 300ms ease,
     background-color 300ms ease;
 }
+.c-cursor.home {
+  left: -45px;
+  top: -45px;
+  width: 90px;
+  height: 90px;
+  transition: transform 200ms ease-out, left 300ms ease, top 300ms ease,
+    width 2000ms ease, height 2000ms ease;
+}
+.c-cursor.hold {
+  left: -50px;
+  top: -50px;
+  width: 100px;
+  height: 100px;
+}
+
 /* .c-cursor.load {
   width: 100px;
   height: 100px;
   left: -50px;
   top: -50px;
 } */
+
 .c-cursor.hovered {
   width: 15px;
   height: 15px;

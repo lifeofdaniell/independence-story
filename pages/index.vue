@@ -2,7 +2,7 @@
   <div>
     <Nav />
     <div class="scroller">
-      <div class="l-section hero-section">
+      <div v-longpress="gotoCategory" class="l-section hero-section home">
         <div class="l-container">
           <div class="c-hero">
             <div class="hero-text__wrapper">
@@ -132,6 +132,7 @@ export default {
         }
       )
     },
+
     fallingImageTwo() {
       const tl = this.$gsap.timeline({ repeat: -1 })
       tl.fromTo(
@@ -148,6 +149,7 @@ export default {
         }
       )
     },
+
     fallingImageThree() {
       const tl = this.$gsap.timeline({ repeat: -1 })
       tl.fromTo(
@@ -164,6 +166,7 @@ export default {
         }
       )
     },
+
     fallingImageFour() {
       const tl = this.$gsap.timeline({ repeat: -1 })
       tl.fromTo(
@@ -180,6 +183,10 @@ export default {
         },
         '<+0.75'
       )
+    },
+
+    gotoCategory() {
+      this.$router.push('/politics')
     }
   }
 }
