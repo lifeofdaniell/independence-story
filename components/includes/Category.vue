@@ -129,38 +129,13 @@ export default {
 </script>
 
 <style scoped>
-.c-category {
-  text-decoration: none;
-  position: relative;
-  margin-right: 30px;
-}
-.c-category__details {
-  position: absolute;
-  margin-left: 0;
-  z-index: 2;
-  background-color: hsla(0, 0%, 0%, 0.65);
-}
-.category-img {
-  transition: opacity 300ms ease-in;
-  z-index: 1;
-}
-.category-img.show {
-  display: flex;
-  opacity: 1;
-}
-.category-header.inner.dark-cyan {
-  color: #57867d;
-}
-.category-header.inner.green {
-  color: #74e779;
-}
 .skeleton-wrapper::-webkit-scrollbar {
   display: none;
 }
 .skeleton-wrapper {
   pointer-events: none;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 .skeleton-wrapper.green > .skeleton-flex > .slide-skeleton {
   border-color: #bde7be;

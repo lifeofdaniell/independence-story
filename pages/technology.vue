@@ -169,10 +169,6 @@ export default {
   color: black;
 }
 
-.category-grid__column.alt {
-  justify-content: flex-end;
-}
-
 .category-header.small {
   border-color: #57867d;
   color: #74e779;

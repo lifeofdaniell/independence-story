@@ -58,46 +58,7 @@ export default {
   transition: transform 200ms ease-out, left 300ms ease, top 300ms ease,
     background-color 300ms ease;
 }
-.c-cursor.home {
-  left: -45px;
-  top: -45px;
-  width: 90px;
-  height: 90px;
-  transition: transform 200ms ease-out, left 300ms ease, top 300ms ease,
-    width 2000ms ease, height 2000ms ease;
-}
-.c-cursor.hold {
-  left: -50px;
-  top: -50px;
-  width: 100px;
-  height: 100px;
-}
 
-/* .c-cursor.load {
-  width: 100px;
-  height: 100px;
-  left: -50px;
-  top: -50px;
-} */
-
-.c-cursor.hovered {
-  width: 15px;
-  height: 15px;
-  left: -7.5px;
-  top: -7.5px;
-  background-color: rgb(255, 255, 255);
-}
-.cursor-text {
-  transition: opacity 300ms ease;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  opacity: 0;
-  font-size: 11px;
-  font-weight: 300;
-}
-.cursor-text.hovered {
-  opacity: 0;
-}
 body:hover .c-cursor {
   opacity: 1;
   color: white;

@@ -98,14 +98,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.category-icon.active {
-  width: 0px;
-}
-.c-nav__text.black,
-.category-text.black,
-.volume-text.black {
-  color: black;
-}
-</style>

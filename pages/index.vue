@@ -191,27 +191,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.letter-bg.hero {
-  left: 0%;
-  top: auto;
-  right: 0%;
-  bottom: 0%;
-  z-index: 2;
-  opacity: 0.25;
-  transform: translate(0px, 12vw);
-}
-
-@media screen and (max-width: 767px) {
-  .letter-bg.hero {
-    transform: translate(0px, 10vw);
-  }
-}
-
-@media screen and (max-width: 479px) {
-  .letter-bg.hero {
-    transform: translate(0px, 11vw);
-  }
-}
-</style>

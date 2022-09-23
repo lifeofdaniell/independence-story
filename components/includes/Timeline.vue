@@ -198,24 +198,6 @@ export default {
 </script>
 
 <style>
-.c-timeline {
-  overflow: hidden;
-}
-.c-timeline__inner {
-  z-index: auto;
-}
-.timeline-blip__wrapper {
-  z-index: 5;
-}
-.timeline-text__wrapper,
-.timeline-subheader {
-  z-index: 10;
-}
-.timeline-img__block {
-  position: relative;
-  border: none;
-  z-index: auto;
-}
 .timeline-img__block::after {
   content: '';
   position: absolute;
@@ -227,180 +209,16 @@ export default {
   background-color: #57867d;
   border: 1px solid black;
 }
-.timeline-img__block > .img {
-  opacity: 0;
-  position: relative;
-  z-index: 6;
-}
-.timeline-img__block > svg,
-.timeline-img__block > svg > rect {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  fill: transparent;
-}
-.timeline-img__block > svg > rect {
-  stroke: black;
-  stroke-width: 2;
-  stroke-dasharray: 250 250;
-  stroke-dashoffset: 250;
-  /* stroke-dasharray: 2100;
-  stroke-dashoffset: 2100; */
-}
-.reveal-block {
-  position: absolute;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  background-color: #57867d;
-}
-.line.horizontal {
-  z-index: 3;
-}
-.line.vertical {
-  z-index: 4;
-}
-.line.straight {
-  z-index: 4;
-}
-.reveal-block.vertical {
-  z-index: 5;
-}
-.reveal-block.horizontal {
-  position: absolute;
-  z-index: 3;
-  width: 100%;
-  height: 100%;
-  background-color: #57867d;
-}
-.reveal-block.reveal {
-  transform: translate(0px, 100%);
-}
-@media screen and (min-width: 992px) {
-  .c-timeline__inner {
-    min-width: 935px;
-    justify-content: space-between;
-    grid-column-gap: 50px;
-    grid-row-gap: 50px;
-  }
-  .c-timeline__inner.inverse {
-    justify-content: space-between;
-    grid-column-gap: 100px;
-    grid-row-gap: 100px;
-  }
-  .timeline-text__wrapper {
-    min-width: 325px;
-  }
-}
-
-/* Ent */
-.reveal-block.green,
-.reveal-block.green {
-  background-color: #74e779;
-}
-.timeline-blip.black {
-  background-color: black;
-}
-.blip-inner.green {
-  background-color: #74e779;
-}
-.timeline-date.ent {
-  color: black;
-  background-color: #74e779;
-}
-.timeline-subheader.ent,
-.timeline-header.black {
-  color: black;
-}
-.timeline-text__wrapper.green,
-.timeline-subheader.bottom.ent,
 .timeline-img__block.green:after {
   background-color: #74e779;
-}
-
-/* Sports */
-.reveal-block.pastel-green,
-.reveal-block.pastel-green {
-  background-color: #bde7be;
-}
-.blip-inner.black {
-  background-color: black;
-}
-.line.dark-cyan {
-  background-color: #57867d;
-}
-.timeline-header.dark-cyan {
-  color: #57867d;
 }
 .timeline-img__block.pastel-green:after {
   background-color: #bde7be;
   border-color: #57867d;
 }
-.timeline-subheader.sports,
-.timeline-date.sports {
-  color: black;
-  background-color: #bde7be;
-}
-.timeline-text__wrapper.pastel-green {
-  background-color: #bde7be;
-}
-
-/* Tech */
-.reveal-block.white,
-.reveal-block.white {
-  background-color: white;
-}
-
-.timeline-date.green,
-.timeline-header.green {
-  color: #74e779;
-}
-
-.timeline-subheader.tech {
-  color: black;
-}
-
-.timeline-date.tech,
-.timeline-subheader.tech {
-  color: black;
-  background-color: white;
-}
-
-.timeline-text__wrapper.white {
-  background-color: white;
-}
-
 .timeline-img__block.white:after {
   background-color: white;
-  border-color: black;
 }
-
-/* Random */
-.reveal-block.black,
-.reveal-block.black {
-  background-color: black;
-}
-
-.timeline-blip.pastel-green {
-  background-color: #bde7be;
-}
-
-.line.green {
-  background-color: #74e779;
-}
-
-.timeline-date.random,
-.timeline-subheader.random {
-  color: white;
-  background-color: black;
-}
-
-.timeline-text__wrapper.black {
-  background-color: black;
-}
-
 .timeline-img__block.black:after {
   background-color: black;
   border-color: #74e779;

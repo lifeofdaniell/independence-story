@@ -6,21 +6,21 @@
           <div class="column-img__block">
             <img
               alt=""
-              class="img"
+              class="grid-img"
               loading="lazy"
               src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
           </div>
           <div class="column-img__block">
             <img
               alt=""
-              class="img"
+              class="grid-img"
               loading="lazy"
               src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
           </div>
           <div class="column-img__block">
             <img
               alt=""
-              class="img"
+              class="grid-img"
               loading="lazy"
               src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
           </div>
@@ -31,21 +31,21 @@
           <div class="column-img__block">
             <img
               alt=""
-              class="img"
+              class="grid-img"
               loading="lazy"
               src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
           </div>
           <div class="column-img__block">
             <img
               alt=""
-              class="img"
+              class="grid-img"
               loading="lazy"
               src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
           </div>
           <div class="column-img__block">
             <img
               alt=""
-              class="img"
+              class="grid-img"
               loading="lazy"
               src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
           </div>
@@ -56,21 +56,21 @@
           <div class="column-img__block">
             <img
               alt=""
-              class="img"
+              class="grid-img"
               loading="lazy"
               src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
           </div>
           <div class="column-img__block">
             <img
               alt=""
-              class="img"
+              class="grid-img"
               loading="lazy"
               src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
           </div>
           <div class="column-img__block">
             <img
               alt=""
-              class="img"
+              class="grid-img"
               loading="lazy"
               src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
           </div>
@@ -81,21 +81,21 @@
           <div class="column-img__block">
             <img
               alt=""
-              class="img"
+              class="grid-img"
               loading="lazy"
               src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
           </div>
           <div class="column-img__block center">
             <img
               alt=""
-              class="img"
+              class="grid-img"
               loading="lazy"
               src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
           </div>
           <div class="column-img__block">
             <img
               alt=""
-              class="img"
+              class="grid-img"
               loading="lazy"
               src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
           </div>
@@ -106,21 +106,21 @@
           <div class="column-img__block">
             <img
               alt=""
-              class="img"
+              class="grid-img"
               loading="lazy"
               src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
           </div>
           <div class="column-img__block">
             <img
               alt=""
-              class="img"
+              class="grid-img"
               loading="lazy"
               src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
           </div>
           <div class="column-img__block">
             <img
               alt=""
-              class="img"
+              class="grid-img"
               loading="lazy"
               src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
           </div>
@@ -131,21 +131,21 @@
           <div class="column-img__block">
             <img
               alt=""
-              class="img"
+              class="grid-img"
               loading="lazy"
               src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
           </div>
           <div class="column-img__block">
             <img
               alt=""
-              class="img"
+              class="grid-img"
               loading="lazy"
               src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
           </div>
           <div class="column-img__block">
             <img
               alt=""
-              class="img"
+              class="grid-img"
               loading="lazy"
               src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
           </div>
@@ -156,21 +156,21 @@
           <div class="column-img__block">
             <img
               alt=""
-              class="img"
+              class="grid-img"
               loading="lazy"
               src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
           </div>
           <div class="column-img__block">
             <img
               alt=""
-              class="img"
+              class="grid-img"
               loading="lazy"
               src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
           </div>
           <div class="column-img__block">
             <img
               alt=""
-              class="img"
+              class="grid-img"
               loading="lazy"
               src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
           </div>
@@ -189,10 +189,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.category-grid {
-  overflow: hidden;
-  z-index: 0;
-}
-</style>

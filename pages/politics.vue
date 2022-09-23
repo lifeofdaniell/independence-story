@@ -151,9 +151,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.category-grid__column.alt {
-  justify-content: flex-end;
-}
-</style>

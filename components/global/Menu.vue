@@ -147,9 +147,7 @@ export default {
 }
 
 .c-menu__slider {
-  overflow: hidden;
-  z-index: 100;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 </style>

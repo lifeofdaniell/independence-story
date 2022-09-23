@@ -166,8 +166,4 @@ export default {
 .storyline-subheader {
   color: black;
 }
-
-.category-grid__column.alt {
-  justify-content: flex-end;
-}
 </style>
