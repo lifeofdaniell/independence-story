@@ -164,16 +164,12 @@ export default {
 .storyline-header {
   color: #bde7be;
 }
-
-.category-header.small {
-  color: #74e779;
-}
-
 .storyline-subheader {
   color: white;
 }
 
 .category-header.small {
+  color: #74e779;
   border-color: #57867d;
 }
 </style>

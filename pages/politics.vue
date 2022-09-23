@@ -151,3 +151,11 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+@media screen and (max-width: 479px) {
+  .category-header.small {
+    color: #74e779;
+  }
+}
+</style>

@@ -43,10 +43,10 @@
       </div>
     </div>
     <div class="c-category__details">
-      <div class="category-header">
+      <div class="category-header" :class="white ? 'white' : ''">
         {{ category }}
       </div>
-      <div class="category-description">
+      <div class="category-description" :class="white ? 'white' : ''">
         <slot name="description" />
       </div>
     </div>
@@ -56,6 +56,7 @@
 <script>
 export default {
   props: {
+    white: Boolean,
     colors: {
       type: String
     },

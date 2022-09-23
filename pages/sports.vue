@@ -161,16 +161,15 @@ export default {
   background: #bde7be;
 }
 
-.category-header.small,
 .storyline-subheader {
   color: black;
 }
-
 .storyline-header {
   color: #57867d;
 }
 
 .category-header.small {
+  color: black;
   border-color: #57867d;
 }
 </style>

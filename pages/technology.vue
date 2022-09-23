@@ -164,7 +164,6 @@ export default {
 .storyline-header {
   color: #74e779;
 }
-
 .storyline-subheader {
   color: black;
 }

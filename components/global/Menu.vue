@@ -10,7 +10,8 @@
             category="Politics"
             colors="dark-cyan"
             img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
-            link="/politics">
+            link="/politics"
+            white>
             <template #description>
               We must warn you, it’s not exactly rosy.
             </template>
@@ -49,7 +50,8 @@
             category="Random Facts"
             colors="black"
             img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
-            link="/random">
+            link="/random"
+            white>
             <template #description>
               We must warn you, it’s not exactly rosy.
             </template>
