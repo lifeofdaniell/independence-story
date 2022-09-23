@@ -191,6 +191,13 @@ Vue.prototype.$homeReveal = (done) => {
     },
     '<+0.2'
   )
+  tl.set(
+    '.category-grid',
+    {
+      yPercent: 100
+    },
+    '>'
+  )
 }
 
 Vue.prototype.$homeLoad = () => {
@@ -215,6 +222,13 @@ Vue.prototype.$homeLoad = () => {
       autoAlpha: 0
     },
     '<+0.2'
+  )
+  tl.set(
+    '.category-grid',
+    {
+      yPercent: 100
+    },
+    '>'
   )
 }
 
@@ -409,7 +423,7 @@ Vue.prototype.$categoryReveal = (done) => {
     '.category-grid',
     {
       autoAlpha: 0,
-      duration: 1.25
+      duration: 1
     },
     '>'
   )
@@ -457,6 +471,13 @@ Vue.prototype.$categoryReveal = (done) => {
     },
     '<+0.2'
   )
+  tl.set(
+    '.category-grid',
+    {
+      yPercent: 100
+    },
+    '>'
+  )
 }
 
 Vue.prototype.$categoryLoad = () => {
@@ -501,5 +522,12 @@ Vue.prototype.$categoryLoad = () => {
       ease: 'power2.out'
     },
     '<+0.2'
+  )
+  tl.set(
+    '.category-grid',
+    {
+      yPercent: 100
+    },
+    '>'
   )
 }
