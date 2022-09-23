@@ -2284,10 +2284,6 @@ p {
     min-height: 700px;
   }
 
-  .c-menu__slider {
-    overflow: auto;
-  }
-
   .c-category {
     height: 330px;
   }
@@ -2659,6 +2655,10 @@ p {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+  }
+
+  .c-category {
+    margin-right: 15px;
   }
 
   .menu-slider__inner {

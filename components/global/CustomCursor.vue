@@ -48,6 +48,7 @@ export default {
 </script>
 <style>
 .c-cursor {
+  opacity: 0;
   left: -15px;
   top: -15px;
   width: 30px;
