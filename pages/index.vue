@@ -1,8 +1,9 @@
 <template>
+  <!-- v-longpress="gotoCategory" -->
   <div>
     <Nav />
     <div class="scroller">
-      <div v-longpress="gotoCategory" class="l-section hero-section home">
+      <div class="l-section hero-section home">
         <div class="l-container">
           <div class="c-hero">
             <div class="hero-text__wrapper">

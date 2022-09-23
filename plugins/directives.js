@@ -1,6 +1,6 @@
-import Vue from 'vue'
+// import Vue from 'vue'
 
-Vue.directive('longpress', {
+/* Vue.directive('longpress', {
   bind(el, binding, vNode) {
     if (typeof binding.value !== 'function') {
       const compName = vNode.context.name
@@ -41,4 +41,4 @@ Vue.directive('longpress', {
     el.addEventListener('touchend', cancel)
     el.addEventListener('touchcancel', cancel)
   }
-})
+}) */
