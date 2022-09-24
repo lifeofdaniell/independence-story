@@ -181,8 +181,6 @@ export default {
 
   mounted() {
     this.$initScroll('.scroller')
-    // this.$initScrolltrigger('.scroller')
-    this.$mountScrollTrigger()
   }
 }
 </script>

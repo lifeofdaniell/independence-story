@@ -1,5 +1,7 @@
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
   color: #333;
   font-size: 14px;
   line-height: 20px;
@@ -114,7 +116,13 @@ p {
   top: 0%;
   right: 0%;
   bottom: 0%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#57867d), to(#74e779));
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#57867d),
+    to(#74e779)
+  );
   background-image: linear-gradient(180deg, #57867d, #74e779);
   opacity: 1;
 }
@@ -382,8 +390,18 @@ p {
   right: 0%;
   bottom: 0%;
   z-index: 2;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(87, 134, 125, 0.91)), color-stop(90%, rgba(0, 0, 0, 0.95)));
-  background-image: linear-gradient(180deg, rgba(87, 134, 125, 0.91), rgba(0, 0, 0, 0.95) 90%);
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(87, 134, 125, 0.91)),
+    color-stop(90%, rgba(0, 0, 0, 0.95))
+  );
+  background-image: linear-gradient(
+    180deg,
+    rgba(87, 134, 125, 0.91),
+    rgba(0, 0, 0, 0.95) 90%
+  );
 }
 
 .hero-text__wrapper {
@@ -608,8 +626,10 @@ p {
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.65);
   opacity: 0;
-  -webkit-transition: opacity 400ms cubic-bezier(.645, .045, .355, 1), margin 400ms cubic-bezier(.645, .045, .355, 1);
-  transition: opacity 400ms cubic-bezier(.645, .045, .355, 1), margin 400ms cubic-bezier(.645, .045, .355, 1);
+  -webkit-transition: opacity 400ms cubic-bezier(0.645, 0.045, 0.355, 1),
+    margin 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 400ms cubic-bezier(0.645, 0.045, 0.355, 1),
+    margin 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
   color: #fff;
 }
 
@@ -1137,6 +1157,7 @@ p {
 }
 
 .timeline-date {
+  z-index: 10;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1173,6 +1194,7 @@ p {
 
 .timeline-blip {
   position: absolute;
+  z-index: 5;
   left: 50%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1429,7 +1451,7 @@ p {
 
 .timeline-blip__wrapper {
   position: relative;
-  z-index: 5;
+  /* z-index: 5; */
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

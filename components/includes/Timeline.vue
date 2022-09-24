@@ -67,7 +67,15 @@ export default {
     }
   },
 
+  data() {
+    return {
+      isMobile: false
+    }
+  },
+
   mounted() {
+    this.checkDevice()
+    window.addEventListener('resize', this.checkDevice)
     setTimeout(() => {
       this.timelineReveal()
     }, 500)
@@ -77,14 +85,14 @@ export default {
     timelineReveal() {
       this.$gsap.utils.toArray('.reveal-block.vertical').forEach((reveal) => {
         this.$gsap.set(reveal, {
-          y: '60px'
+          y: this.isMobile ? '35px' : '60px'
         })
         this.$gsap.to(reveal, {
           scrollTrigger: {
-            scroller: '.scroller',
+            scroller: this.isMobile ? '' : '.scroller',
             trigger: reveal.parentElement,
-            start: 'top 80%',
-            scrub: true
+            start: this.isMobile ? 'top 70%' : 'top 80%',
+            scrub: this.isMobile ? 2 : true
           },
           yPercent: 100
         })
@@ -121,11 +129,11 @@ export default {
       this.$gsap.utils.toArray('.timeline-img__block > .img').forEach((img) => {
         this.$gsap.to(img, {
           scrollTrigger: {
-            scroller: '.scroller',
+            scroller: this.isMobile ? '' : '.scroller',
             trigger: img.parentElement,
             start: 'top 22%',
             end: 'top 15%',
-            scrub: 1
+            scrub: this.isMobile ? 3 : 1
           },
           opacity: 1
         })
@@ -192,6 +200,15 @@ export default {
           _color.blipSmallColor = ''
           return _color
       }
+    },
+
+    checkDevice() {
+      if (window.innerWidth < 767) {
+        this.isMobile = true
+      } else {
+        this.isMobile = false
+      }
+      console.log(this.isMobile)
     }
   }
 }
