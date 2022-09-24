@@ -189,3 +189,11 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+@media screen and (max-width: 479px) {
+  .category-grid {
+    height: var(--app-height);
+  }
+}
+</style>

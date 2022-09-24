@@ -65,7 +65,15 @@ export default {
     }
   },
 
+  data() {
+    return {
+      isMobile: false
+    }
+  },
+
   mounted() {
+    this.checkDevice()
+    window.addEventListener('resize', this.checkDevice)
     setTimeout(() => {
       this.imageReveal()
     }, 500)
@@ -75,9 +83,9 @@ export default {
     imageReveal() {
       const tl = this.$gsap.timeline({
         scrollTrigger: {
-          scroller: '.scroller',
+          scroller: this.isMobile ? '' : '.scroller',
           trigger: '.footer',
-          start: 'bottom 110%'
+          start: this.isMobile ? 'bottom 130%' : 'bottom 110%'
         }
       })
       tl.from('.footer-img__block', {
@@ -114,6 +122,14 @@ export default {
 
     hoverOut() {
       this.$store.commit('toggleHover', false)
+    },
+
+    checkDevice() {
+      if (window.innerWidth < 767) {
+        this.isMobile = true
+      } else {
+        this.isMobile = false
+      }
     }
   }
 }

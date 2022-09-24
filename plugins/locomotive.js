@@ -24,16 +24,9 @@ Vue.prototype.$initScroll = (scroller) => {
 
   locoScroll.on('scroll', ScrollTrigger.update)
   ScrollTrigger.scrollerProxy(scroller, {
-    //  scrollTop(value) {
-    // return arguments.length
-    //   ? locoScroll.scrollTo(value, 0, 0)
-    //   : locoScroll.scroll.instance.scroll.y
-    //   },
-
     scrollTop(value) {
       return arguments.length
-        ? // ? locoScroll.scrollTo(value, 0, 0)
-          locoScroll.scrollTo(value, {
+        ? locoScroll.scrollTo(value, {
             duration: 0,
             disableLerp: true
           })
@@ -54,6 +47,5 @@ Vue.prototype.$initScroll = (scroller) => {
       : 'fixed'
   })
 
-  // ScrollTrigger.addEventListener('refresh', () => locoScroll.update())
   ScrollTrigger.refresh()
 }

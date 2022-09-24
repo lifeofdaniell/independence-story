@@ -18,7 +18,7 @@
                 with over <span class="dgreen-text">250 ethnic groups</span>
               </h3>
             </div>
-            <div class="hero-subtext__wrapper">
+            <div class="hero-subtext__wrapper left">
               <p>
                 From the highest highs to the lowest lows. Despite it all, we
                 are still here, standing tall.
