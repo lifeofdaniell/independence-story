@@ -270,12 +270,6 @@ export default {
   --app-height: 100%;
 }
 
-@media screen and (max-width: 767px) {
-  .l-section.hero-section {
-    min-height: 0px;
-  }
-}
-
 @media screen and (max-width: 479px) {
   html,
   body {

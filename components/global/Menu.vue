@@ -1,11 +1,63 @@
 <template>
   <div class="c-menu">
     <div ref="scroller" class="c-menu__slider">
-      <marquee-text :paused="isHoveing" :repeat="4">
+      <div v-if="isMobile" class="menu-slider__inner">
+        <category
+          category="Technology"
+          img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
+          link="/technology">
+          <template #description>
+            We must warn you, it’s not exactly rosy.
+          </template>
+        </category>
+
+        <category
+          category="Politics"
+          colors="dark-cyan"
+          img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
+          link="/politics"
+          white>
+          <template #description>
+            We must warn you, it’s not exactly rosy.
+          </template>
+        </category>
+
+        <category
+          category="Sports"
+          colors="pastel-green"
+          img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
+          link="/sports">
+          <template #description>
+            We must warn you, it’s not exactly rosy.
+          </template>
+        </category>
+
+        <category
+          category="Entertainment"
+          colors="green"
+          img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
+          link="/entertainment">
+          <template #description>
+            We must warn you, it’s not exactly rosy.
+          </template>
+        </category>
+
+        <category
+          category="Random Facts"
+          colors="black"
+          img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
+          link="/random"
+          white>
+          <template #description>
+            We must warn you, it’s not exactly rosy.
+          </template>
+        </category>
+      </div>
+      <marquee-text v-else :paused="isHovering" :repeat="4">
         <div
           class="menu-slider__inner"
-          @mouseenter="isHoveing = true"
-          @mouseleave="isHoveing = false">
+          @mouseenter="isHovering = true"
+          @mouseleave="isHovering = false">
           <category
             category="Technology"
             img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
@@ -94,11 +146,17 @@
 export default {
   data() {
     return {
-      isHoveing: false
+      isHovering: false,
+      isMobile: false
     }
   },
+
   mounted() {
-    this.menuInnerSlider()
+    this.checkDevice()
+    window.addEventListener('resize', this.checkDevice)
+    setTimeout(() => {
+      this.menuInnerSlider()
+    }, 100)
   },
 
   methods: {
@@ -138,6 +196,14 @@ export default {
         },
         repeat: -1
       })
+    },
+
+    checkDevice() {
+      if (window.innerWidth < 767) {
+        this.isMobile = true
+      } else {
+        this.isMobile = false
+      }
     }
   }
 }
@@ -151,5 +217,11 @@ export default {
 .c-menu__slider {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+@media screen and (max-width: 479px) {
+  .c-menu {
+    height: var(--app-height);
+  }
 }
 </style>
