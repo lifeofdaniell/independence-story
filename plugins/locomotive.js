@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import locomotiveScroll from 'locomotive-scroll'
-import 'locomotive-scroll/dist/locomotive-scroll.css'
+// import 'locomotive-scroll/dist/locomotive-scroll.css'
 
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
