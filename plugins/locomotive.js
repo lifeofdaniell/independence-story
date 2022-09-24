@@ -14,6 +14,7 @@ Vue.prototype.$initScroll = (scroller) => {
     smooth: true,
     multiplier: 0.75,
     lerp: 0.02,
+    resetNativeScroll: false,
     tablet: {
       smooth: false
     },
@@ -24,11 +25,18 @@ Vue.prototype.$initScroll = (scroller) => {
 
   locoScroll.on('scroll', ScrollTrigger.update)
   ScrollTrigger.scrollerProxy(scroller, {
+    //  scrollTop(value) {
+    // return arguments.length
+    //   ? locoScroll.scrollTo(value, 0, 0)
+    //   : locoScroll.scroll.instance.scroll.y
+    //   },
+
     scrollTop(value) {
       return arguments.length
-        ? locoScroll.scrollTo(value, 0, 0)
+        ? locoScroll.scrollTo(value, { duration: 0, disableLerp: true })
         : locoScroll.scroll.instance.scroll.y
     },
+
     getBoundingClientRect() {
       return {
         top: 0,
@@ -39,6 +47,30 @@ Vue.prototype.$initScroll = (scroller) => {
     }
   })
 
-  // ScrollTrigger.addEventListener('refresh', () => locoScroll.update())
-  ScrollTrigger.refresh()
+  // // ScrollTrigger.addEventListener('refresh', () => locoScroll.update())
+  // ScrollTrigger.refresh()
+}
+
+// Vue.prototype.$initScrolltrigger = (scroller) => {
+//   const locomotive = scroller
+//   locomotive.on('scroll', ScrollTrigger.update)
+//   ScrollTrigger.scrollerProxy(scroller, {
+//     scrollTop(value) {
+//       return arguments.length
+//         ? locomotive.scrollTo(value, 0, 0)
+//         : locomotive.scroll.instance.scroll.y
+//     },
+//     getBoundingClientRect() {
+//       return {
+//         top: 0,
+//         left: 0,
+//         width: window.innerWidth,
+//         height: window.innerHeight
+//       }
+//     }
+//   })
+// }
+
+Vue.prototype.$mountScrollTrigger = () => {
+  ScrollTrigger.refresh(true)
 }
