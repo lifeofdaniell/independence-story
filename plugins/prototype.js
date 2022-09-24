@@ -104,6 +104,19 @@ gsap.registerPlugin({
 
 Vue.prototype.$gsap = gsap
 
+let isMobile = false
+function checkDevice() {
+  if (window.innerWidth < 767) {
+    isMobile = true
+  } else {
+    isMobile = false
+  }
+  // console.log(isMobile)
+}
+
+checkDevice()
+window.addEventListener('resize', checkDevice)
+
 Vue.prototype.$beforeHomeExit = () => {
   // console.log('Before Home Exit')
   gsap.set('.category-grid', {
@@ -280,7 +293,8 @@ Vue.prototype.$beforeCategoryExit = () => {
     height: '250%'
   })
   gsap.set('.column-inner.center', {
-    yPercent: 40
+    yPercent: 40,
+    justifyContent: 'space-between'
   })
   gsap.set('.column-inner.reversed', {
     yPercent: -40
@@ -365,15 +379,11 @@ Vue.prototype.$beforeCategoryReveal = () => {
 Vue.prototype.$categoryReveal = (done) => {
   // console.log('Category Reveal')
   const tl = gsap.timeline({ onComplete: done })
-  tl.to(
-    '.column-inner',
-    {
-      height: '100%',
-      duration: 2.5,
-      ease: 'Sine.inOut'
-    },
-    '>1'
-  )
+  tl.to('.column-inner', {
+    height: '100%',
+    duration: 2.5,
+    ease: 'Sine.inOut'
+  })
   tl.to(
     '.column-inner.center',
     {
@@ -404,7 +414,7 @@ Vue.prototype.$categoryReveal = (done) => {
   tl.to(
     '.category-grid__flex',
     {
-      scale: 2,
+      scale: isMobile ? 1.5 : 2,
       duration: 2,
       ease: 'power4.inOut'
     },
@@ -431,37 +441,42 @@ Vue.prototype.$categoryReveal = (done) => {
       duration: 1,
       ease: 'power2.out'
     },
-    '>'
+    '<+0.5'
+  )
+  tl.to(
+    '.column-inner.center',
+    {
+      justifyContent: 'center'
+    },
+    '<'
   )
   tl.to(
     '.column-img__block.center',
     {
-      height: '570px',
-      width: '530px',
-      maxHeight: '39vw',
-      maxWidth: '37vw',
+      width: isMobile ? '300px' : '430px',
+      height: isMobile ? '270px' : '430px',
+      ease: 'power3.out',
+      duration: 1.25
+    },
+    '<'
+  )
+  tl.to(
+    '.column-img__block.center',
+    {
+      rotate: -150,
+      y: '-120vh',
       ease: 'power2.out',
-      duration: 1.5
+      duration: isMobile ? 2.2 : 1.5
     },
-    '<'
-  )
-  tl.to(
-    '.column-img__block.center',
-    {
-      rotate: 2,
-      y: 112,
-      duration: 2,
-      ease: 'power2.out'
-    },
-    '<'
+    '<+0.3'
   )
   tl.to(
     '.category-grid',
     {
       autoAlpha: 0,
-      duration: 1
+      duration: 1.25
     },
-    '>'
+    '<+0.5'
   )
   tl.from(
     '.home-link',
@@ -488,19 +503,29 @@ Vue.prototype.$categoryReveal = (done) => {
     '<+0.2'
   )
   tl.from(
+    '.header-img.center',
+    {
+      y: isMobile ? '700' : '120vh',
+      rotate: 150,
+      ease: 'power2.out',
+      duration: 1.5
+    },
+    '<-1.5'
+  )
+  tl.from(
     '.header-img.small.right',
     {
-      x: '50vw',
+      x: isMobile ? '700' : '60vw',
       rotate: -70,
       duration: 1,
       ease: 'power2.out'
     },
-    '<-1.1'
+    '<+0.65'
   )
   tl.from(
     '.header-img.small.left',
     {
-      x: '-55vw',
+      x: isMobile ? '-700' : '-55vw',
       rotate: 70,
       duration: 1,
       ease: 'power2.out'
@@ -540,19 +565,29 @@ Vue.prototype.$categoryLoad = () => {
     '<+0.2'
   )
   tl.from(
-    '.header-img.small.right',
+    '.header-img.center',
     {
-      x: '50vw',
-      rotate: -70,
-      duration: 1,
-      ease: 'power2.out'
+      y: isMobile ? '700' : '120vh',
+      rotate: 150,
+      ease: 'power2.out',
+      duration: 1.5
     },
     '<-0.4'
   )
   tl.from(
+    '.header-img.small.right',
+    {
+      x: isMobile ? '700' : '60vw',
+      rotate: -70,
+      duration: 1,
+      ease: 'power2.out'
+    },
+    '<+0.65'
+  )
+  tl.from(
     '.header-img.small.left',
     {
-      x: '-55vw',
+      x: isMobile ? '-700' : '-65vw',
       rotate: 70,
       duration: 1,
       ease: 'power2.out'

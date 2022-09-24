@@ -14,9 +14,6 @@ Vue.prototype.$initScroll = (scroller) => {
     smooth: true,
     multiplier: 0.75,
     lerp: 0.02,
-    // tablet: {
-    //   smooth: false
-    // },
     smartphone: {
       smooth: false
     }
@@ -40,12 +37,8 @@ Vue.prototype.$initScroll = (scroller) => {
         width: window.innerWidth,
         height: window.innerHeight
       }
-    },
-
-    pinType: document.querySelector(scroller).style.transform
-      ? 'transform'
-      : 'fixed'
+    }
   })
 
-  ScrollTrigger.refresh()
+  // ScrollTrigger.refresh()
 }
