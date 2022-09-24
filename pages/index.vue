@@ -50,28 +50,28 @@
           class="falling-img four"
           loading="lazy"
           src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
-      </div>
-      <div class="letter-bg hero">
-        <div class="n-letter">
-          N
-        </div>
-        <div class="i-letter">
-          I
-        </div>
-        <div class="g-letter">
-          G
-        </div>
-        <div class="e-letter">
-          E
-        </div>
-        <div class="r-letter">
-          R
-        </div>
-        <div class="i-letter two">
-          I
-        </div>
-        <div class="a-letter">
-          A
+        <div class="letter-bg hero">
+          <div class="n-letter">
+            N
+          </div>
+          <div class="i-letter">
+            I
+          </div>
+          <div class="g-letter">
+            G
+          </div>
+          <div class="e-letter">
+            E
+          </div>
+          <div class="r-letter">
+            R
+          </div>
+          <div class="i-letter two">
+            I
+          </div>
+          <div class="a-letter">
+            A
+          </div>
         </div>
       </div>
     </div>
@@ -108,8 +108,43 @@ export default {
     }
   },
 
+  head() {
+    return {
+      htmlAttrs: {
+        lang: 'en'
+      },
+      title: this.title,
+      theme: this.theme,
+      meta: [...this.meta]
+    }
+  },
+
+  computed: {
+    meta() {
+      return this.mxMetaUtils({
+        title: this.title,
+        theme: this.theme,
+        description: this.description
+      })
+    },
+
+    description() {
+      return ''
+    },
+
+    theme() {
+      return '#000000'
+    },
+
+    title() {
+      return 'The Naija Story'
+    }
+  },
+
   mounted() {
     this.$initScroll('.scroller')
+    window.addEventListener('resize', this.appHeight)
+    this.appHeight()
     this.fallingImageOne()
     this.fallingImageTwo()
     this.fallingImageThree()
@@ -117,6 +152,11 @@ export default {
   },
 
   methods: {
+    appHeight() {
+      const doc = document.documentElement
+      doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+    },
+
     fallingImageOne() {
       const tl = this.$gsap.timeline({ repeat: -1 })
       tl.fromTo(
@@ -131,6 +171,14 @@ export default {
           duration: 4,
           ease: 'power1.inOut'
         }
+      )
+      tl.to(
+        '.falling-img.one',
+        {
+          opacity: 0,
+          ease: 'power1.inOut'
+        },
+        '<+2'
       )
     },
 
@@ -149,6 +197,14 @@ export default {
           ease: 'power3.inOut'
         }
       )
+      tl.to(
+        '.falling-img.two',
+        {
+          opacity: 0,
+          ease: 'power1.inOut'
+        },
+        '<+2.5'
+      )
     },
 
     fallingImageThree() {
@@ -165,6 +221,14 @@ export default {
           duration: 4,
           ease: 'power3.inOut'
         }
+      )
+      tl.to(
+        '.falling-img.three',
+        {
+          opacity: 0,
+          ease: 'power1.inOut'
+        },
+        '<+1.9'
       )
     },
 
@@ -184,6 +248,14 @@ export default {
         },
         '<+0.75'
       )
+      tl.to(
+        '.falling-img.four',
+        {
+          opacity: 0,
+          ease: 'power1.inOut'
+        },
+        '<+3.3'
+      )
     },
 
     gotoCategory() {
@@ -192,3 +264,32 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+:root {
+  --app-height: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .l-section.hero-section {
+    min-height: 0px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    height: var(--app-height);
+  }
+
+  .l-section.hero-section,
+  .c-hero {
+    height: var(--app-height);
+  }
+}
+</style>

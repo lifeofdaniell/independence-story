@@ -149,6 +149,39 @@ export default {
     }
   },
 
+  head() {
+    return {
+      htmlAttrs: {
+        lang: 'en'
+      },
+      title: this.title,
+      theme: this.theme,
+      meta: [...this.meta]
+    }
+  },
+
+  computed: {
+    meta() {
+      return this.mxMetaUtils({
+        title: this.title,
+        theme: this.theme,
+        description: this.description
+      })
+    },
+
+    description() {
+      return ''
+    },
+
+    theme() {
+      return '#ffffff'
+    },
+
+    title() {
+      return 'Technology | The Naija Story'
+    }
+  },
+
   mounted() {
     this.$initScroll('.scroller')
   }

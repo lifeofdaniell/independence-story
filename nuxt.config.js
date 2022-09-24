@@ -27,6 +27,7 @@ export default {
     '@/plugins/components',
     '@/plugins/directives',
     '@/plugins/locomotive',
+    '@/plugins/mixins',
     '@/plugins/prototype'
   ],
   components: ['@/components/global', '@/components/includes'],

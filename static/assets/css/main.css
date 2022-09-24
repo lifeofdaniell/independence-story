@@ -1,6 +1,7 @@
 a {
   color: inherit;
 }
+
 body:before {
   content: '';
   z-index: 10000;
@@ -16,6 +17,7 @@ body:before {
   animation: 0.3s infinite noise;
   pointer-events: none;
 }
+
 @keyframes noise {
   0%,
   100% {
@@ -52,6 +54,16 @@ body:before {
 .letter-bg {
   pointer-events: none;
 }
+/* 
+html.has-scroll-smooth {
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
 .has-scroll-smooth body {
   overflow: hidden !important;
 }
@@ -61,13 +73,16 @@ body:before {
   width: 100% !important;
 }
 
-@media screen and (min-width: 991px) {
-  .scroller {
-    width: 100%;
-    position: fixed;
-  }
-
-  .c-scrollbar {
-    display: none;
-  }
+.scroller {
+  width: 100%;
+  position: fixed;
 }
+
+.c-scrollbar {
+  display: none;
+}
+@media screen and (max-width: 991px) {
+  .scroller {
+    position: static;
+  }
+} */

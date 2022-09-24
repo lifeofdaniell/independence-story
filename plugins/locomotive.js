@@ -1,12 +1,14 @@
 import Vue from 'vue'
 import locomotiveScroll from 'locomotive-scroll'
+import 'locomotive-scroll/dist/locomotive-scroll.css'
+
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
 Vue.prototype.$initScroll = (scroller) => {
-  // eslint-disable-next-line new-cap
+  // eslint-disable-next-line new-cap, no-unused-vars
   const locoScroll = new locomotiveScroll({
     el: document.querySelector(scroller),
     smooth: true,
@@ -15,7 +17,7 @@ Vue.prototype.$initScroll = (scroller) => {
     tablet: {
       smooth: false
     },
-    mobile: {
+    smartphone: {
       smooth: false
     }
   })
@@ -37,5 +39,6 @@ Vue.prototype.$initScroll = (scroller) => {
     }
   })
 
-  ScrollTrigger.refresh(true)
+  // ScrollTrigger.addEventListener('refresh', () => locoScroll.update())
+  ScrollTrigger.refresh()
 }

@@ -7,6 +7,15 @@
           @mouseenter="isHoveing = true"
           @mouseleave="isHoveing = false">
           <category
+            category="Technology"
+            img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
+            link="/technology">
+            <template #description>
+              We must warn you, it’s not exactly rosy.
+            </template>
+          </category>
+
+          <category
             category="Politics"
             colors="dark-cyan"
             img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
@@ -22,15 +31,6 @@
             colors="pastel-green"
             img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
             link="/sports">
-            <template #description>
-              We must warn you, it’s not exactly rosy.
-            </template>
-          </category>
-
-          <category
-            category="Technology"
-            img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
-            link="/technology">
             <template #description>
               We must warn you, it’s not exactly rosy.
             </template>
