@@ -184,6 +184,7 @@ export default {
 
   mounted() {
     this.$initScroll('.scroller')
+    this.$paragraph()
   }
 }
 </script>
