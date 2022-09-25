@@ -67,7 +67,7 @@ Vue.prototype.$paragraph = () => {
             scrollTrigger: {
               scroller: isMobile ? '' : '.scroller',
               trigger: result.el,
-              start: isMobile ? 'top 50%' : 'top 60%'
+              start: isMobile ? 'top 60%' : 'top 60%'
             },
             autoAlpha: 0,
             x: 50,
@@ -93,7 +93,7 @@ Vue.prototype.$paragraph = () => {
             scrollTrigger: {
               scroller: isMobile ? '' : '.scroller',
               trigger: paragraph.el,
-              start: isMobile ? 'top 50%' : 'top 70%'
+              start: isMobile ? 'top 60%' : 'top 70%'
             },
             autoAlpha: 0,
             x: 50,

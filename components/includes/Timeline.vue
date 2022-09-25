@@ -175,8 +175,8 @@ export default {
               scrollTrigger: {
                 scroller: this.isMobile ? '' : '.scroller',
                 trigger: img.parentElement,
-                start: this.isMobile ? 'top 80%' : 'top 40%',
-                end: this.isMobile ? 'top 70%' : 'top 30%',
+                start: this.isMobile ? 'top 70%' : 'top 40%',
+                end: this.isMobile ? 'top 60%' : 'top 30%',
                 scrub: this.isMobile ? 3 : 1
               },
               opacity: 1
