@@ -29,9 +29,9 @@ Vue.prototype.$paragraph = () => {
         date,
         {
           scrollTrigger: {
-            scroller: '.scroller',
+            scroller: isMobile ? '' : '.scroller',
             trigger: date,
-            start: isMobile ? 'top 70%' : 'top 40%'
+            start: isMobile ? 'top 50%' : 'top 40%'
           },
           autoAlpha: 0
         },
