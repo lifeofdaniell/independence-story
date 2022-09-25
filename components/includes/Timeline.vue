@@ -6,10 +6,7 @@
           class="blip-inner"
           :class="addColorClass(colors).blipSmallColor"></div>
       </div>
-      <div
-        class="timeline-date"
-        :class="addColorClass(colors).page"
-        data-paragraph>
+      <div class="timeline-date" :class="addColorClass(colors).page" data-date>
         <slot name="timeline-date" />
       </div>
     </div>
@@ -20,7 +17,7 @@
         <h2
           class="timeline-header"
           :class="addColorClass(colors).headerColor"
-          data-paragraph>
+          data-header>
           <slot name="timeline-header" />
         </h2>
         <div class="timeline-subheader" :class="addColorClass(colors).page">
@@ -38,7 +35,7 @@
         <div
           class="timeline-subheader bottom"
           :class="[reversed ? 'right' : '', addColorClass(colors).page]">
-          <h4 class="timeline-text no-margin" data-paragraph>
+          <h4 class="timeline-text no-margin" data-paragraph-bottom>
             <slot name="timeline-subtext" />
           </h4>
         </div>
@@ -84,7 +81,6 @@ export default {
     window.addEventListener('resize', this.checkDevice)
     setTimeout(() => {
       this.timelineReveal()
-      // this.$paragraph('data-paragraph')
     }, 500)
   },
 

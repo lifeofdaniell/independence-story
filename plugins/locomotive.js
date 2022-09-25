@@ -11,7 +11,7 @@ Vue.prototype.$initScroll = (scroller) => {
   const locoScroll = new locomotiveScroll({
     el: document.querySelector(scroller),
     smooth: true,
-    multiplier: 0.75,
+    multiplier: 0.65,
     lerp: 0.02,
     tablet: {
       breakpoint: 1024,
