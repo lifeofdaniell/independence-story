@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import locomotiveScroll from 'locomotive-scroll'
-// import 'locomotive-scroll/dist/locomotive-scroll.css'
 
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -14,7 +13,12 @@ Vue.prototype.$initScroll = (scroller) => {
     smooth: true,
     multiplier: 0.75,
     lerp: 0.02,
+    tablet: {
+      breakpoint: 1024,
+      smooth: false
+    },
     smartphone: {
+      breakpoint: 767,
       smooth: false
     }
   })
@@ -39,6 +43,4 @@ Vue.prototype.$initScroll = (scroller) => {
       }
     }
   })
-
-  // ScrollTrigger.refresh()
 }

@@ -3,104 +3,6 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
-// ClassNamePlugin START (requires GSAP 3.2.2 or later)
-gsap.registerPlugin({
-  name: 'className',
-  init: true,
-  register(gsap, Plugin) {
-    const CSSPlugin = gsap.plugins.css
-    const cssCore =
-      CSSPlugin.core || console.warn('Requires GSAP 3.2.1 or later') || {}
-    const _removeLinkedListItem = gsap.core._removeLinkedListItem
-    const _removeProperty = cssCore._removeProperty
-    const PropTween = gsap.core.PropTween
-    const _getAllStyles = function (target, uncache) {
-      const styles = {}
-      const computed = getComputedStyle(target)
-      let cache = target._gsap
-      let p
-      for (p in computed) {
-        if (isNaN(p) && p !== 'cssText' && p !== 'length') {
-          styles[p] = computed[p]
-        }
-      }
-      uncache && cache && (cache.uncache = true)
-      gsap.getProperty(target, 'x')
-      cache = target._gsap
-      for (p in cache) {
-        styles[p] = cache[p]
-      }
-      return styles
-    }
-    Plugin.prototype.init = function (target, endValue, tween) {
-      const startClassList = target.getAttribute('class')
-      const style = target.style
-      const cssText = style.cssText
-      const cache = target._gsap
-      const classPT = cache.classPT
-      const inlineToRemoveAtEnd = {}
-      const end =
-        endValue.charAt(1) !== '='
-          ? endValue
-          : startClassList.replace(
-              new RegExp('(?:\\s|^)' + endValue.substr(2) + '(?![\\w-])'),
-              ''
-            ) + (endValue.charAt(0) === '+' ? ' ' + endValue.substr(2) : '')
-      const plugin = this
-      const changingVars = {}
-      const startVars = _getAllStyles(target)
-      const transformRelated = /(transform|perspective)/i
-      const css = new CSSPlugin()
-      const _renderClassName = function (ratio) {
-        css.render(ratio, css)
-        if (!ratio || ratio === 1) {
-          target.setAttribute('class', ratio ? end : startClassList)
-          for (const p in inlineToRemoveAtEnd) {
-            _removeProperty(target, p)
-          }
-        }
-      }
-      let endVars
-      let p
-      if (classPT) {
-        classPT.r(1, classPT.d)
-        _removeLinkedListItem(classPT.d, classPT, '_pt')
-      }
-      target.setAttribute('class', end)
-      // eslint-disable-next-line prefer-const
-      endVars = _getAllStyles(target, true)
-      target.setAttribute('class', startClassList)
-      for (p in endVars) {
-        if (endVars[p] !== startVars[p] && !transformRelated.test(p)) {
-          changingVars[p] = endVars[p]
-          if (!style[p] && style[p] !== '0') {
-            inlineToRemoveAtEnd[p] = 1
-          }
-        }
-      }
-      cache.classPT = plugin._pt = new PropTween(
-        null,
-        target,
-        'className',
-        0,
-        0,
-        _renderClassName,
-        plugin,
-        0,
-        -11
-      )
-      if (style.cssText !== cssText) {
-        style.cssText = cssText
-      }
-      cache.uncache = true
-      gsap.getProperty(target, 'x')
-      css.init(target, changingVars, tween)
-      plugin._props.push.apply(plugin._props, css._props)
-      return 1
-    }
-  }
-})
-// ClassNamePlugin END
 
 Vue.prototype.$gsap = gsap
 
@@ -111,14 +13,12 @@ function checkDevice() {
   } else {
     isMobile = false
   }
-  // console.log(isMobile)
 }
 
 checkDevice()
 window.addEventListener('resize', checkDevice)
 
 Vue.prototype.$beforeHomeExit = () => {
-  // console.log('Before Home Exit')
   gsap.set('.category-grid', {
     yPercent: 100,
     autoAlpha: 1,
@@ -139,7 +39,6 @@ Vue.prototype.$beforeHomeExit = () => {
 }
 
 Vue.prototype.$homeExit = (done) => {
-  // console.log('Home Exit')
   const tl = gsap.timeline({ onComplete: done })
   tl.to('.home-link', {
     yPercent: -100,
@@ -170,12 +69,9 @@ Vue.prototype.$homeExit = (done) => {
   )
 }
 
-Vue.prototype.$beforeHomeReveal = () => {
-  // console.log('Before Home Reveal')
-}
+Vue.prototype.$beforeHomeReveal = () => {}
 
 Vue.prototype.$homeReveal = (done) => {
-  // console.log('Home Reveal')
   const tl = gsap.timeline({ onComplete: done })
   tl.to('.category-grid', {
     autoAlpha: 0
@@ -232,7 +128,6 @@ Vue.prototype.$homeReveal = (done) => {
 }
 
 Vue.prototype.$homeLoad = () => {
-  // console.log('Home Load')
   const tl = gsap.timeline({})
   tl.from('.home-link', {
     yPercent: -100,
@@ -283,7 +178,6 @@ Vue.prototype.$homeLoad = () => {
 
 // Category
 Vue.prototype.$beforeCategoryExit = () => {
-  // console.log('Before Category Exit')
   gsap.set('.category-grid', {
     yPercent: 100,
     autoAlpha: 1,
@@ -311,7 +205,6 @@ Vue.prototype.$beforeCategoryExit = () => {
 }
 
 Vue.prototype.$categoryExit = (done) => {
-  // console.log('Category Exit')
   const tl = gsap.timeline({ onComplete: done })
   tl.to('.home-link', {
     yPercent: -100,
@@ -372,12 +265,9 @@ Vue.prototype.$categoryExit = (done) => {
   )
 }
 
-Vue.prototype.$beforeCategoryReveal = () => {
-  // console.log('Before Category Reveal')
-}
+Vue.prototype.$beforeCategoryReveal = () => {}
 
 Vue.prototype.$categoryReveal = (done) => {
-  // console.log('Category Reveal')
   const tl = gsap.timeline({ onComplete: done })
   tl.to('.column-inner', {
     height: '100%',
@@ -542,7 +432,6 @@ Vue.prototype.$categoryReveal = (done) => {
 }
 
 Vue.prototype.$categoryLoad = () => {
-  // console.log('Category Load')
   const tl = gsap.timeline({})
   tl.from('.home-link', {
     yPercent: -100,

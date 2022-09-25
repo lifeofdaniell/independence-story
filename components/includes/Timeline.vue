@@ -6,7 +6,10 @@
           class="blip-inner"
           :class="addColorClass(colors).blipSmallColor"></div>
       </div>
-      <div class="timeline-date" :class="addColorClass(colors).page">
+      <div
+        class="timeline-date"
+        :class="addColorClass(colors).page"
+        data-paragraph>
         <slot name="timeline-date" />
       </div>
     </div>
@@ -14,11 +17,14 @@
       <div
         class="timeline-text__wrapper"
         :class="addColorClass(colors).revealColor">
-        <h2 class="timeline-header" :class="addColorClass(colors).headerColor">
+        <h2
+          class="timeline-header"
+          :class="addColorClass(colors).headerColor"
+          data-paragraph>
           <slot name="timeline-header" />
         </h2>
         <div class="timeline-subheader" :class="addColorClass(colors).page">
-          <h4 class="timeline-text no-margin">
+          <h4 class="timeline-text no-margin" data-paragraph>
             <slot name="timeline-text" />
           </h4>
         </div>
@@ -32,7 +38,7 @@
         <div
           class="timeline-subheader bottom"
           :class="[reversed ? 'right' : '', addColorClass(colors).page]">
-          <h4 class="timeline-text no-margin">
+          <h4 class="timeline-text no-margin" data-paragraph>
             <slot name="timeline-subtext" />
           </h4>
         </div>
@@ -78,38 +84,66 @@ export default {
     window.addEventListener('resize', this.checkDevice)
     setTimeout(() => {
       this.timelineReveal()
+      // this.$paragraph('data-paragraph')
     }, 500)
   },
 
   methods: {
     timelineReveal() {
-      this.$gsap.utils.toArray('.reveal-block.vertical').forEach((reveal) => {
-        this.$gsap.set(reveal, {
-          y: this.isMobile ? '35px' : '60px'
+      this.$gsap.utils
+        .toArray('.reveal-block.vertical')
+        .forEach((reveal, i) => {
+          this.$gsap.set(reveal, {
+            y: this.isMobile ? '35px' : '60px'
+          })
+          if (i !== 0) {
+            this.$gsap.to(reveal, {
+              scrollTrigger: {
+                scroller: this.isMobile ? '' : '.scroller',
+                trigger: reveal.parentElement,
+                start: this.isMobile ? 'top 40%' : 'top 40%',
+                scrub: this.isMobile ? 2 : true
+              },
+              yPercent: 100
+            })
+          } else {
+            this.$gsap.to(reveal, {
+              scrollTrigger: {
+                scroller: this.isMobile ? '' : '.scroller',
+                trigger: reveal.parentElement,
+                start: this.isMobile ? 'top 70%' : 'top 85%',
+                scrub: this.isMobile ? 2 : true
+              },
+              yPercent: 100
+            })
+          }
         })
-        this.$gsap.to(reveal, {
-          scrollTrigger: {
-            scroller: this.isMobile ? '' : '.scroller',
-            trigger: reveal.parentElement,
-            start: this.isMobile ? 'top 70%' : 'top 80%',
-            scrub: this.isMobile ? 2 : true
-          },
-          yPercent: 100
-        })
-      })
 
       this.$gsap.utils
         .toArray('.reveal-block.horizontal.left')
-        .forEach((reveal) => {
-          this.$gsap.to(reveal, {
-            scrollTrigger: {
-              scroller: '.scroller',
-              trigger: reveal.parentElement,
-              start: 'top -5%',
-              scrub: true
-            },
-            xPercent: 100
-          })
+        .forEach((reveal, i) => {
+          if (i !== 0) {
+            this.$gsap.to(reveal, {
+              scrollTrigger: {
+                scroller: this.isMobile ? '' : '.scroller',
+                trigger: reveal.parentElement,
+                start: this.isMobile ? 'top 0%' : 'top -20%',
+                scrub: true
+              },
+              xPercent: 100
+            })
+          } else {
+            this.$gsap.to(reveal, {
+              scrollTrigger: {
+                scroller: this.isMobile ? '' : '.scroller',
+                trigger: reveal.parentElement,
+                start: this.isMobile ? 'top 0%' : 'top 0%',
+
+                scrub: true
+              },
+              xPercent: 100
+            })
+          }
         })
 
       this.$gsap.utils
@@ -117,27 +151,42 @@ export default {
         .forEach((reveal) => {
           this.$gsap.to(reveal, {
             scrollTrigger: {
-              scroller: '.scroller',
+              scroller: this.isMobile ? '' : '.scroller',
               trigger: reveal.parentElement,
-              start: 'top -5%',
+              start: this.isMobile ? 'top 0%' : 'top -16%',
               scrub: true
             },
             xPercent: -100
           })
         })
 
-      this.$gsap.utils.toArray('.timeline-img__block > .img').forEach((img) => {
-        this.$gsap.to(img, {
-          scrollTrigger: {
-            scroller: this.isMobile ? '' : '.scroller',
-            trigger: img.parentElement,
-            start: 'top 22%',
-            end: 'top 15%',
-            scrub: this.isMobile ? 3 : 1
-          },
-          opacity: 1
+      this.$gsap.utils
+        .toArray('.timeline-img__block > .img')
+        .forEach((img, i) => {
+          if (i !== 0) {
+            this.$gsap.to(img, {
+              scrollTrigger: {
+                scroller: this.isMobile ? '' : '.scroller',
+                trigger: img.parentElement,
+                start: this.isMobile ? 'top 60%' : 'top 30%',
+                end: this.isMobile ? 'top 50%' : 'top 20%',
+                scrub: this.isMobile ? 3 : 1
+              },
+              opacity: 1
+            })
+          } else {
+            this.$gsap.to(img, {
+              scrollTrigger: {
+                scroller: this.isMobile ? '' : '.scroller',
+                trigger: img.parentElement,
+                start: this.isMobile ? 'top 80%' : 'top 40%',
+                end: this.isMobile ? 'top 70%' : 'top 30%',
+                scrub: this.isMobile ? 3 : 1
+              },
+              opacity: 1
+            })
+          }
         })
-      })
     },
 
     addColorClass(color) {
@@ -203,7 +252,7 @@ export default {
     },
 
     checkDevice() {
-      if (window.innerWidth < 767) {
+      if (window.innerWidth <= 1024) {
         this.isMobile = true
       } else {
         this.isMobile = false

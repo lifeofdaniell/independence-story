@@ -90,7 +90,6 @@ export default {
         yPercent: -100,
         duration: 1.15,
         ease: 'power4.out',
-        // autoAlpha: 0,
         onComplete: done
       })
     },

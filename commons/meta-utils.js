@@ -5,7 +5,6 @@ const type = 'Website'
 let url = process.env.SITE_URL
 const title = 'The Story of Nigeria'
 const siteName = 'The Story of What Was & What Is'
-// const theme = '#ffffff'
 const description = ''
 let mainImage = '/webclip.png'
 const twitterCard = 'summary_large_image' // summary, summary_large_image, app, or player.

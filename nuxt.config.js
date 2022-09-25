@@ -28,7 +28,8 @@ export default {
     '@/plugins/directives',
     '@/plugins/locomotive',
     '@/plugins/mixins',
-    '@/plugins/prototype'
+    '@/plugins/prototype',
+    '@/plugins/splitting'
   ],
   components: ['@/components/global', '@/components/includes'],
 
