@@ -100,7 +100,7 @@ Vue.prototype.$homeReveal = (done) => {
     },
     '<+0.2'
   )
-  tl.from(
+  /*   tl.from(
     '.hero-subtext__wrapper.left',
     {
       xPercent: -50,
@@ -117,7 +117,7 @@ Vue.prototype.$homeReveal = (done) => {
       duration: 1
     },
     '<+0.3'
-  )
+  ) */
   tl.set(
     '.category-grid',
     {
@@ -149,7 +149,7 @@ Vue.prototype.$homeLoad = () => {
     },
     '<+0.2'
   )
-  tl.from(
+  /*   tl.from(
     '.hero-subtext__wrapper.left',
     {
       x: -50,
@@ -166,7 +166,7 @@ Vue.prototype.$homeLoad = () => {
       duration: 1
     },
     '<+0.3'
-  )
+  ) */
   tl.set(
     '.category-grid',
     {

@@ -7,25 +7,27 @@
         <div class="l-container">
           <div class="c-hero">
             <div class="hero-text__wrapper">
-              <h3 class="no-margin">
+              <h3 class="no-margin" data-header>
                 We are telling the story of
               </h3>
-              <h1 class="hero-text">
+              <h1 class="hero-text" data-header>
                 What was and What is
               </h1>
-              <h3>
+              <h3 data-header>
                 A tale of <span class="dgreen-text">62 years</span> of a nation
                 with over <span class="dgreen-text">250 ethnic groups</span>
               </h3>
             </div>
             <div class="hero-subtext__wrapper left">
-              <p>
+              <p data-text>
                 From the highest highs to the lowest lows. Despite it all, we
                 are still here, standing tall.
               </p>
             </div>
             <div class="hero-subtext__wrapper right">
-              <div>Against All Odds</div>
+              <div data-text>
+                Against All Odds
+              </div>
             </div>
           </div>
         </div>
@@ -149,6 +151,7 @@ export default {
     this.fallingImageTwo()
     this.fallingImageThree()
     this.fallingImageFour()
+    this.$paragraph()
   },
 
   methods: {

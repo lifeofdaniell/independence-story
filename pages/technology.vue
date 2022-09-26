@@ -184,7 +184,9 @@ export default {
 
   mounted() {
     this.$initScroll('.scroller')
-    this.$paragraph()
+    setTimeout(() => {
+      this.$timelineParagraph()
+    }, 500)
   }
 }
 </script>

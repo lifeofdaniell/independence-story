@@ -7,7 +7,7 @@ import 'splitting/dist/splitting-cells.css'
 
 gsap.registerPlugin(ScrollTrigger)
 
-Vue.prototype.$paragraph = () => {
+Vue.prototype.$timelineParagraph = () => {
   // eslint-disable-next-line no-unused-vars
   let isMobile = false
   function checkDevice() {
@@ -120,6 +120,32 @@ Vue.prototype.$paragraph = () => {
               scroller: isMobile ? '' : '.scroller',
               trigger: paragraphB.el,
               start: 'top 50%'
+            },
+            autoAlpha: 0,
+            x: 50,
+            delay: lineIndex * 0.15
+          },
+          '>'
+        )
+      })
+    })
+  })
+}
+
+Vue.prototype.$paragraph = () => {
+  const texts = document.querySelectorAll('[data-text]')
+  const paragraphs = Splitting({ target: texts, by: 'lines' })
+  paragraphs.forEach((paragraph) => {
+    paragraph.lines.forEach((line, lineIndex) => {
+      line.forEach((word, wordIndex) => {
+        gsap.set(texts, {
+          opacity: 1
+        })
+        gsap.from(
+          word,
+          {
+            scrollTrigger: {
+              trigger: paragraph.el
             },
             autoAlpha: 0,
             x: 50,
