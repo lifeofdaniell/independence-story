@@ -259,6 +259,27 @@ export default {
 </script>
 
 <style>
+@media screen and (min-width: 992px) {
+  .line.vertical {
+    height: 12%;
+    bottom: 30%;
+  }
+  .line.horizontal {
+    bottom: 30%;
+  }
+  .timeline-header {
+    text-transform: capitalize;
+    font-size: 50px;
+    line-height: 65px;
+  }
+  .timeline-text {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .timeline-text__wrapper {
+    margin-top: 35px;
+  }
+}
 .timeline-img__block::after {
   content: '';
   position: absolute;
