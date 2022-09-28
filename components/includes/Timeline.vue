@@ -10,7 +10,9 @@
         <slot name="timeline-date" />
       </div>
     </div>
-    <div class="c-timeline__inner" :class="reversed ? 'inverse' : ''">
+    <div
+      class="c-timeline__inner"
+      :class="[reversed ? 'inverse' : '', !timeline.text ? 'small' : '']">
       <div
         class="timeline-text__wrapper"
         :class="addColorClass(colors).revealColor">
@@ -41,9 +43,11 @@
         </div>
       </div>
       <div
+        v-if="timeline.text"
         class="line vertical"
         :class="[reversed ? 'right' : '', addColorClass(colors).lineColor]"></div>
       <div
+        v-if="timeline.text"
         class="line horizontal"
         :class="[reversed ? 'right' : '', addColorClass(colors).lineColor]"></div>
     </div>
@@ -67,6 +71,14 @@ export default {
     imgSrc: {
       type: String,
       required: true
+    },
+    timeline: {
+      type: Object,
+      default: () => {
+        return {
+          text: null
+        }
+      }
     }
   },
 
@@ -259,6 +271,16 @@ export default {
 </script>
 
 <style>
+.c-timeline__inner.small {
+  min-height: 600px;
+}
+
+@media screen and (max-width: 767px) {
+  .c-timeline__inner.small {
+    min-height: 400px;
+  }
+}
+
 @media screen and (min-width: 992px) {
   .line.vertical {
     height: 12%;

@@ -130,6 +130,12 @@ export default {
 </script>
 
 <style scoped>
+@media screen and (min-width: 992px) {
+  .category-description {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
 .skeleton-wrapper::-webkit-scrollbar {
   display: none;
 }

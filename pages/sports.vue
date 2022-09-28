@@ -9,11 +9,11 @@
               <div>Sports</div>
             </div>
             <div class="storyline-header">
-              <div>Nigeria gains Independence</div>
+              <div>First Olympic medal</div>
             </div>
             <div class="header-img__wrapper">
               <div class="storyline-subheader top">
-                <div>October 1st, 1960</div>
+                <div>1964</div>
               </div>
               <div class="header-img__block">
                 <img
@@ -34,68 +34,31 @@
               </div>
               <div class="storyline-subheader">
                 <div>
-                  Millions of Nigerians poured out to the streets in celebration
-                  of a new dawn. On this day, Nigeria was born.
+                  Nojim Maiyegun won a bronze medal men's Light Middleweight (71
+                  kg) category at the 1964 Summer Olympics in Tokyo, Japan.
                 </div>
               </div>
             </div>
           </div>
           <div class="c-timeline__wrapper">
             <timeline
+              v-for="(timeline, index) in timelines"
+              :key="index"
               colors="pastel-green"
-              img-src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg">
+              :img-src="timeline.img"
+              :reversed="index % 2 ? true : false"
+              :timeline="timeline">
               <template #timeline-date>
-                October 1st, 1963
+                {{ timeline.date }}
               </template>
               <template #timeline-header>
-                The First Republic
+                {{ timeline.header }}
               </template>
               <template #timeline-text>
-                Although we had gained Independence, there was still the heavy
-                influence of the British monarchy in Nigeria.
+                {{ timeline.subheader }}
               </template>
               <template #timeline-subtext>
-                Under President Nnamdi Azikiwe’s regime, Nigeria became a
-                republic. Thus, we became solely responsible for our own future.
-              </template>
-            </timeline>
-
-            <timeline
-              colors="pastel-green"
-              img-src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
-              reversed>
-              <template #timeline-date>
-                January 15th, 1966
-              </template>
-              <template #timeline-header>
-                First Military Coup
-              </template>
-              <template #timeline-text>
-                The military coup marked the end of the first republic and the
-                defining moment for what would be a series of unfortunate
-                events.
-              </template>
-              <template #timeline-subtext>
-                It led to the death of many political leaders, including
-                Nigeria’s first and only Prime Minister, Abubakar Tafawa Balewa.
-              </template>
-            </timeline>
-
-            <timeline
-              colors="pastel-green"
-              img-src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg">
-              <template #timeline-date>
-                May 30, 1967
-              </template>
-              <template #timeline-header>
-                Biafran Civil War Breaks out
-              </template>
-              <template #timeline-text>
-                Tensions in Northern and South-Eastern Nigeria led to the Igbos
-                demanding secession and the breakout of a civil war.
-              </template>
-              <template #timeline-subtext>
-                The war was fought between Nigeria and the Republic of Biafrans.
+                {{ timeline.text }}
               </template>
             </timeline>
           </div>
@@ -109,8 +72,9 @@
         link="/technology"
         page="sports">
         <template #description>
-          We may not be winning any medals with our politics, but when it comes
-          to sports? We go big or go home.
+          Tech has become a glimmer of hope amidst many failing systems. Nigeria
+          currently houses some of the biggest tech leaders in Africa. Let’s
+          take a look at the journey so far.
         </template>
       </next-section>
     </div>
@@ -146,6 +110,125 @@ export default {
           this.$categoryReveal(done)
         }
       }
+    }
+  },
+
+  data() {
+    return {
+      timelines: [
+        {
+          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          date: '1980',
+          header: 'First African Cup of Nations Title',
+          subheader:
+            'On March 22nd 1980, Segun Odegbami scored twice to win the then Green Eagles their first ever African Cup of Nations title.',
+          text: ''
+        },
+        {
+          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          date: '1983',
+          header: 'Fourth Round at Wimbledon',
+          subheader:
+            'Nduka Odizor, was the first and remains the only Nigerian player to get to the fourth round at the Wimbledon.',
+          text: ''
+        },
+        {
+          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          date: '1985',
+          header: 'We arrived',
+          subheader:
+            'The Golden Eaglets (our U-17 national football team) won the first-ever FIFA U-17 Championship held in China.',
+          text: ''
+        },
+        {
+          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          date: '1985',
+          header: 'World Cruiserweight Champion',
+          subheader:
+            'Bash Ali made history as the first Cruiserweight Boxing champion from the African continent.',
+          text: ''
+        },
+        {
+          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          date: '1989',
+          header: 'Nigeria loses a star',
+          subheader:
+            'A rather devastating occurrence:  Rising Star, Samuel Okwaraji died due to heart failure in the 1990 FIFA World Cup Qualifier match against Angola.',
+          text: 'He is said to have literally played his heart for Nigeria.'
+        },
+        {
+          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          date: '1993',
+          header: 'Africa’s best',
+          subheader:
+            'Late Rashidi Yekini was the first Nigerian footballer to be named African Footballer of the Year after scoring 34 goals in 32 games.',
+          text: ''
+        },
+        {
+          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          date: '1994',
+          header: 'Our First World Cup Goal',
+          subheader:
+            'At the World Cup in USA the following year, reigning African Footballer of the Year Rashidi Yekini scored Nigeria’s first ever goal against Bulgaria.',
+          text: ''
+        },
+        {
+          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          date: '1994',
+          header: 'Super Eagles attain top 5 FIFA ranking',
+          subheader:
+            'The Super Eagles were ranked fifth globally by FIFA and number one in Africa! It remains our highest ranking so far.',
+          text: ''
+        },
+        {
+          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          date: '1996',
+          header: 'First Olympic Gold Medals',
+          subheader:
+            'Chioma Ajunwa won the first-ever gold medal for Nigeria in the Long jump category at the Olympics, Atlanta.',
+          text: 'The Nigerian Men’s Football team proudly tagged The Dream Team defeated Argentina to win Africa’s first olympic gold medal in football.'
+        },
+        {
+          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          date: '2008',
+          header: 'World Heavyweight Boxing Champion',
+          subheader:
+            'Samuel Okon Peter is the first Nigerian to hold the WBC Heavyweight Title.',
+          text: 'He was ranked by The Ring among the ten best heavyweights from 2005 to 2008, reaching his highest ranking of world No.2 in 2007.'
+        },
+        {
+          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          date: '2016',
+          header: 'Breaking World records, TWICE',
+          subheader:
+            'Late Paul Kehinde broke the men’s 65kg World Record twice ( with lifts of 218kg and 220kg)  at the Paralympics in Rio.',
+          text: ''
+        },
+        {
+          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          date: '2018',
+          header: 'Africa’s first ever bobsled team',
+          subheader:
+            'Established by Seun Adigun in 2016, this self-funding female team represented Nigeria at the Winter Olympics held in Pyeongchang, South Korea.',
+          text: 'They are the first ever Nigerians to participate in the Winter Olympics.'
+        },
+        {
+          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          date: '2022',
+          header: 'ITTF TOP 10 Player',
+          subheader:
+            'In 2014, Quadri Aruna was named Star player of the year by the ITTF and has only advanced ever since.',
+          text: 'He is the first African and black player to be ranked in the top 10 in world table tennis ranking. This Nigerian is currently ranked number 10 globally and number 1 in Africa.'
+        },
+        {
+          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          date: '2008',
+          header: 'World Athletics Championships glory',
+          subheader:
+            'Tobi Amusan entered the 2022 World Athletics Championships as a medal contender. In the heats she ran an African record of 12.40s, but then in the semifinal, she set a new world record of 12.12s.',
+          text: 'Then she went on to best her time once again in the final, running 12.06s (2.5m/s wind assisted), becoming the first Nigerian world champion at the World Athletics Championships.'
+        }
+      ]
     }
   },
 
@@ -186,7 +269,7 @@ export default {
     this.$initScroll('.scroller')
     setTimeout(() => {
       this.$timelineParagraph()
-    }, 500)
+    }, 100)
   }
 }
 </script>

@@ -9,11 +9,11 @@
               <div>Technology</div>
             </div>
             <div class="storyline-header">
-              <div>Nigeria gains Independence</div>
+              <div>First Computer Centre</div>
             </div>
             <div class="header-img__wrapper">
               <div class="storyline-subheader top">
-                <div>October 1st, 1960</div>
+                <div>1963</div>
               </div>
               <div class="header-img__block">
                 <img
@@ -34,68 +34,32 @@
               </div>
               <div class="storyline-subheader">
                 <div>
-                  Millions of Nigerians poured out to the streets in celebration
-                  of a new dawn. On this day, Nigeria was born.
+                  IBM African Education Centre was set up at University College,
+                  Ibadan (renamed University of Ibadan Computing Centre in
+                  1966).
                 </div>
               </div>
             </div>
           </div>
           <div class="c-timeline__wrapper">
             <timeline
+              v-for="(timeline, index) in timelines"
+              :key="index"
               colors="white"
-              img-src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg">
+              :img-src="timeline.img"
+              :reversed="index % 2 ? true : false"
+              :timeline="timeline">
               <template #timeline-date>
-                October 1st, 1963
+                {{ timeline.date }}
               </template>
               <template #timeline-header>
-                The First Republic
+                {{ timeline.header }}
               </template>
               <template #timeline-text>
-                Although we had gained Independence, there was still the heavy
-                influence of the British monarchy in Nigeria.
+                {{ timeline.subheader }}
               </template>
               <template #timeline-subtext>
-                Under President Nnamdi Azikiwe’s regime, Nigeria became a
-                republic. Thus, we became solely responsible for our own future.
-              </template>
-            </timeline>
-
-            <timeline
-              colors="white"
-              img-src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
-              reversed>
-              <template #timeline-date>
-                January 15th, 1966
-              </template>
-              <template #timeline-header>
-                First Military Coup
-              </template>
-              <template #timeline-text>
-                The military coup marked the end of the first republic and the
-                defining moment for what would be a series of unfortunate
-                events.
-              </template>
-              <template #timeline-subtext>
-                It led to the death of many political leaders, including
-                Nigeria’s first and only Prime Minister, Abubakar Tafawa Balewa.
-              </template>
-            </timeline>
-
-            <timeline
-              colors="white"
-              img-src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg">
-              <template #timeline-date>
-                May 30, 1967
-              </template>
-              <template #timeline-header>
-                Biafran Civil War Breaks out
-              </template>
-              <template #timeline-text>
-                Tensions in Northern and South-Eastern Nigeria led to the Igbos
-                demanding secession and the breakout of a civil war.
-              </template>
-              <template #timeline-subtext>
-                The war was fought between Nigeria and the Republic of Biafrans.
+                {{ timeline.text }}
               </template>
             </timeline>
           </div>
@@ -109,8 +73,8 @@
         link="/random"
         page="tech">
         <template #description>
-          We may not be winning any medals with our politics, but when it comes
-          to sports? We go big or go home.
+          From the history of buildings to the first Nigerian to win the Nobel
+          Prize, these are some facts we think you should know
         </template>
       </next-section>
     </div>
@@ -146,6 +110,108 @@ export default {
           this.$categoryReveal(done)
         }
       }
+    }
+  },
+
+  data() {
+    return {
+      timelines: [
+        {
+          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          date: '1972',
+          header: 'Computer Science course in Nigerian Universities',
+          subheader:
+            'Computer Science courses instituted at the University of Lagos, University of Ife, and University of Ibadan.',
+          text: ''
+        },
+        {
+          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          date: '1973',
+          header: 'Computers used in National Census exercise',
+          subheader:
+            'For the first time in Nigeria, computers were used in the National Census exercise.',
+          text: ''
+        },
+        {
+          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          date: '1978',
+          header: 'COAN was inaugurated',
+          subheader:
+            'The Computer Association of Nigeria, now Nigeria Computer Society (NCS) is the umbrella organisation of all Information Technology Professionals, Interest Groups and Stakeholders in Nigeria.',
+          text: 'It transformed into NCS in 2002 as a result of harmonisation with other stakeholders and interest group.'
+        },
+        {
+          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          date: '1982',
+          header: 'Leaving the folders for screens',
+          subheader: 'Banks begin to computerise.',
+          text: ''
+        },
+        {
+          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          date: '1989',
+          header: 'Inventing a supercomputer',
+          subheader:
+            'Nigerian-born computer scientist Philip Emeagwali designed the program and formula for the fastest computer on earth at that time, the Connection Machine.',
+          text: 'Utilising the connection machine and 65,536 microprocessors to achieve 3.1 billion calculations per second, the fastest computational record at the time.'
+        },
+        {
+          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          date: '1985',
+          header: 'NITEL communications was created',
+          subheader:
+            'Nigerian Telecommunications was a monopoly telephone service provider in Nigeria until 1992 when the Nigerian government enacted the Nigerian Communications Commission act allowing new entrants into the telecommunications sector.',
+          text: 'NITEL is infamous for its abysmal service.'
+        },
+        {
+          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          date: '2001',
+          header: 'The birth of mobile phones and mobile internet',
+          subheader:
+            'The Nigerian Communications Services awarded licences to operate to Econet (now Airtel) and MTN in August.',
+          text: 'This was a turning point for communication systems and accessibility in Nigeria.'
+        },
+        {
+          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          date: '2010',
+          header: 'MainOne Launch in West Africa',
+          subheader:
+            'The submarine communications cable stretching from Portugal to South Africa added Nigeria along its route.',
+          text: 'This positively impacted the quality of internet connection available in the country.'
+        },
+        {
+          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          date: '2014',
+          header: 'Andela launches in Lagos',
+          subheader:
+            'The tech talent ecosystem and community came to Nigeria, paving the way for international opportunities and exposure for Nigerian tech.',
+          text: ''
+        },
+        {
+          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          date: '2016',
+          header: 'Netflix and Chill Comes to Nigeria',
+          subheader:
+            'In it’s expansion efforts to 130 countries in 2016, Netflix launched in Nigeria.',
+          text: 'Fifty, a film directed by the late Biyi Bandele, was one of the first Nigerian films streamed on the platform.'
+        },
+        {
+          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          date: '2020',
+          header: 'Paystack acquisition by Stripe',
+          subheader:
+            'Founded in 2015 by Shola Akinlade and Ezra Olubi, Paystack was one of the first Nigerian startups to get into US-based seed accelerator, Y Combinator.',
+          text: 'The payments platform was acquired by Stripe for over $200 million.'
+        },
+        {
+          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          date: '2019',
+          header: 'First Nigerian Unicorn',
+          subheader:
+            'Nigerian digital payments company, Interswitch became Nigeria’s first unicorn and Africa’s second ever unicorn.',
+          text: ''
+        }
+      ]
     }
   },
 

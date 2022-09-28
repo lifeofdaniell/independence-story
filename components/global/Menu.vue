@@ -7,7 +7,7 @@
           img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
           link="/technology">
           <template #description>
-            We must warn you, it’s not exactly rosy.
+            Tech has become a glimmer of hope amidst many failing systems.
           </template>
         </category>
 
@@ -28,7 +28,7 @@
           img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
           link="/sports">
           <template #description>
-            We must warn you, it’s not exactly rosy.
+            When it comes to sports? We go big or go home.
           </template>
         </category>
 
@@ -38,7 +38,7 @@
           img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
           link="/entertainment">
           <template #description>
-            We must warn you, it’s not exactly rosy.
+            There’s nothing bigger, nothing more Nigerian, than entertainment.
           </template>
         </category>
 
@@ -49,7 +49,7 @@
           link="/random"
           white>
           <template #description>
-            We must warn you, it’s not exactly rosy.
+            These are some facts we think you should know.
           </template>
         </category>
       </div>
@@ -63,7 +63,7 @@
             img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
             link="/technology">
             <template #description>
-              We must warn you, it’s not exactly rosy.
+              Tech has become a glimmer of hope amidst many failing systems.
             </template>
           </category>
 
@@ -84,7 +84,7 @@
             img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
             link="/sports">
             <template #description>
-              We must warn you, it’s not exactly rosy.
+              When it comes to sports? We go big or go home.
             </template>
           </category>
 
@@ -94,7 +94,7 @@
             img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
             link="/entertainment">
             <template #description>
-              We must warn you, it’s not exactly rosy.
+              There’s nothing bigger, nothing more Nigerian, than entertainment.
             </template>
           </category>
 
@@ -105,7 +105,7 @@
             link="/random"
             white>
             <template #description>
-              We must warn you, it’s not exactly rosy.
+              These are some facts we think you should know.
             </template>
           </category>
         </div>

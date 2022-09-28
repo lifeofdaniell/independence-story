@@ -45,7 +45,8 @@
               v-for="(timeline, index) in timelines"
               :key="index"
               :img-src="timeline.img"
-              :reversed="index % 2 ? true : false">
+              :reversed="index % 2 ? true : false"
+              :timeline="timeline">
               <template #timeline-date>
                 {{ timeline.date }}
               </template>
@@ -70,8 +71,9 @@
         link="/entertainment"
         page="politics">
         <template #description>
-          We may not be winning any medals with our politics, but when it comes
-          to sports? We go big or go home.
+          The Nigerian entertainment industry spans countries and continents and
+          is perhaps our greatest export. There’s nothing bigger, nothing more
+          Nigerian, than entertainment.
         </template>
       </next-section>
     </div>

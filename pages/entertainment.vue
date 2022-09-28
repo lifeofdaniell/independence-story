@@ -9,11 +9,11 @@
               <div>Entertainment</div>
             </div>
             <div class="storyline-header">
-              <div>Nigeria gains Independence</div>
+              <div>Cinema of Nigeria</div>
             </div>
             <div class="header-img__wrapper">
               <div class="storyline-subheader top">
-                <div>October 1st, 1960</div>
+                <div>1960</div>
               </div>
               <div class="header-img__block">
                 <img
@@ -34,8 +34,8 @@
               </div>
               <div class="storyline-subheader">
                 <div>
-                  Millions of Nigerians poured out to the streets in celebration
-                  of a new dawn. On this day, Nigeria was born.
+                  After gaining independence, the cinema business rapidly
+                  expanded, with new cinema houses being established.
                 </div>
               </div>
             </div>
@@ -46,7 +46,8 @@
               :key="index"
               colors="green"
               :img-src="timeline.img"
-              :reversed="index % 2 ? true : false">
+              :reversed="index % 2 ? true : false"
+              :timeline="timeline">
               <template #timeline-date>
                 {{ timeline.date }}
               </template>
@@ -116,14 +117,6 @@ export default {
       timelines: [
         {
           img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
-          date: '1960',
-          header: 'Cinema of Nigeria',
-          subheader:
-            'After gaining independence, the cinema business rapidly expanded, with new cinema houses being established',
-          text: 'However, the films being shown at these cinemas were mostly foreign films: Chinese, American, Indian etc.'
-        },
-        {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
           date: '1962',
           header: 'Latola Films',
           subheader: 'First and earliest film production company in Nigeria ',
@@ -147,7 +140,7 @@ export default {
         },
         {
           img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
-          date: 'Aired from the 1980s',
+          date: 'Aired from 1980',
           header: 'First TV sitcom in Nigeria',
           subheader:
             'New Masquerade, created and written by James Iroha and aired on Nigerian Television Network on Tuesday nights from 8:30 pm – 9:00 pm.',
@@ -244,17 +237,17 @@ export default {
         {
           img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
           date: '2021',
-          header: 'First Female MTV Best African Act',
+          header: 'First Nigerian to win a Grammy',
           subheader:
-            'Singer, songwriter and actress, Tiwa Savage was the first female musician to win the "Best African Act" award at the MTV Europe awards in Spain.',
+            'Performing artist and musician, Burna Boy, popularly referred to as the African Giant, is the first Nigerian to be awarded a Grammy in the Best World Music Album category for his fifth studio album, Twice as Tall.',
           text: ''
         },
         {
           img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
           date: '2022',
-          header: 'First Female MTV Best African Act',
+          header: 'Amazon Prime biopic',
           subheader:
-            'Singer, songwriter and actress, Tiwa Savage was the first female musician to win the "Best African Act" award at the MTV Europe awards in Spain.',
+            'Nwa Baby crooner, Flavour was the first African to receive $3m as an advance payment for his biopic on Amazon Prime ',
           text: ''
         }
       ]

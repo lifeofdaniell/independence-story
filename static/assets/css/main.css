@@ -93,6 +93,13 @@ html.has-scroll-smooth {
   visibility: visible;
 }
 
+@media screen and (min-width: 992px) {
+  .storyline-subheader {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .scroller {
     position: static;
