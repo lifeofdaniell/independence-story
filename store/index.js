@@ -1,5 +1,7 @@
-import { removeKeys } from '../commons/utils'
-const token = process.env.token
+// import { removeKeys } from '../commons/utils'
+const apiKey = process.env.apiKey
+const apiSecret = process.env.apiSecret
+const cloudName = process.env.cloudName
 
 export const state = () => ({
   menuOpen: false,
@@ -46,14 +48,14 @@ export const mutations = {
 
 export const actions = {
   fetchImages(context, payload) {
-    const imageURL = process.env.mediaURL + '/upload/files'
+    const imageURL = `https://api.cloudinary.com/v1_1/${cloudName}/resources/image`
     return new Promise((resolve, reject) => {
       this.$axios
         .$get(imageURL, {
           headers: {
-            Authorization: `Bearer ${token}`
-          },
-          params: removeKeys(payload, ['page'])
+            Authorization: `Basic ${apiKey}:${apiSecret}`
+          }
+          // params: removeKeys(payload, ['page'])
         })
         .then((response) => {
           resolve(response)

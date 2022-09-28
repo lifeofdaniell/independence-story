@@ -9,7 +9,7 @@
       @leave="menuLeave">
       <Menu v-if="menuOpen" />
     </transition>
-    <!---
+
     <transition :css="false" @leave="loaderLeave">
       <Loader v-if="loaderOpen" />
     </transition>
@@ -19,8 +19,7 @@
       @enter="enter"
       @leave="leave">
       <Nuxt />
-    </transition> -->
-    <Nuxt />
+    </transition>
   </div>
 </template>
 

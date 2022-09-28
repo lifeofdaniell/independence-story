@@ -8,9 +8,9 @@ export default {
 
   env: {
     siteURL: process.env.SITE_URL,
-    baseURL: process.env.BASE_URL,
-    mediaURL: process.env.MEDIA_URL,
-    token: process.env.TOKEN
+    apiKey: process.env.CLOUDINARY_API_KEY,
+    apiSecret: process.env.CLOUDINARY_SECRET,
+    cloudName: process.env.CLOUDINARY_CLOUD_NAME
   },
 
   target: 'static',
@@ -41,9 +41,7 @@ export default {
 
   modules: ['@nuxtjs/axios', '@nuxtjs/pwa'],
 
-  axios: {
-    baseURL: process.env.BASE_URL
-  },
+  axios: {},
 
   pwa: {
     manifest: pwaUtils.getManifest()

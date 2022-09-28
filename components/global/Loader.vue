@@ -92,6 +92,7 @@ export default {
 
     async fetchImages() {
       const images = await this.$store.dispatch('fetchImages')
+      console.log(images)
       this.img = images.map(a => a.url)
       this.totalImages = this.img.length
       this.imgLoaded()
