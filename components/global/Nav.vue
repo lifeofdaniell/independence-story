@@ -15,8 +15,8 @@
             🇳🇬
           </div>
         </nuxt-link>
+        <!-- v-if="!loaderOpen" -->
         <div
-          v-if="!loaderOpen"
           class="category-btn"
           @click="toggleMenu"
           @mouseout="hoverOut"

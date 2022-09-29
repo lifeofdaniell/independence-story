@@ -20,17 +20,17 @@
                   alt=""
                   class="header-img center"
                   loading="lazy"
-                  src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
+                  src="https://res.cloudinary.com/deljrzv80/image/upload/v1664327314/independence_media/IBM_ud56af.jpg" />
                 <img
                   alt=""
                   class="header-img small left"
                   loading="lazy"
-                  src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
+                  src="https://res.cloudinary.com/deljrzv80/image/upload/v1664439679/independence_media/IBM-2_uypwix.jpg" />
                 <img
                   alt=""
                   class="header-img small right"
                   loading="lazy"
-                  src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
+                  src="https://res.cloudinary.com/deljrzv80/image/upload/v1664439832/independence_media/IBM-3_gun4ha.jpg" />
               </div>
               <div class="storyline-subheader">
                 <div>
@@ -117,7 +117,7 @@ export default {
     return {
       timelines: [
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664440089/independence_media/UI_tv2sj5.jpg',
           date: '1972',
           header: 'Computer Science course in Nigerian Universities',
           subheader:
@@ -148,7 +148,7 @@ export default {
           text: ''
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327316/independence_media/rsz_emeagwali-connection-machine_vk6yss.jpg',
           date: '1989',
           header: 'Inventing a supercomputer',
           subheader:
@@ -156,7 +156,7 @@ export default {
           text: 'Utilising the connection machine and 65,536 microprocessors to achieve 3.1 billion calculations per second, the fastest computational record at the time.'
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327313/independence_media/NITEL_jp5jm6.jpg',
           date: '1985',
           header: 'NITEL communications was created',
           subheader:
@@ -164,7 +164,7 @@ export default {
           text: 'NITEL is infamous for its abysmal service.'
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327313/independence_media/ICT_q2gbcz.jpg',
           date: '2001',
           header: 'The birth of mobile phones and mobile internet',
           subheader:
@@ -172,7 +172,7 @@ export default {
           text: 'This was a turning point for communication systems and accessibility in Nigeria.'
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327314/independence_media/MainOne_gefjxm.jpg',
           date: '2010',
           header: 'MainOne Launch in West Africa',
           subheader:
@@ -188,7 +188,7 @@ export default {
           text: ''
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327312/independence_media/Netflix-Nigeria_iehx2t.jpg',
           date: '2016',
           header: 'Netflix and Chill Comes to Nigeria',
           subheader:
@@ -196,7 +196,7 @@ export default {
           text: 'Fifty, a film directed by the late Biyi Bandele, was one of the first Nigerian films streamed on the platform.'
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327334/independence_media/Paystack-Founders_jc80fj.jpg',
           date: '2020',
           header: 'Paystack acquisition by Stripe',
           subheader:
@@ -268,6 +268,13 @@ export default {
 }
 .storyline-subheader {
   color: black;
+}
+
+.header-img.small {
+  filter: grayscale(100%);
+}
+.header-img.small.left {
+  object-position: 70% 50%;
 }
 
 .category-header.small {

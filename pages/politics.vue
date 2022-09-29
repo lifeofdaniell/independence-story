@@ -20,17 +20,17 @@
                   alt=""
                   class="header-img center"
                   loading="lazy"
-                  src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
+                  src="https://res.cloudinary.com/deljrzv80/image/upload/v1664327336/independence_media/IndependenceDay_lxmnsx.jpg" />
                 <img
                   alt=""
                   class="header-img small left"
                   loading="lazy"
-                  src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
+                  src="https://res.cloudinary.com/deljrzv80/image/upload/v1664441909/independence_media/Independence_kkyssq.jpg" />
                 <img
                   alt=""
                   class="header-img small right"
                   loading="lazy"
-                  src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
+                  src="https://res.cloudinary.com/deljrzv80/image/upload/v1664327332/independence_media/IndependenceDayCelebration_jlhmen.webp" />
               </div>
               <div class="storyline-subheader">
                 <div>
@@ -116,7 +116,7 @@ export default {
     return {
       timelines: [
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664442320/independence_media/vllkyttbh2ol5pd74_oek1dl.jpg',
           date: 'October 1st, 1963',
           header: 'The First Republic',
           subheader:
@@ -124,7 +124,7 @@ export default {
           text: 'Under President Nnamdi Azikiwe’s regime, Nigeria became a republic. Thus, we became solely responsible for our own future.'
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664441910/independence_media/Military_Coup_appjc8.jpg',
           date: 'January 15th, 1966',
           header: 'First Military Coup',
           subheader:
@@ -132,7 +132,7 @@ export default {
           text: 'It led to the death of many political leaders, including Nigeria’s first and only Prime Minister, Abubakar Tafawa Balewa.'
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327339/independence_media/Biafara-War_yaqj4h.webp',
           date: 'May 30, 1967',
           header: 'Biafran Civil War Breaks out',
           subheader:
@@ -140,7 +140,7 @@ export default {
           text: 'The war was fought between Nigeria and the Republic of Biafrans.'
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327338/independence_media/BiafraWar_otk1l6.jpg',
           date: '15th January 1970',
           header: 'End of the Biafran Civil War',
           subheader:
@@ -155,7 +155,7 @@ export default {
           text: 'The return to civilian rule was a beacon of light after years of gloom.'
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327339/independence_media/AnnulledElection_cvpkvo.jpg',
           date: 'June 12, 1993',
           header: 'Annulled Election',
           subheader:
@@ -163,7 +163,7 @@ export default {
           text: 'However, the Head of State at the time, Ibrahim Babangida annulled the results. Thousands of Nigerians all over the country took to the streets in protest.'
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327333/independence_media/OgoniNine_qnfvj5.jpg',
           date: '1995',
           header: 'Ogoni Nine execution',
           subheader:
@@ -171,7 +171,7 @@ export default {
           text: "This devastating incident provoked international outrage and resulted in Nigeria's suspension from the Commonwealth of Nations for over three years."
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327338/independence_media/DemocracyReturns_bb57o1.webp',
           date: 'May 29, 1999',
           header: 'A fresh start for Nigeria’s Democracy',
           subheader:
@@ -195,7 +195,7 @@ export default {
           text: 'He was replaced by his Vice, Goodluck Jonathan.'
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327337/independence_media/ChibokGirls_vhsfew.webp',
           date: '2014',
           header: 'Chibok Girls',
           subheader:
@@ -257,6 +257,9 @@ export default {
 </script>
 
 <style scoped>
+.header-img.small.left {
+  object-position: 80% 50%;
+}
 @media screen and (max-width: 479px) {
   .category-header.small {
     color: #74e779;

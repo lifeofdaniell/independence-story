@@ -48,15 +48,10 @@ export const mutations = {
 
 export const actions = {
   fetchImages(context, payload) {
-    const imageURL = `https://api.cloudinary.com/v1_1/${cloudName}/resources/image`
+    const imageURL = `https://${apiKey}:${apiSecret}@api.cloudinary.com/v1_1/${cloudName}/resources/image`
     return new Promise((resolve, reject) => {
       this.$axios
-        .$get(imageURL, {
-          headers: {
-            Authorization: `Basic ${apiKey}:${apiSecret}`
-          }
-          // params: removeKeys(payload, ['page'])
-        })
+        .$get(imageURL)
         .then((response) => {
           resolve(response)
         })

@@ -123,7 +123,7 @@ export default {
           text: 'Posters and new road signs were put up to spread the word of this change.'
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327342/independence_media/GhanaMustGo_dvite8.webp',
           date: '1983',
           header: 'Ghana Must Go',
           subheader:
@@ -131,7 +131,7 @@ export default {
           text: 'The vestiges of this movement is ever present by the cheap matted woven zipped bags, used by the migrants to move their belongings and popularly called, Ghana Must Go.'
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327333/independence_media/Wole-Soyinka-receiving-the-Nobel-Prize-in-1986_twalto.png',
           date: '1986',
           header: 'First African Recipient of the Nobel Prize',
           subheader:
@@ -147,7 +147,7 @@ export default {
           text: 'The union was, however, proscribed and not allowed to resume operation till 1990. The union has embarked on many other strike actions ever since.'
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327321/independence_media/Third-Mainland-Bridge_uebg4x.webp',
           date: '1990',
           header: 'Longest Bridge in Nigeria',
           subheader:
@@ -171,7 +171,7 @@ export default {
           text: 'Nigeria was indeed the giant of Africa, not just in population, but in the prosperity of its economy.'
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327323/independence_media/CanoppyWalk2_nefzkm.jpg',
           date: '2015',
           header: 'Canopy Walk is launched',
           subheader:
@@ -179,7 +179,7 @@ export default {
           text: ''
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327326/independence_media/Anietocin_lim2jo.jpg',
           date: '2022',
           header: 'Anietocin is invented',
           subheader:
@@ -187,7 +187,7 @@ export default {
           text: 'The medication is named after his family.'
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327328/independence_media/MathsChampion_uiwwdt.jpg',
           date: '2022',
           header: 'World’s Best Mathematics Student',
           subheader:

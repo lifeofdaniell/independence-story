@@ -117,7 +117,7 @@ export default {
     return {
       timelines: [
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327330/independence_media/FirstAFCON_su81is.jpg',
           date: '1980',
           header: 'First African Cup of Nations Title',
           subheader:
@@ -125,7 +125,7 @@ export default {
           text: ''
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327331/independence_media/WimbledonFirstRound_z6gz1f.webp',
           date: '1983',
           header: 'Fourth Round at Wimbledon',
           subheader:
@@ -141,7 +141,7 @@ export default {
           text: ''
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327317/independence_media/bashali_n0guxl.jpg',
           date: '1985',
           header: 'World Cruiserweight Champion',
           subheader:
@@ -149,7 +149,7 @@ export default {
           text: ''
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327320/independence_media/okwaraji-carried-out-of-pitch_iyr6q7.jpg',
           date: '1989',
           header: 'Nigeria loses a star',
           subheader:
@@ -165,7 +165,7 @@ export default {
           text: ''
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327333/independence_media/FirstWorldCupGoal_mioye3.webp',
           date: '1994',
           header: 'Our First World Cup Goal',
           subheader:
@@ -181,12 +181,12 @@ export default {
           text: ''
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327329/independence_media/OlympicGoldFootball_cy9ido.webp',
           date: '1996',
           header: 'First Olympic Gold Medals',
           subheader:
-            'Chioma Ajunwa won the first-ever gold medal for Nigeria in the Long jump category at the Olympics, Atlanta.',
-          text: 'The Nigerian Men’s Football team proudly tagged The Dream Team defeated Argentina to win Africa’s first olympic gold medal in football.'
+            'The Nigerian Men’s Football team proudly tagged The Dream Team defeated Argentina to win Africa’s first olympic gold medal in football.',
+          text: 'Chioma Ajunwa won the first-ever gold medal for Nigeria in the Long jump category at the Olympics, Atlanta.'
         },
         {
           img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
@@ -197,7 +197,7 @@ export default {
           text: 'He was ranked by The Ring among the ten best heavyweights from 2005 to 2008, reaching his highest ranking of world No.2 in 2007.'
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327327/independence_media/PaulKehindeGold_jehixs.jpg',
           date: '2016',
           header: 'Breaking World records, TWICE',
           subheader:
@@ -213,7 +213,7 @@ export default {
           text: 'They are the first ever Nigerians to participate in the Winter Olympics.'
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327330/independence_media/QuadriArunaITF_psdox3.png',
           date: '2022',
           header: 'ITTF TOP 10 Player',
           subheader:

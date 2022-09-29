@@ -123,7 +123,7 @@ export default {
           text: ''
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327325/independence_media/IKDairo_qbvtfq.png',
           date: '1963',
           header: 'Membership of the Order of the British Empire',
           subheader:
@@ -147,7 +147,7 @@ export default {
           text: ''
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327315/independence_media/Living-in-Bondage_c3g3rv.jpg',
           date: '1992',
           header: 'Living in Bondage',
           subheader:
@@ -155,7 +155,7 @@ export default {
           text: 'It is regarded as the first Nigerian home video which achieved blockbuster success.'
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664441910/independence_media/Fela_bobwcl.jpg',
           date: '1997',
           header: 'Fela Anikulapo Kuti dies',
           subheader:
@@ -163,7 +163,7 @@ export default {
           text: 'Fela was a Pan-Africanist, political activist and perhaps the greatest performer Nigeria has had to date.'
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327338/independence_media/AgbaniDarego_uv9zan.webp',
           date: '2001',
           header: 'First Black African To Be Crowned Miss World',
           subheader:
@@ -203,7 +203,7 @@ export default {
           text: 'Every year since inception, the awards show has held in Lagos, Nigeria.'
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327314/independence_media/olamide-OLIC_npyvrh.jpg',
           date: '2014 - 2016',
           header: 'OLIC Sells out for three consecutive years',
           subheader:
@@ -211,7 +211,7 @@ export default {
           text: ''
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327317/independence_media/Tiwa-Savage_pptdbo.jpg',
           date: '2018',
           header: 'First Female MTV Best African Act',
           subheader:
@@ -219,7 +219,7 @@ export default {
           text: ''
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327325/independence_media/lady-buckit-1_x81tli.png',
           date: '2020',
           header: 'First feature-length animated movie',
           subheader:
@@ -235,7 +235,7 @@ export default {
           text: ''
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327314/independence_media/burna-boy-grammy-trophy_gxvnay.jpg',
           date: '2021',
           header: 'First Nigerian to win a Grammy',
           subheader:

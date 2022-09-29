@@ -32,7 +32,7 @@
         <div
           class="timeline-img__block"
           :class="addColorClass(colors).imgColor">
-          <img alt="" class="img" loading="lazy" :src="imgSrc" />
+          <img alt="" class="t-img" loading="lazy" :src="imgSrc" />
         </div>
         <div
           class="timeline-subheader bottom"
@@ -169,7 +169,7 @@ export default {
         })
 
       this.$gsap.utils
-        .toArray('.timeline-img__block > .img')
+        .toArray('.timeline-img__block > .t-img')
         .forEach((img, i) => {
           if (i !== 0) {
             this.$gsap.to(img, {
@@ -271,6 +271,15 @@ export default {
 </script>
 
 <style>
+.t-img {
+  position: relative;
+  z-index: 6;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
 .c-timeline__inner.small {
   min-height: 600px;
 }
