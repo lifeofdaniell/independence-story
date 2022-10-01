@@ -5,7 +5,8 @@ const type = 'Website'
 let url = process.env.SITE_URL
 const title = 'The Story of Nigeria'
 const siteName = 'The Story of What Was & What Is'
-const description = ''
+const description =
+  'A celebration of Nigeria’s independence day and a time travel of the most significant events that have occurred since the country attained independence 62 years ago'
 let mainImage = '/open-graph.png'
 const twitterCard = 'summary_large_image' // summary, summary_large_image, app, or player.
 const twitterHandle = ''
