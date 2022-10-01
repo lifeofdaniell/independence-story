@@ -85,7 +85,7 @@ export default {
         scrollTrigger: {
           scroller: this.isMobile ? '' : '.scroller',
           trigger: '.footer',
-          start: this.isMobile ? 'bottom 130%' : 'bottom 110%'
+          start: this.isMobile ? 'bottom 130%' : 'bottom 120%'
         }
       })
       tl.from('.footer-img__block', {

@@ -100,24 +100,6 @@ Vue.prototype.$homeReveal = (done) => {
     },
     '<+0.2'
   )
-  /*   tl.from(
-    '.hero-subtext__wrapper.left',
-    {
-      xPercent: -50,
-      autoAlpha: 0,
-      duration: 1
-    },
-    '<+0.2'
-  )
-  tl.from(
-    '.hero-subtext__wrapper.right',
-    {
-      x: 50,
-      autoAlpha: 0,
-      duration: 1
-    },
-    '<+0.3'
-  ) */
   tl.set(
     '.category-grid',
     {
@@ -149,24 +131,6 @@ Vue.prototype.$homeLoad = () => {
     },
     '<+0.2'
   )
-  /*   tl.from(
-    '.hero-subtext__wrapper.left',
-    {
-      x: -50,
-      autoAlpha: 0,
-      duration: 1
-    },
-    '<+0.2'
-  )
-  tl.from(
-    '.hero-subtext__wrapper.right',
-    {
-      x: 50,
-      autoAlpha: 0,
-      duration: 1
-    },
-    '<+0.3'
-  ) */
   tl.set(
     '.category-grid',
     {
@@ -274,6 +238,7 @@ Vue.prototype.$categoryReveal = (done) => {
     duration: 2.5,
     ease: 'Sine.inOut'
   })
+
   tl.to(
     '.column-inner.center',
     {
@@ -315,7 +280,7 @@ Vue.prototype.$categoryReveal = (done) => {
     {
       autoAlpha: 0
     },
-    '<+1.25'
+    '<+1.5'
   )
   tl.to(
     '.column-img__block.center',

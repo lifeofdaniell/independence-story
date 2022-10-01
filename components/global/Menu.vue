@@ -3,18 +3,9 @@
     <div ref="scroller" class="c-menu__slider">
       <div v-if="isMobile" class="menu-slider__inner">
         <category
-          category="Technology"
-          img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
-          link="/technology">
-          <template #description>
-            Tech has become a glimmer of hope amidst many failing systems.
-          </template>
-        </category>
-
-        <category
           category="Politics"
           colors="dark-cyan"
-          img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
+          img="https://res.cloudinary.com/deljrzv80/image/upload/v1664543919/naija_media/independence_1_ly27cr.jpg"
           link="/politics"
           white>
           <template #description>
@@ -25,7 +16,7 @@
         <category
           category="Sports"
           colors="pastel-green"
-          img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
+          img="https://res.cloudinary.com/deljrzv80/image/upload/v1664543934/naija_media/first_goal_row6tl.jpg"
           link="/sports">
           <template #description>
             When it comes to sports? We go big or go home.
@@ -35,7 +26,7 @@
         <category
           category="Entertainment"
           colors="green"
-          img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
+          img="https://res.cloudinary.com/deljrzv80/image/upload/v1664543914/naija_media/miss_world_vg6eaw.jpg"
           link="/entertainment">
           <template #description>
             There’s nothing bigger, nothing more Nigerian, than entertainment.
@@ -45,32 +36,32 @@
         <category
           category="Random Facts"
           colors="black"
-          img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
+          img="https://res.cloudinary.com/deljrzv80/image/upload/v1664543926/naija_media/Skyscraper_1_wugfgm.png"
           link="/random"
           white>
           <template #description>
             These are some facts we think you should know.
           </template>
         </category>
+
+        <category
+          category="Technology"
+          img="https://res.cloudinary.com/deljrzv80/image/upload/v1664614918/naija_media/IBM_ud56af_jeaeg8.jpg"
+          link="/technology">
+          <template #description>
+            Tech has become a glimmer of hope amidst many failing systems.
+          </template>
+        </category>
       </div>
-      <marquee-text v-else :paused="isHovering" :repeat="4">
+      <marquee-text v-else :duration="30" :paused="isHovering" :repeat="4">
         <div
           class="menu-slider__inner"
           @mouseenter="isHovering = true"
           @mouseleave="isHovering = false">
           <category
-            category="Technology"
-            img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
-            link="/technology">
-            <template #description>
-              Tech has become a glimmer of hope amidst many failing systems.
-            </template>
-          </category>
-
-          <category
             category="Politics"
             colors="dark-cyan"
-            img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
+            img="https://res.cloudinary.com/deljrzv80/image/upload/v1664543919/naija_media/independence_1_ly27cr.jpg"
             link="/politics"
             white>
             <template #description>
@@ -81,7 +72,7 @@
           <category
             category="Sports"
             colors="pastel-green"
-            img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
+            img="https://res.cloudinary.com/deljrzv80/image/upload/v1664543934/naija_media/first_goal_row6tl.jpg"
             link="/sports">
             <template #description>
               When it comes to sports? We go big or go home.
@@ -91,7 +82,7 @@
           <category
             category="Entertainment"
             colors="green"
-            img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
+            img="https://res.cloudinary.com/deljrzv80/image/upload/v1664543914/naija_media/miss_world_vg6eaw.jpg"
             link="/entertainment">
             <template #description>
               There’s nothing bigger, nothing more Nigerian, than entertainment.
@@ -101,11 +92,20 @@
           <category
             category="Random Facts"
             colors="black"
-            img="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
+            img="https://res.cloudinary.com/deljrzv80/image/upload/v1664543926/naija_media/Skyscraper_1_wugfgm.png"
             link="/random"
             white>
             <template #description>
               These are some facts we think you should know.
+            </template>
+          </category>
+
+          <category
+            category="Technology"
+            img="https://res.cloudinary.com/deljrzv80/image/upload/v1664614918/naija_media/IBM_ud56af_jeaeg8.jpg"
+            link="/technology">
+            <template #description>
+              Tech has become a glimmer of hope amidst many failing systems.
             </template>
           </category>
         </div>
@@ -116,27 +116,7 @@
         alt=""
         class="c-menu__img one"
         loading="lazy"
-        src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
-      <img
-        alt=""
-        class="c-menu__img two"
-        loading="lazy"
-        src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
-      <img
-        alt=""
-        class="c-menu__img three"
-        loading="lazy"
-        src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
-      <img
-        alt=""
-        class="c-menu__img four"
-        loading="lazy"
-        src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
-      <img
-        alt=""
-        class="c-menu__img five"
-        loading="lazy"
-        src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
+        src="https://res.cloudinary.com/deljrzv80/image/upload/v1664543921/naija_media/Politics_darwhl.jpg" />
     </div>
     <div class="c-menu__overlay"></div>
   </div>
@@ -180,22 +160,6 @@ export default {
         },
         '<'
       )
-    },
-
-    menuSlider() {
-      const tl = this.$gsap.timeline({})
-      tl.set('.c-category', {
-        x: i => i * 0.2
-      })
-      tl.to('.c-category', {
-        duration: 5,
-        ease: 'none',
-        x: '-=100%',
-        modifiers: {
-          x: this.$gsap.utils.unitize(x => parseFloat(x) % 500)
-        },
-        repeat: -1
-      })
     },
 
     checkDevice() {

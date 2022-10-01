@@ -36,22 +36,22 @@
           alt=""
           class="falling-img one"
           loading="lazy"
-          src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
+          src="https://res.cloudinary.com/deljrzv80/image/upload/v1664543918/naija_media/first_republic_nghfin.jpg" />
         <img
           alt=""
           class="falling-img two"
           loading="lazy"
-          src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
+          src="https://res.cloudinary.com/deljrzv80/image/upload/v1664585992/naija_media/Nojim-2_w1ovqf.jpg" />
         <img
           alt=""
           class="falling-img three"
           loading="lazy"
-          src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
+          src="https://res.cloudinary.com/deljrzv80/image/upload/v1664614918/naija_media/IBM_ud56af_jeaeg8.jpg" />
         <img
           alt=""
           class="falling-img four"
           loading="lazy"
-          src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" />
+          src="https://res.cloudinary.com/deljrzv80/image/upload/v1664543921/naija_media/Politics_darwhl.jpg" />
         <div class="letter-bg hero">
           <div class="n-letter">
             N
@@ -110,6 +110,12 @@ export default {
     }
   },
 
+  data() {
+    return {
+      isMobile: false
+    }
+  },
+
   head() {
     return {
       htmlAttrs: {
@@ -131,7 +137,7 @@ export default {
     },
 
     description() {
-      return ''
+      return 'A celebration of Nigeria’s independence day and a time travel of the most significant events that have occurred since the country attained independence 62 years ago.'
     },
 
     theme() {
@@ -144,6 +150,7 @@ export default {
   },
 
   mounted() {
+    this.checkDevice()
     this.$initScroll('.scroller')
     window.addEventListener('resize', this.appHeight)
     this.appHeight()
@@ -171,17 +178,9 @@ export default {
         {
           top: '105vh',
           rotation: -20,
-          duration: 4,
+          duration: this.mobile ? 21 : 7,
           ease: 'power1.inOut'
         }
-      )
-      tl.to(
-        '.falling-img.one',
-        {
-          opacity: 0,
-          ease: 'power1.inOut'
-        },
-        '<+2'
       )
     },
 
@@ -196,17 +195,9 @@ export default {
         {
           top: '105vh',
           rotation: 90,
-          duration: 5,
+          duration: this.mobile ? 24 : 8,
           ease: 'power3.inOut'
         }
-      )
-      tl.to(
-        '.falling-img.two',
-        {
-          opacity: 0,
-          ease: 'power1.inOut'
-        },
-        '<+2.5'
       )
     },
 
@@ -221,17 +212,9 @@ export default {
         {
           top: '105vh',
           rotation: -80,
-          duration: 4,
+          duration: this.mobile ? 21 : 7,
           ease: 'power3.inOut'
         }
-      )
-      tl.to(
-        '.falling-img.three',
-        {
-          opacity: 0,
-          ease: 'power1.inOut'
-        },
-        '<+1.9'
       )
     },
 
@@ -246,23 +229,23 @@ export default {
         {
           top: '105vh',
           rotation: -50,
-          duration: 6,
+          duration: this.mobile ? 27 : 9,
           ease: 'power1.inOut'
         },
         '<+0.75'
-      )
-      tl.to(
-        '.falling-img.four',
-        {
-          opacity: 0,
-          ease: 'power1.inOut'
-        },
-        '<+3.3'
       )
     },
 
     gotoCategory() {
       this.$router.push('/politics')
+    },
+
+    checkDevice() {
+      if (window.innerWidth < 767) {
+        this.isMobile = true
+      } else {
+        this.isMobile = false
+      }
     }
   }
 }

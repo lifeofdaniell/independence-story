@@ -20,17 +20,17 @@
                   alt=""
                   class="header-img center"
                   loading="lazy"
-                  src="https://res.cloudinary.com/deljrzv80/image/upload/v1664327314/independence_media/IBM_ud56af.jpg" />
+                  src="https://res.cloudinary.com/deljrzv80/image/upload/v1664614918/naija_media/IBM_ud56af_jeaeg8.jpg" />
                 <img
                   alt=""
                   class="header-img small left"
                   loading="lazy"
-                  src="https://res.cloudinary.com/deljrzv80/image/upload/v1664439679/independence_media/IBM-2_uypwix.jpg" />
+                  src="https://res.cloudinary.com/deljrzv80/image/upload/v1664614919/naija_media/IBM-2_uypwix_n4lflz.jpg" />
                 <img
                   alt=""
                   class="header-img small right"
                   loading="lazy"
-                  src="https://res.cloudinary.com/deljrzv80/image/upload/v1664439832/independence_media/IBM-3_gun4ha.jpg" />
+                  src="https://res.cloudinary.com/deljrzv80/image/upload/v1664614917/naija_media/IBM-3_gun4ha_yiuqza.jpg" />
               </div>
               <div class="storyline-subheader">
                 <div>
@@ -47,6 +47,7 @@
               :key="index"
               colors="white"
               :img-src="timeline.img"
+              :read-link="timeline.read"
               :reversed="index % 2 ? true : false"
               :timeline="timeline">
               <template #timeline-date>
@@ -58,6 +59,9 @@
               <template #timeline-text>
                 {{ timeline.subheader }}
               </template>
+              <template #timeline-source>
+                {{ timeline.source }}
+              </template>
               <template #timeline-subtext>
                 {{ timeline.text }}
               </template>
@@ -67,9 +71,9 @@
       </div>
       <next-section
         category="Random Facts"
-        img-center="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
-        img-left="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
-        img-right="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
+        img-center="https://res.cloudinary.com/deljrzv80/image/upload/v1664543926/naija_media/Skyscraper_1_wugfgm.png"
+        img-left="https://res.cloudinary.com/deljrzv80/image/upload/v1664543928/naija_media/Right-Hand-Drive-Nigeria_sk4a8o.png"
+        img-right="https://res.cloudinary.com/deljrzv80/image/upload/v1664543927/naija_media/Ghana_must_go_uqn9mw.png"
         link="/random"
         page="tech">
         <template #description>
@@ -117,99 +121,114 @@ export default {
     return {
       timelines: [
         {
-          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664440089/independence_media/UI_tv2sj5.jpg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543944/naija_media/computer_science_sgvh0i.jpg',
           date: '1972',
           header: 'Computer Science course in Nigerian Universities',
           subheader:
             'Computer Science courses instituted at the University of Lagos, University of Ife, and University of Ibadan.',
-          text: ''
+          text: '',
+          source: 'Wikipedia',
+          read: ''
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543950/naija_media/Census_nqcdau.jpg',
           date: '1973',
           header: 'Computers used in National Census exercise',
           subheader:
             'For the first time in Nigeria, computers were used in the National Census exercise.',
-          text: ''
+          text: '',
+          source: 'Wikipedia',
+          read: ''
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543944/naija_media/COAN_i2d3fu.jpg',
           date: '1978',
           header: 'COAN was inaugurated',
           subheader:
             'The Computer Association of Nigeria, now Nigeria Computer Society (NCS) is the umbrella organisation of all Information Technology Professionals, Interest Groups and Stakeholders in Nigeria.',
-          text: 'It transformed into NCS in 2002 as a result of harmonisation with other stakeholders and interest group.'
+          text: 'It transformed into NCS in 2002 as a result of harmonisation with other stakeholders and interest group.',
+          source: 'Wikipedia',
+          read: ''
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543947/naija_media/Nigerian_bank_mhdxkl.jpg',
           date: '1982',
           header: 'Leaving the folders for screens',
-          subheader: 'Banks begin to computerise.',
-          text: ''
+          subheader:
+            'Computerization in the Nigerian banking industry was introduced first in the 1980s by Society General Bank (Nigeria) Limited.',
+          text: 'Until the mid-1990s few banks that were computerized adopted the Local Area Network (LAN) within the bank branches.',
+          source: 'Wikipedia',
+          read: ''
         },
         {
-          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327316/independence_media/rsz_emeagwali-connection-machine_vk6yss.jpg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543948/naija_media/supercomputer_fdpkd5.jpg',
           date: '1989',
           header: 'Inventing a supercomputer',
           subheader:
             'Nigerian-born computer scientist Philip Emeagwali designed the program and formula for the fastest computer on earth at that time, the Connection Machine.',
-          text: 'Utilising the connection machine and 65,536 microprocessors to achieve 3.1 billion calculations per second, the fastest computational record at the time.'
+          text: 'Utilising the connection machine and 65,536 microprocessors to achieve 3.1 billion calculations per second, the fastest computational record at the time.',
+          source: 'Wikipedia',
+          read: ''
         },
         {
-          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327313/independence_media/NITEL_jp5jm6.jpg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543946/naija_media/NITEL_x6uln1.jpg',
           date: '1985',
           header: 'NITEL communications was created',
           subheader:
             'Nigerian Telecommunications was a monopoly telephone service provider in Nigeria until 1992 when the Nigerian government enacted the Nigerian Communications Commission act allowing new entrants into the telecommunications sector.',
-          text: 'NITEL is infamous for its abysmal service.'
+          text: 'NITEL is infamous for its abysmal service.',
+          source: 'Wikipedia',
+          read: ''
         },
         {
-          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327313/independence_media/ICT_q2gbcz.jpg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543946/naija_media/birth_phones_bpitse.jpg',
           date: '2001',
           header: 'The birth of mobile phones and mobile internet',
           subheader:
             'The Nigerian Communications Services awarded licences to operate to Econet (now Airtel) and MTN in August.',
-          text: 'This was a turning point for communication systems and accessibility in Nigeria.'
+          text: 'This was a turning point for communication systems and accessibility in Nigeria.',
+          source: 'Wikipedia',
+          read: ''
         },
         {
-          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327314/independence_media/MainOne_gefjxm.jpg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543946/naija_media/Mainone_ocns1n.jpg',
           date: '2010',
           header: 'MainOne Launch in West Africa',
           subheader:
             'The submarine communications cable stretching from Portugal to South Africa added Nigeria along its route.',
-          text: 'This positively impacted the quality of internet connection available in the country.'
+          text: 'This positively impacted the quality of internet connection available in the country.',
+          source: 'Wikipedia',
+          read: ''
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543949/naija_media/Andela_tm9ts1.jpg',
           date: '2014',
           header: 'Andela launches in Lagos',
           subheader:
             'The tech talent ecosystem and community came to Nigeria, paving the way for international opportunities and exposure for Nigerian tech.',
-          text: ''
+          text: '',
+          source: 'Wikipedia',
+          read: ''
         },
         {
-          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327312/independence_media/Netflix-Nigeria_iehx2t.jpg',
-          date: '2016',
-          header: 'Netflix and Chill Comes to Nigeria',
-          subheader:
-            'In it’s expansion efforts to 130 countries in 2016, Netflix launched in Nigeria.',
-          text: 'Fifty, a film directed by the late Biyi Bandele, was one of the first Nigerian films streamed on the platform.'
-        },
-        {
-          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664327334/independence_media/Paystack-Founders_jc80fj.jpg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543948/naija_media/paystack_w6vtc3.jpg',
           date: '2020',
           header: 'Paystack acquisition by Stripe',
           subheader:
             'Founded in 2015 by Shola Akinlade and Ezra Olubi, Paystack was one of the first Nigerian startups to get into US-based seed accelerator, Y Combinator.',
-          text: 'The payments platform was acquired by Stripe for over $200 million.'
+          text: 'The payments platform was acquired by Stripe for over $200 million.',
+          source: 'Wikipedia',
+          read: ''
         },
         {
-          img: 'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
+          img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543944/naija_media/interswitch_bfqaiy.jpg',
           date: '2019',
           header: 'First Nigerian Unicorn',
           subheader:
             'Nigerian digital payments company, Interswitch became Nigeria’s first unicorn and Africa’s second ever unicorn.',
-          text: ''
+          text: '',
+          source: 'Wikipedia',
+          read: ''
         }
       ]
     }
@@ -236,7 +255,7 @@ export default {
     },
 
     description() {
-      return ''
+      return 'The tech scene currently serves as a glimmer of hope for many Nigerians and here are a few milestones since independence'
     },
 
     theme() {

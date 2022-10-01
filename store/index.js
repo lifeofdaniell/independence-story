@@ -1,8 +1,3 @@
-// import { removeKeys } from '../commons/utils'
-const apiKey = process.env.apiKey
-const apiSecret = process.env.apiSecret
-const cloudName = process.env.cloudName
-
 export const state = () => ({
   menuOpen: false,
   loading: true,
@@ -43,21 +38,5 @@ export const mutations = {
 
   updateGridColor: (state, payload) => {
     state.gridColor = payload
-  }
-}
-
-export const actions = {
-  fetchImages(context, payload) {
-    const imageURL = `https://${apiKey}:${apiSecret}@api.cloudinary.com/v1_1/${cloudName}/resources/image`
-    return new Promise((resolve, reject) => {
-      this.$axios
-        .$get(imageURL)
-        .then((response) => {
-          resolve(response)
-        })
-        .catch((error) => {
-          reject(error)
-        })
-    })
   }
 }

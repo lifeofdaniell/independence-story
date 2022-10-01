@@ -7,10 +7,7 @@ export default {
   ssr: false,
 
   env: {
-    siteURL: process.env.SITE_URL,
-    apiKey: process.env.CLOUDINARY_API_KEY,
-    apiSecret: process.env.CLOUDINARY_SECRET,
-    cloudName: process.env.CLOUDINARY_CLOUD_NAME
+    siteURL: process.env.SITE_URL
   },
 
   target: 'static',

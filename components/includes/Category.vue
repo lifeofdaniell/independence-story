@@ -1,9 +1,5 @@
 <template>
-  <nuxt-link
-    class="c-category"
-    :to="link"
-    @mouseenter.native="categoryHoverIn"
-    @mouseleave.native="categoryHoverOut">
+  <nuxt-link class="c-category" :to="link">
     <div class="c-category__inner" :class="addColorClass(colors).categoryColor">
       <img alt="" class="category-img" loading="lazy" :src="img" />
       <div class="category-inner__slide">
@@ -79,18 +75,6 @@ export default {
       this.$store.commit('toggleMenu', false)
     },
 
-    categoryHoverIn(e) {
-      e.currentTarget.lastElementChild.classList.add('active')
-      e.currentTarget.firstElementChild.firstElementChild.classList.add('show')
-    },
-
-    categoryHoverOut(e) {
-      e.currentTarget.lastElementChild.classList.remove('active')
-      e.currentTarget.firstElementChild.firstElementChild.classList.remove(
-        'show'
-      )
-    },
-
     addColorClass(color) {
       const _color = {
         categoryColor: '',
@@ -130,11 +114,15 @@ export default {
 </script>
 
 <style scoped>
-@media screen and (min-width: 992px) {
-  .category-description {
-    font-size: 20px;
-    line-height: 30px;
-  }
+.c-category:hover > .c-category__inner > .category-img {
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  opacity: 1;
+}
+.c-category:hover > .c-category__details {
+  opacity: 1;
 }
 .skeleton-wrapper::-webkit-scrollbar {
   display: none;

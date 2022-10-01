@@ -6,7 +6,7 @@ let url = process.env.SITE_URL
 const title = 'The Story of Nigeria'
 const siteName = 'The Story of What Was & What Is'
 const description = ''
-let mainImage = '/webclip.png'
+let mainImage = '/open-graph.png'
 const twitterCard = 'summary_large_image' // summary, summary_large_image, app, or player.
 const twitterHandle = ''
 

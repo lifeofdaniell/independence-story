@@ -35,6 +35,15 @@
           <img alt="" class="t-img" loading="lazy" :src="imgSrc" />
         </div>
         <div
+          class="img-source"
+          :class="[reversed ? 'inverse' : '', addColorClass(colors).page]">
+          <div>
+            Image Credits:
+            <slot name="timeline-source" />
+          </div>
+          <div><a :href="readLink" target="_blank">Read More</a></div>
+        </div>
+        <div
           class="timeline-subheader bottom"
           :class="[reversed ? 'right' : '', addColorClass(colors).page]">
           <h4 class="timeline-text no-margin" data-paragraph-bottom>
@@ -69,6 +78,12 @@ export default {
     },
     reversed: Boolean,
     imgSrc: {
+      type: String,
+      required: true
+    },
+
+    source: String,
+    readLink: {
       type: String,
       required: true
     },
@@ -271,46 +286,6 @@ export default {
 </script>
 
 <style>
-.t-img {
-  position: relative;
-  z-index: 6;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-.c-timeline__inner.small {
-  min-height: 600px;
-}
-
-@media screen and (max-width: 767px) {
-  .c-timeline__inner.small {
-    min-height: 400px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .line.vertical {
-    height: 12%;
-    bottom: 30%;
-  }
-  .line.horizontal {
-    bottom: 30%;
-  }
-  .timeline-header {
-    text-transform: capitalize;
-    font-size: 50px;
-    line-height: 65px;
-  }
-  .timeline-text {
-    font-size: 20px;
-    line-height: 32px;
-  }
-  .timeline-text__wrapper {
-    margin-top: 35px;
-  }
-}
 .timeline-img__block::after {
   content: '';
   position: absolute;
