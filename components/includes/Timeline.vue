@@ -85,7 +85,8 @@ export default {
       type: Object,
       default: () => {
         return {
-          text: null
+          text: null,
+          source: null
         }
       }
     }

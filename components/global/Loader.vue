@@ -145,19 +145,28 @@ export default {
     this.loadingAnimation()
     setTimeout(() => {
       this.preloadImages(this.img)
-    }, 7000)
+    }, 7500)
   },
 
   methods: {
     loadingAnimation() {
-      this.$gsap.from('.letter-bg.load', {
+      this.$gsap.to('.letter-bg.load', {
         delay: 1,
-        bottom: '50%',
-        fontSize: '17vw',
-        lineHeight: '18vw',
-        duration: 3,
-        ease: 'bounce.out'
+        autoAlpha: 1,
+        duration: 1.5
       })
+      this.$gsap.from(
+        '.letter-bg.load',
+        {
+          delay: 1,
+          bottom: '50%',
+          fontSize: '17vw',
+          lineHeight: '18vw',
+          duration: 3,
+          ease: 'bounce.out'
+        },
+        '>'
+      )
       this.$gsap.from(
         '.fall',
         {
@@ -199,6 +208,7 @@ export default {
         '.loader-progress__fill'
       ).style.width = `${this.percent}%`
       if (this.imagesLoaded === this.totalImages) {
+        document.querySelector('.loader-progress__fill').style.width = '100%'
         return this.doneLoading()
       }
     },
@@ -242,14 +252,3 @@ export default {
   }
 }
 </script>
-<style scoped>
-.c-loader__inner {
-  opacity: 0;
-}
-.loader-year {
-  margin-bottom: 0;
-}
-.year-wrapper {
-  min-width: 300px;
-}
-</style>
