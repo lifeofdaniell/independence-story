@@ -25,7 +25,7 @@
       <div class="n-letter fall">
         N
       </div>
-      <div class="i-letter fall">
+      <div class="i-letter one fall">
         I
       </div>
       <div class="g-letter fall">
@@ -155,7 +155,7 @@ export default {
         autoAlpha: 1,
         duration: 1.5
       })
-      this.$gsap.from(
+      /*  this.$gsap.from(
         '.letter-bg.load',
         {
           delay: 1,
@@ -173,6 +173,96 @@ export default {
           translateX: '0vw',
           translateY: '0vw',
           rotate: 0,
+          duration: 7,
+          ease: 'none'
+        },
+        '<'
+      ) */
+
+      this.$gsap.to(
+        '.letter-bg.load',
+        {
+          delay: 1,
+          bottom: '0%',
+          fontSize: '23vw',
+          lineHeight: '24vw',
+          duration: 3,
+          ease: 'bounce.out'
+        },
+        '>'
+      )
+      this.$gsap.to(
+        '.n-letter.fall',
+        {
+          translateX: '-5vw',
+          translateY: '0vw',
+          rotate: -28,
+          duration: 7,
+          ease: 'none'
+        },
+        '<'
+      )
+      this.$gsap.to(
+        '.i-letter.one.fall',
+        {
+          translateX: '-2vw',
+          translateY: '-1vw',
+          rotate: -28,
+          duration: 7,
+          ease: 'none'
+        },
+        '<'
+      )
+      this.$gsap.to(
+        '.g-letter.fall',
+        {
+          translateX: '-3vw',
+          translateY: '-1vw',
+          rotate: 24,
+          duration: 7,
+          ease: 'none'
+        },
+        '<'
+      )
+      this.$gsap.to(
+        '.e-letter.fall',
+        {
+          translateX: '2vw',
+          translateY: '0vw',
+          rotate: -21,
+          duration: 7,
+          ease: 'none'
+        },
+        '<'
+      )
+      this.$gsap.to(
+        '.r-letter.fall',
+        {
+          translateX: '2vw',
+          translateY: '1vw',
+          rotate: -18,
+          duration: 7,
+          ease: 'none'
+        },
+        '<'
+      )
+      this.$gsap.to(
+        '.i-letter.two.fall',
+        {
+          translateX: '9vw',
+          translateY: '-1vw',
+          rotate: -28,
+          duration: 7,
+          ease: 'none'
+        },
+        '<'
+      )
+      this.$gsap.to(
+        '.a-letter.fall',
+        {
+          translateX: '8vw',
+          translateY: '0vw',
+          rotate: 11,
           duration: 7,
           ease: 'none'
         },

@@ -162,7 +162,10 @@ p {
 }
 
 .letter-bg.load {
-  opacity: 0;
+  bottom: 50%;
+  opacity: 1;
+  font-size: 17vw;
+  line-height: 18vw;
 }
 
 .dgreen-text {
@@ -446,6 +449,12 @@ p {
   color: #74e779;
 }
 
+.n-letter.fall {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
 .i-letter {
   -webkit-transform: translate(-2vw, -1vw) rotate(-28deg);
   -ms-transform: translate(-2vw, -1vw) rotate(-28deg);
@@ -459,12 +468,30 @@ p {
   transform: translate(9vw, -1vw) rotate(-28deg);
 }
 
+.i-letter.two.fall {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.i-letter.one.fall {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
 .g-letter {
   opacity: 0.5;
   -webkit-transform: translate(-3vw, -1vw) rotate(24deg);
   -ms-transform: translate(-3vw, -1vw) rotate(24deg);
   transform: translate(-3vw, -1vw) rotate(24deg);
   color: #fff;
+}
+
+.g-letter.fall {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
 }
 
 .e-letter {
@@ -475,6 +502,12 @@ p {
   color: #fff;
 }
 
+.e-letter.fall {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
 .r-letter {
   opacity: 0.5;
   -webkit-transform: translate(2vw, 1vw) rotate(18deg);
@@ -483,11 +516,23 @@ p {
   color: #fff;
 }
 
+.r-letter.fall {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
 .a-letter {
   -webkit-transform: translate(8vw, 0vw) rotate(11deg);
   -ms-transform: translate(8vw, 0vw) rotate(11deg);
   transform: translate(8vw, 0vw) rotate(11deg);
   color: #74e779;
+}
+
+.a-letter.fall {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
 }
 
 .c-menu {
