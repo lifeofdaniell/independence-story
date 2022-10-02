@@ -143,6 +143,9 @@ export default {
 
   mounted() {
     this.loadingAnimation()
+    setTimeout(() => {
+      this.preloadImages(this.img)
+    }, 7000)
   },
 
   methods: {
@@ -170,21 +173,22 @@ export default {
         '.c-loader__inner',
         {
           autoAlpha: 1,
-          duration: 1,
-          onComplete: this.preloadImages
+          duration: 1
         },
         '<+3.5'
       )
     },
 
-    preloadImages() {
+    preloadImages(imageArray, index) {
       this.totalImages = this.img.length
-      this.imgLoaded()
-      for (let i = 0; i < this.totalImages; i++) {
-        const tImg = new Image()
-        tImg.onload = this.imgLoaded
-        tImg.onerror = this.imgLoaded
-        tImg.src = this.img[i]
+      index = index || 0
+      if (imageArray && imageArray.length > index) {
+        const img = new Image()
+        img.onload = () => {
+          this.imgLoaded()
+          this.preloadImages(imageArray, index + 1)
+        }
+        img.src = imageArray[index]
       }
     },
 
@@ -224,7 +228,7 @@ export default {
       tl.to(
         secondLetters,
         {
-          yPercent: -75,
+          yPercent: -77,
           duration: 1,
           ease: 'power3.outIn',
           stagger: 0.1
