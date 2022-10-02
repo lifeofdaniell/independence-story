@@ -6,6 +6,7 @@ import 'splitting/dist/splitting.css'
 import 'splitting/dist/splitting-cells.css'
 
 gsap.registerPlugin(ScrollTrigger)
+Vue.prototype.$splittext = Splitting
 
 Vue.prototype.$timelineParagraph = () => {
   // eslint-disable-next-line no-unused-vars

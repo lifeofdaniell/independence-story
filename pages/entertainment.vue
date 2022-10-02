@@ -119,17 +119,6 @@ export default {
   data() {
     return {
       timelines: [
-        // {
-        //   img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543907/naija_media/membership_british_zok2sr.jpg',
-        //   date: '1963',
-        //   header: 'Membership of the Order of the British Empire',
-        //   subheader:
-        //     'Late I.K Dairo became the only African musician ever honoured by receiving membership of the Order of the British Empire.',
-        //   text: 'An order of chivalry in the United Kingdom. He was perhaps the biggest African music act in the 60s.',
-        //   source: 'Wikipedia',
-        //
-        //   read: ''
-        // },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664588365/naija_media/casino-cinema_afhcpb.jpg',
           date: '1972',
@@ -137,8 +126,7 @@ export default {
           subheader:
             'The Indigenization Decree by Yakubu Gowon demanded the transfer of ownership of about a total of 300 film theatres from their foreign owners to Nigerians',
           text: 'Which resulted in more Nigerians playing active roles in the cinema and film.',
-          source: 'Wikipedia',
-          read: ''
+          source: 'yabacity.com'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664588142/naija_media/new-masquerade_cvtfer.jpg',
@@ -147,8 +135,7 @@ export default {
           subheader:
             'New Masquerade, created and written by James Iroha and aired on Nigerian Television Network on Tuesday nights from 8:30 pm – 9:00 pm.',
           text: '',
-          source: 'Wikipedia',
-          read: ''
+          source: 'Facebook'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543905/naija_media/living_in_bondage_ezbla6.jpg',
@@ -157,8 +144,7 @@ export default {
           subheader:
             'Directed by Chris Obi Rapu, and written by Kenneth Nnebue and Okechukwu Ogunjiofor.',
           text: 'It is regarded as the first Nigerian home video which achieved blockbuster success.',
-          source: 'Wikipedia',
-          read: ''
+          source: 'Google'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543905/naija_media/Fela_idxfwi.jpg',
@@ -167,8 +153,7 @@ export default {
           subheader:
             'The death of the pioneer of Afrobeat, Fela Anikulapo Kuti rocked the entire country.',
           text: 'Fela was a Pan-Africanist, political activist and perhaps the greatest performer Nigeria has had to date.',
-          source: 'Wikipedia',
-          read: ''
+          source: 'Genius'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543914/naija_media/miss_world_vg6eaw.jpg',
@@ -177,8 +162,7 @@ export default {
           subheader:
             "The entire world was captivated by Chief Ibiagbanidokibubo Asenite 'Agbani' Darego, MFR who was crowned the Miss World title, held in Puerto Rico, at the age of 19.",
           text: 'She remains the only Nigerian to hold that title ever since.',
-          source: 'Wikipedia',
-          read: ''
+          source: 'Google'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664587500/naija_media/africa-magic_ghpnc1.jpg',
@@ -187,8 +171,7 @@ export default {
           subheader:
             'This was a pivotal moment for filmmakers and the entire Nigerian movie industry as it was an answer to the difficulties faced with marketing and distribution of films.',
           text: '',
-          source: 'Wikipedia',
-          read: ''
+          source: 'Google'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664586793/naija_media/Headies-award_ykpcp1.jpg',
@@ -197,8 +180,7 @@ export default {
           subheader:
             'The Headies Awards, formerly called Hip Hop World Awards is Nigeria’s pioneer music awards show established to recognize outstanding achievements in the Nigerian music industry.',
           text: 'Its first edition had winners such as P-Square, DJ Jimmy Jat and Keke Ogungbe.',
-          source: 'Wikipedia',
-          read: ''
+          source: 'Google'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664586615/naija_media/amvca_rfjcgp.jpg',
@@ -207,8 +189,7 @@ export default {
           subheader:
             'Africa Magic Viewers Choice Awards is perhaps the largest celebration of television and film in Africa.',
           text: 'Every year since inception, the awards show has held in Lagos, Nigeria.',
-          source: 'Wikipedia',
-          read: ''
+          source: 'Google'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543906/naija_media/OLIC_wtm84d.jpg',
@@ -217,8 +198,7 @@ export default {
           subheader:
             'Popularly know as King of Rap, or the King of the streets, Olamide was the first Nigerian artiste to sell out the Eko Convention Center, for three consecutive years',
           text: '',
-          source: 'Wikipedia',
-          read: ''
+          source: 'Guardian NG'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543947/naija_media/netflix_dm8fox.jpg',
@@ -227,8 +207,7 @@ export default {
           subheader:
             'In it’s expansion efforts to 130 countries in 2016, Netflix launched in Nigeria.',
           text: 'Fifty, a film directed by the late Biyi Bandele, was one of the first Nigerian films streamed on the platform.',
-          source: 'Wikipedia',
-          read: ''
+          source: 'Netflix'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543905/naija_media/First_mtv_female_hsslaf.jpg',
@@ -237,8 +216,7 @@ export default {
           subheader:
             'Singer, songwriter and actress, Tiwa Savage was the first female musician to win the "Best African Act" award at the MTV Europe awards in Spain.',
           text: '',
-          source: 'Wikipedia',
-          read: ''
+          source: 'Wikipedia'
         },
 
         {
@@ -248,8 +226,7 @@ export default {
           subheader:
             'Lady Buckit and the Motley Mopsters (LBMM) is Nigeria’s first feature-lenght animated movie and was directed by Adebisi Adetayo with an estimated budget of 400 million Naira.',
           text: 'In 2021, it won the Best Animation category at the Africa Movie Academy Awards.',
-          source: 'Wikipedia',
-          read: ''
+          source: ''
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543907/naija_media/wizkid_O2_g0dtzg.jpg',
@@ -258,8 +235,7 @@ export default {
           subheader:
             'Wizkid, one of the biggest acts in Africa, sold out the famous London O2 Arena, with a capacity of 20,000 people, three times in a row in November.',
           text: '',
-          source: 'Wikipedia',
-          read: ''
+          source: ''
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543905/naija_media/burna_syrqyl.jpg',
@@ -268,8 +244,7 @@ export default {
           subheader:
             'Performing artist and musician, Burna Boy, popularly referred to as the African Giant, is the first Nigerian to be awarded a Grammy in the Best World Music Album category for his fifth studio album, Twice as Tall.',
           text: '',
-          source: 'Wikipedia',
-          read: ''
+          source: ''
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543905/naija_media/ckay_iyivwy.jpg',
@@ -278,8 +253,7 @@ export default {
           subheader:
             "Everyone knows Nigerians are killing it in the music industry. Regardless, it was still a surprise when 'Essence (Wizkid Ft. Tems)' crossed the ocean and settled on the Billboard 100 in 2020",
           text: "'Love Nwatiti' followed the next year. CKay’s sleeper hit is also the most certified afrobeat song!",
-          source: 'Wikipedia',
-          read: ''
+          source: ''
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664587260/naija_media/flavour_qklay7.png',
@@ -288,8 +262,7 @@ export default {
           subheader:
             'Nwa Baby crooner, Flavour was the first African to receive $3m as an advance payment for his biopic on Amazon Prime ',
           text: '',
-          source: 'Wikipedia',
-          read: ''
+          source: ''
         }
       ]
     }

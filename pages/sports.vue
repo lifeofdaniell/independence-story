@@ -127,8 +127,7 @@ export default {
           subheader:
             'On March 22nd 1980, Segun Odegbami scored twice to win the then Green Eagles their first ever African Cup of Nations title.',
           text: '',
-          source: 'Brila',
-          read: 'https://www.brila.net/40-years-after-christian-chukwu-talks-about-historic-afcon-1980-triumph/'
+          source: 'Brila'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543938/naija_media/wimbeldon_cwuic1.jpg',
@@ -137,8 +136,7 @@ export default {
           subheader:
             'Nduka Odizor, was the first and remains the only Nigerian player to get to the fourth round at the Wimbledon.',
           text: '',
-          source: 'Skabash',
-          read: 'https://www.skabash.com/wimbledon-nduka-odizors-1983-exploit-other-trivia-on-worlds-oldest-tennis-competition/'
+          source: 'Skabash'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543934/naija_media/Golden_Eaglets_rimtgw.jpg',
@@ -147,8 +145,7 @@ export default {
           subheader:
             'The Golden Eaglets (our U-17 national football team) won the first-ever FIFA U-17 Championship held in China.',
           text: '',
-          source: 'ACLSports',
-          read: 'https://www.aclsports.com/the-making-of-the-world-golden-eaglets/'
+          source: 'ACLSports'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543939/naija_media/cruiseweight_pchwsp.jpg',
@@ -157,8 +154,7 @@ export default {
           subheader:
             'Bash Ali made history as the first Cruiserweight Boxing champion from the African continent.',
           text: '',
-          source: 'Getty Images',
-          read: 'https://sportandstudy.org/bash-ali-biography-nigeria-greatest-boxer/'
+          source: 'Getty Images'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543936/naija_media/loss_of_a_star_bux0up.jpg',
@@ -167,8 +163,7 @@ export default {
           subheader:
             'A rather devastating occurrence:  Rising Star, Samuel Okwaraji died due to heart failure in the 1990 FIFA World Cup Qualifier match against Angola.',
           text: 'He is said to have literally played his heart for Nigeria.',
-          source: 'PunchNG',
-          read: 'https://www.brila.net/how-samuel-okwaraji-slumped-and-died-in-1989/'
+          source: 'PunchNG'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543936/naija_media/Rashidi_Yekini_zged2h.jpg',
@@ -177,8 +172,7 @@ export default {
           subheader:
             'Late Rashidi Yekini was the first Nigerian footballer to be named African Footballer of the Year after scoring 34 goals in 32 games.',
           text: '',
-          source: 'Playmakerstats',
-          read: ''
+          source: 'Playmakerstats'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543934/naija_media/first_goal_row6tl.jpg',
@@ -187,8 +181,7 @@ export default {
           subheader:
             'At the World Cup in USA the following year, reigning African Footballer of the Year Rashidi Yekini scored Nigeria’s first ever goal against Bulgaria.',
           text: '',
-          source: 'Wikipedia',
-          read: ''
+          source: 'AP'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543935/naija_media/Fifa_Ranking_oljt0o.jpg',
@@ -197,8 +190,7 @@ export default {
           subheader:
             'The Super Eagles were ranked fifth globally by FIFA and number one in Africa! It remains our highest ranking so far.',
           text: '',
-          source: 'Wikipedia',
-          read: ''
+          source: 'ConnectNigeria'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543935/naija_media/first_gold_medal_pbjcvu.jpg',
@@ -207,8 +199,7 @@ export default {
           subheader:
             'The Nigerian Men’s Football team proudly tagged The Dream Team defeated Argentina to win Africa’s first olympic gold medal in football.',
           text: 'Chioma Ajunwa won the first-ever gold medal for Nigeria in the Long jump category at the Olympics, Atlanta.',
-          source: 'Wikipedia',
-          read: ''
+          source: 'Olympics.com'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543937/naija_media/Samuel_Peter_r0dpsc.jpg',
@@ -217,8 +208,7 @@ export default {
           subheader:
             'Samuel Okon Peter is the first Nigerian to hold the WBC Heavyweight Title.',
           text: 'He was ranked by The Ring among the ten best heavyweights from 2005 to 2008, reaching his highest ranking of world No.2 in 2007.',
-          source: 'Wikipedia',
-          read: ''
+          source: 'Getty Images'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543938/naija_media/world_record_twice_a6qsln.jpg',
@@ -227,8 +217,7 @@ export default {
           subheader:
             'Late Paul Kehinde broke the men’s 65kg World Record twice ( with lifts of 218kg and 220kg)  at the Paralympics in Rio.',
           text: '',
-          source: 'Wikipedia',
-          read: ''
+          source: 'SportsBrief'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543937/naija_media/Bobsled_Team_d5jltj.jpg',
@@ -237,8 +226,7 @@ export default {
           subheader:
             'Established by Seun Adigun in 2016, this self-funding female team represented Nigeria at the Winter Olympics held in Pyeongchang, South Korea.',
           text: 'They are the first ever Nigerians to participate in the Winter Olympics.',
-          source: 'Wikipedia',
-          read: ''
+          source: 'Getty Images'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543933/naija_media/Asisat_Oshoala_jqc9sd.jpg',
@@ -247,8 +235,7 @@ export default {
           subheader:
             'Super Falcons striker, Asisat Lamina Oshoala got nominated for the 2022 Ballon dór Feminine player of the year following her impressive season with Fc Barcelona Femini in the Spanish League.',
           text: 'She also holds the record for most African Women’s Footballer of the Year awards, winning it five times.',
-          source: 'Wikipedia',
-          read: ''
+          source: 'Vanguard NG'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543935/naija_media/ITTF_z5fnao.jpg',
@@ -257,8 +244,7 @@ export default {
           subheader:
             'In 2014, Quadri Aruna was named Star player of the year by the ITTF and has only advanced ever since.',
           text: 'He is the first African and black player to be ranked in the top 10 in world table tennis ranking. This Nigerian is currently ranked number 10 globally and number 1 in Africa.',
-          source: 'Wikipedia',
-          read: ''
+          source: 'ChannelsTV'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543937/naija_media/Tobi_Amusan_vpplpp.jpg',
@@ -267,8 +253,7 @@ export default {
           subheader:
             'Tobi Amusan entered the 2022 World Athletics Championships as a medal contender. In the heats she ran an African record of 12.40s, but then in the semifinal, she set a new world record of 12.12s.',
           text: 'Then she went on to best her time once again in the final, running 12.06s (2.5m/s wind assisted), becoming the first Nigerian world champion at the World Athletics Championships.',
-          source: 'Wikipedia',
-          read: ''
+          source: 'Getty Images'
         }
       ]
     }

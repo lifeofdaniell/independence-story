@@ -10,16 +10,10 @@
       <Menu v-if="menuOpen" />
     </transition>
 
-    <!--   <transition :css="false" @leave="loaderLeave">
+    <transition :css="false" @leave="loaderLeave">
       <Loader v-if="loaderOpen" />
     </transition>
-    <transition
-      :css="false"
-      @before-enter="beforeEnter"
-      @enter="enter"
-      @leave="leave">
-      <Nuxt />
-    </transition> -->
+
     <Nuxt />
   </div>
 </template>
@@ -65,12 +59,6 @@ export default {
       this.$store.commit('toggleMenu', false)
     },
 
-    beforeEnter(el) {},
-
-    enter(el, done) {},
-
-    leave(el) {},
-
     menuBEnter(el) {
       this.$gsap.set(el, {
         yPercent: 100
@@ -111,7 +99,7 @@ export default {
         el,
         {
           autoAlpha: 0,
-          duration: 3,
+          duration: 1.5,
           onComplete: done
         },
         '>'

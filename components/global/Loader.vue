@@ -4,8 +4,13 @@
       <h4 class="no-margin">
         Where it all started
       </h4>
-      <div class="loader-year">
-        1960
+      <div class="year-wrapper">
+        <div class="loader-year" data-year>
+          1960
+        </div>
+        <div class="loader-year" data-current>
+          2022
+        </div>
       </div>
       <div class="loader-progress__bar">
         <div class="loader-progress__fill"></div>
@@ -195,8 +200,49 @@ export default {
     },
 
     doneLoading() {
-      this.$store.commit('toggleLoading', false)
+      const first = document.querySelector('[data-year]')
+      const firstYear = this.$splittext({ target: first })
+      const letters = firstYear[0].chars
+      const second = document.querySelector('[data-current]')
+      const currentYear = this.$splittext({ target: second })
+      const secondLetters = currentYear[0].chars
+      const tl = this.$gsap.timeline({})
+      tl.to(letters, {
+        delay: 1.5,
+        yPercent: -100,
+        duration: 1,
+        ease: 'power3.inOut',
+        stagger: 0.1
+      })
+      tl.set(
+        '[data-current]',
+        {
+          overflow: 'visible'
+        },
+        '<'
+      )
+      tl.to(
+        secondLetters,
+        {
+          yPercent: -75,
+          duration: 1,
+          ease: 'power3.outIn',
+          stagger: 0.1
+        },
+        '<+0.25'
+      )
+      setTimeout(() => {
+        this.$store.commit('toggleLoading', false)
+      }, 3500)
     }
   }
 }
 </script>
+<style scoped>
+.loader-year {
+  margin-bottom: 0;
+}
+.year-wrapper {
+  min-width: 300px;
+}
+</style>

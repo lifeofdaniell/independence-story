@@ -127,8 +127,7 @@ export default {
           subheader:
             'Computer Science courses instituted at the University of Lagos, University of Ife, and University of Ibadan.',
           text: '',
-          source: 'Wikipedia',
-          read: ''
+          source: ''
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543950/naija_media/Census_nqcdau.jpg',
@@ -137,8 +136,7 @@ export default {
           subheader:
             'For the first time in Nigeria, computers were used in the National Census exercise.',
           text: '',
-          source: 'Wikipedia',
-          read: ''
+          source: 'legit.ng'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543944/naija_media/COAN_i2d3fu.jpg',
@@ -147,8 +145,7 @@ export default {
           subheader:
             'The Computer Association of Nigeria, now Nigeria Computer Society (NCS) is the umbrella organisation of all Information Technology Professionals, Interest Groups and Stakeholders in Nigeria.',
           text: 'It transformed into NCS in 2002 as a result of harmonisation with other stakeholders and interest group.',
-          source: 'Wikipedia',
-          read: ''
+          source: 'techeconomy.ng'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543947/naija_media/Nigerian_bank_mhdxkl.jpg',
@@ -157,8 +154,7 @@ export default {
           subheader:
             'Computerization in the Nigerian banking industry was introduced first in the 1980s by Society General Bank (Nigeria) Limited.',
           text: 'Until the mid-1990s few banks that were computerized adopted the Local Area Network (LAN) within the bank branches.',
-          source: 'Wikipedia',
-          read: ''
+          source: 'Getty Images'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543948/naija_media/supercomputer_fdpkd5.jpg',
@@ -167,8 +163,7 @@ export default {
           subheader:
             'Nigerian-born computer scientist Philip Emeagwali designed the program and formula for the fastest computer on earth at that time, the Connection Machine.',
           text: 'Utilising the connection machine and 65,536 microprocessors to achieve 3.1 billion calculations per second, the fastest computational record at the time.',
-          source: 'Wikipedia',
-          read: ''
+          source: 'howng.com'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543946/naija_media/NITEL_x6uln1.jpg',
@@ -177,8 +172,7 @@ export default {
           subheader:
             'Nigerian Telecommunications was a monopoly telephone service provider in Nigeria until 1992 when the Nigerian government enacted the Nigerian Communications Commission act allowing new entrants into the telecommunications sector.',
           text: 'NITEL is infamous for its abysmal service.',
-          source: 'Wikipedia',
-          read: ''
+          source: 'trendsmap.com'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543946/naija_media/birth_phones_bpitse.jpg',
@@ -187,8 +181,7 @@ export default {
           subheader:
             'The Nigerian Communications Services awarded licences to operate to Econet (now Airtel) and MTN in August.',
           text: 'This was a turning point for communication systems and accessibility in Nigeria.',
-          source: 'Wikipedia',
-          read: ''
+          source: 'Guardian NG'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543946/naija_media/Mainone_ocns1n.jpg',
@@ -197,8 +190,7 @@ export default {
           subheader:
             'The submarine communications cable stretching from Portugal to South Africa added Nigeria along its route.',
           text: 'This positively impacted the quality of internet connection available in the country.',
-          source: 'Wikipedia',
-          read: ''
+          source: 'msmeafricaonline.com'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543949/naija_media/Andela_tm9ts1.jpg',
@@ -207,8 +199,7 @@ export default {
           subheader:
             'The tech talent ecosystem and community came to Nigeria, paving the way for international opportunities and exposure for Nigerian tech.',
           text: '',
-          source: 'Wikipedia',
-          read: ''
+          source: 'CurrentSchoolNews'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543948/naija_media/paystack_w6vtc3.jpg',
@@ -217,8 +208,7 @@ export default {
           subheader:
             'Founded in 2015 by Shola Akinlade and Ezra Olubi, Paystack was one of the first Nigerian startups to get into US-based seed accelerator, Y Combinator.',
           text: 'The payments platform was acquired by Stripe for over $200 million.',
-          source: 'Wikipedia',
-          read: ''
+          source: 'Brent Franson'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543944/naija_media/interswitch_bfqaiy.jpg',
@@ -227,8 +217,7 @@ export default {
           subheader:
             'Nigerian digital payments company, Interswitch became Nigeria’s first unicorn and Africa’s second ever unicorn.',
           text: '',
-          source: 'Wikipedia',
-          read: ''
+          source: 'Nairametrics'
         }
       ]
     }

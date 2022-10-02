@@ -126,8 +126,7 @@ export default {
           subheader:
             'Although we had gained Independence, there was still the heavy influence of the British monarchy in Nigeria.',
           text: 'Under President Nnamdi Azikiwe’s regime, Nigeria became a republic. Thus, we became solely responsible for our own future.',
-          source: 'Wikipedia',
-          read: ''
+          source: 'Oasdom'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543918/naija_media/first_military_coup_ohkem8.jpg',
@@ -136,8 +135,7 @@ export default {
           subheader:
             'The military coup marked the end of the first republic and the defining moment for what would be a series of unfortunate events.',
           text: 'It led to the death of many political leaders, including Nigeria’s first and only Prime Minister, Abubakar Tafawa Balewa.',
-          source: 'Wikipedia',
-          read: ''
+          source: ''
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543922/naija_media/start_Biafran_war_f6bqut.jpg',
@@ -146,8 +144,7 @@ export default {
           subheader:
             'Tensions in Northern and South-Eastern Nigeria led to the Igbos demanding secession and the breakout of a civil war.',
           text: 'The war was fought between Nigeria and the Republic of Biafrans.',
-          source: 'Wikipedia',
-          read: ''
+          source: 'Getty Images'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543918/naija_media/Civil_War_ends_quhymn.jpg',
@@ -156,8 +153,7 @@ export default {
           subheader:
             'The end of what’s probably the darkest and lowest point in Nigeria’s history- between 500,000 and 2,000,000 Biafran civilians died of starvation.',
           text: 'Millions more casualties were recorded.',
-          source: 'Wikipedia',
-          read: ''
+          source: 'Getty Images'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543921/naija_media/Return_to_civilian_rule_bvgspj.jpg',
@@ -165,8 +161,7 @@ export default {
           header: 'Return of Civilian Rule',
           subheader: 'A divided nation still picking up the broken pieces.',
           text: 'The return to civilian rule was a beacon of light after years of gloom.',
-          source: 'Wikipedia',
-          read: ''
+          source: 'Getty Images'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543922/naija_media/annulled_election_euhnbw.jpg',
@@ -175,8 +170,7 @@ export default {
           subheader:
             'Moshood Kashimawo Olawale Abiola emerged the winner of a fair and peaceful presidential election.',
           text: 'However, the Head of State at the time, Ibrahim Babangida annulled the results. Thousands of Nigerians all over the country took to the streets in protest.',
-          source: 'Wikipedia',
-          read: ''
+          source: 'Getty Images'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543920/naija_media/ogoni_nine_igxoe8.jpg',
@@ -185,8 +179,7 @@ export default {
           subheader:
             'Nigerian writer and activist, Ken Saro-Wiwa, alongside eight others were executed by the Nigerian government for their nonviolent campaign against environmental degradation of the land and waters of Ogoniland, Niger Delta.',
           text: "This devastating incident provoked international outrage and resulted in Nigeria's suspension from the Commonwealth of Nations for over three years.",
-          source: 'Wikipedia',
-          read: ''
+          source: 'ConnectNigeria'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543920/naija_media/fresh_start_fv0wlg.jpg',
@@ -195,8 +188,7 @@ export default {
           subheader:
             'Olusegun Obasanjo was elected as President, taking the baton from military ruler, General Abdulsalami Alhaji Abubakar.',
           text: 'This ushered in the fourth republic and a new constitution.',
-          source: 'Wikipedia',
-          read: ''
+          source: 'Getty Images'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543920/naija_media/Niger_Delta_Protest_oibsky.jpg',
@@ -205,8 +197,7 @@ export default {
           subheader:
             'Residents of Niger Delta protested against oil companies exploiting their land without a substantial share of petroleum profits in return.',
           text: 'These protests, however, erupted into militant action that did not come to a halt till 2009.',
-          source: 'Wikipedia',
-          read: ''
+          source: 'Getty Images'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543921/naija_media/Yaradua_crp1rx.jpg',
@@ -215,8 +206,7 @@ export default {
           subheader:
             "President Umaru Musa Yar'Adua died- from a natural cause while in office.",
           text: 'He was replaced by his Vice, Goodluck Jonathan.',
-          source: 'Wikipedia',
-          read: ''
+          source: 'Getty Images'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543917/naija_media/chibok_w0rrm3.jpg',
@@ -225,8 +215,7 @@ export default {
           subheader:
             'Reportedly, 276 female students were kidnapped from Government Girls Secondary School at the town of Chibok, Bornu State, by Islamic terrorist group, Boko Haram. This sparked the #BringBackOurGirls Movement all over the world with calls for action by the Nigerian government.',
           text: 'Many of the girls have managed to escape or been released by the militant group in deal exchanges with the Nigerian government.  It’s been eight years since the kidnapping and at least 100 of the girls are still missing.',
-          source: 'Wikipedia',
-          read: ''
+          source: 'Getty Images'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543921/naija_media/Opposition_win_aka2g8.jpg',
@@ -235,8 +224,7 @@ export default {
           subheader:
             "Muhammadu Buhari won the presidential election, becoming the first opposition candidate to do so in Nigeria's history.",
           text: ' It was truly a feat as President Goodluck Jonathan served only one term before he was voted out.',
-          source: 'Wikipedia',
-          read: ''
+          source: 'Getty Images'
         },
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543921/naija_media/Politics_darwhl.jpg',
@@ -245,8 +233,7 @@ export default {
           subheader:
             'The #EndSARS Protests broke out to demand the end of police brutality, extortion, harassment and extra-judicial killings perpetrated by the Special Anti-Robbery Squad (SARS). It was a decentralised movement that involved a series of mass protests spanning weeks in different parts of the country. The protests garnered international attention and support and about 28 million tweets bearing #EndSARS have been made on Twitter alone.',
           text: 'The most devastating incident during the protests, which is referred to as the Lekki Massacre occurred on 20th, October 2020 when the Nigerian army fired live bullets at unarmed protesters at the Lekki toll gate.',
-          source: 'Wikipedia',
-          read: ''
+          source: ''
         }
       ]
     }

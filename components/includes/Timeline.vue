@@ -37,11 +37,10 @@
         <div
           class="img-source"
           :class="[reversed ? 'inverse' : '', addColorClass(colors).page]">
-          <div>
+          <div v-if="timeline.source">
             Image Credits:
             <slot name="timeline-source" />
           </div>
-          <div><a :href="readLink" target="_blank">Read More</a></div>
         </div>
         <div
           class="timeline-subheader bottom"
@@ -81,12 +80,7 @@ export default {
       type: String,
       required: true
     },
-
     source: String,
-    readLink: {
-      type: String,
-      required: true
-    },
     timeline: {
       type: Object,
       default: () => {

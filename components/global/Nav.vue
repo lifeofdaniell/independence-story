@@ -8,22 +8,24 @@
           to="/"
           @mouseout.native="hoverOut"
           @mouseover.native="hoverIn">
-          <div class="c-nav__text" :class="inverse & !menuOpen ? 'black' : ''">
+          <div
+            class="c-nav__text"
+            :class="inverse & !menuOpen & !loaderOpen ? 'black' : ''">
             Independence Day
           </div>
           <div class="flag">
             🇳🇬
           </div>
         </nuxt-link>
-        <!-- v-if="!loaderOpen" -->
         <div
+          v-if="!loaderOpen & !menuOpen"
           class="category-btn"
           @click="toggleMenu"
           @mouseout="hoverOut"
           @mouseover="hoverIn">
           <div class="category-icon" :class="menuOpen ? 'active' : ''">
             <img
-              v-if="inverse & !menuOpen"
+              v-if="inverse & !menuOpen & !loaderOpen"
               alt=""
               class="icon-img"
               loading="lazy"
@@ -37,17 +39,19 @@
           </div>
           <div
             class="category-text"
-            :class="inverse & !menuOpen ? 'black' : ''">
+            :class="inverse & !menuOpen & !loaderOpen ? 'black' : ''">
             {{ menuOpen ? 'Back To Home' : 'Select a category' }}
           </div>
         </div>
         <div class="volume-btn" @mouseout="hoverOut" @mouseover="hoverIn">
-          <div class="volume-text" :class="inverse & !menuOpen ? 'black' : ''">
+          <div
+            class="volume-text"
+            :class="inverse & !menuOpen & !loaderOpen ? 'black' : ''">
             Volume On
           </div>
           <div class="volume-icon">
             <img
-              v-if="inverse & !menuOpen"
+              v-if="inverse & !menuOpen & !loaderOpen"
               alt=""
               class="icon-img"
               loading="lazy"
