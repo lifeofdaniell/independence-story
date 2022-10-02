@@ -166,10 +166,10 @@ export default {
         },
         '<'
       )
-      this.$gsap.from(
+      this.$gsap.to(
         '.c-loader__inner',
         {
-          autoAlpha: 0,
+          autoAlpha: 1,
           duration: 1,
           onComplete: this.preloadImages
         },
@@ -239,6 +239,9 @@ export default {
 }
 </script>
 <style scoped>
+.c-loader__inner {
+  opacity: 0;
+}
 .loader-year {
   margin-bottom: 0;
 }
