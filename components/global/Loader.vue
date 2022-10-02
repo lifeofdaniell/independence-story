@@ -240,7 +240,7 @@ export default {
         {
           translateX: '2vw',
           translateY: '1vw',
-          rotate: -18,
+          rotate: 18,
           duration: 7,
           ease: 'none'
         },
