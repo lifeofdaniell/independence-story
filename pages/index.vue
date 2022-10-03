@@ -2,11 +2,15 @@
   <div>
     <Nav />
     <div class="scroller">
-      <nuxt-link
+      <div
+        v-long-press="2000"
         class="l-section hero-section home"
-        to="/politics"
-        @mouseenter.native="cursorIn"
-        @mouseleave.native="cursorOut">
+        @long-press-start="onLongPressStart"
+        @long-press-stop="onLongPressStop"
+        @mousedown="fillCursor"
+        @mouseenter="cursorIn"
+        @mouseleave="cursorOut"
+        @mouseup="unfillCursor">
         <div class="l-container">
           <div class="c-hero">
             <div class="hero-text__wrapper">
@@ -32,9 +36,16 @@
                 Against All Odds
               </div>
             </div>
-            <nuxt-link class="start-btn" to="/politics">
-              Start
-            </nuxt-link>
+            <div
+              v-long-press="2000"
+              class="start-btn"
+              @long-press-start="onLongTouchStart"
+              @long-press-stop="onLongTouchStop"
+              @touchend="unfillCircle"
+              @touchstart="fillCircle">
+              <div>Start</div>
+              <div class="btn-fill"></div>
+            </div>
           </div>
         </div>
         <div class="hero-gradient"></div>
@@ -81,7 +92,7 @@
             A
           </div>
         </div>
-      </nuxt-link>
+      </div>
     </div>
   </div>
 </template>
@@ -118,7 +129,14 @@ export default {
 
   data() {
     return {
-      isMobile: false
+      isMobile: false,
+      longPressed: false,
+      fillTL: this.$gsap.timeline({
+        paused: true
+      }),
+      btnTL: this.$gsap.timeline({
+        paused: true
+      })
     }
   },
 
@@ -247,7 +265,7 @@ export default {
     },
 
     checkDevice() {
-      if (window.innerWidth < 767) {
+      if (window.innerWidth < 1024) {
         this.isMobile = true
       } else {
         this.isMobile = false
@@ -268,7 +286,45 @@ export default {
       cursor.classList.remove('cta')
       text.textContent = ''
       text.classList.remove('show')
-    }
+    },
+
+    fillCircle() {
+      this.btnTL.to('.btn-fill', {
+        top: '0%',
+        duration: 1.8,
+        ease: 'none'
+      })
+      this.btnTL.play()
+    },
+
+    unfillCircle() {
+      this.btnTL.reverse()
+    },
+
+    fillCursor() {
+      this.fillTL.to('.cursor-fill', {
+        top: '0%',
+        duration: 1.8,
+        ease: 'none'
+      })
+      this.fillTL.play()
+    },
+
+    unfillCursor() {
+      this.fillTL.reverse()
+    },
+
+    onLongPressStart() {
+      this.gotoCategory()
+    },
+
+    onLongPressStop() {},
+
+    onLongTouchStart() {
+      this.gotoCategory()
+    },
+
+    onLongTouchStop() {}
   }
 }
 </script>
@@ -278,13 +334,39 @@ export default {
   --app-height: 100%;
 }
 
+.hero-gradient {
+  pointer-events: none;
+}
+
 .home {
   cursor: pointer;
   text-decoration: none;
 }
 
+@media screen and (max-width: 991px) {
+  .home {
+    pointer-events: none;
+  }
+}
+
+.btn-fill {
+  width: 130%;
+  top: 100%;
+  bottom: 0%;
+  right: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  background-color: white;
+}
+
 .start-btn {
+  overflow: hidden;
+  pointer-events: all;
   text-decoration: none;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 @media screen and (max-width: 479px) {

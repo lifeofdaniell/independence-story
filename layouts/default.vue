@@ -17,9 +17,9 @@
       <Menu v-if="menuOpen" />
     </transition>
 
-    <transition :css="false" @leave="loaderLeave">
+    <!--   <transition :css="false" @leave="loaderLeave">
       <Loader v-if="loaderOpen" />
-    </transition>
+    </transition> -->
 
     <Nuxt />
   </div>
@@ -59,6 +59,7 @@ export default {
       }
       this.closeMenu()
       this.resetCursor()
+      this.unfillCircle()
     }
   },
 
@@ -126,6 +127,15 @@ export default {
       cursor.classList.remove('white')
       text.classList.remove('show')
       text.textContent = ''
+    },
+
+    unfillCircle() {
+      this.$gsap.set('.cursor-fill', {
+        top: '100%'
+      })
+      this.$gsap.set('.btn-fill', {
+        top: '100%'
+      })
     }
   }
 }

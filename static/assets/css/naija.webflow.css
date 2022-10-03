@@ -2945,7 +2945,7 @@ p {
   .hero-subtext__wrapper {
     left: 20px;
     bottom: 70px;
-    max-width: 30%;
+    max-width: 50%;
   }
 
   .hero-subtext__wrapper.right {

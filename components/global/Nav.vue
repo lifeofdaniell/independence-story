@@ -18,7 +18,7 @@
           </div>
         </nuxt-link>
         <div
-          v-if="!loaderOpen"
+          v-show="!loaderOpen"
           class="category-btn"
           @click="toggleMenu"
           @mouseenter="cursorIn"

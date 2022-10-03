@@ -8706,6 +8706,11 @@ vue-client-only@^2.0.0:
   resolved "https://registry.yarnpkg.com/vue-client-only/-/vue-client-only-2.1.0.tgz#1a67a47b8ecacfa86d75830173fffee3bf8a4ee3"
   integrity sha512-vKl1skEKn8EK9f8P2ZzhRnuaRHLHrlt1sbRmazlvsx6EiC3A8oWF8YCBrMJzoN+W3OnElwIGbVjsx6/xelY1AA==
 
+vue-directive-long-press@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/vue-directive-long-press/-/vue-directive-long-press-1.1.0.tgz#ef30e3aa846c81b843a28589f288a7496a852d0a"
+  integrity sha512-OHhR4N1kuuKaK87SPmqkcm5Y81HjXgv5DfWr96flIkTYveWps1AozKiNrabsIirq+ibSZWFr3IUr0en+Ce3fAA==
+
 vue-eslint-parser@^8.0.1, vue-eslint-parser@^8.3.0:
   version "8.3.0"
   resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-8.3.0.tgz#5d31129a1b3dd89c0069ca0a1c88f970c360bd0d"
