@@ -231,7 +231,7 @@ export default {
         {
           img: 'https://res.cloudinary.com/deljrzv80/image/upload/v1664543933/naija_media/Asisat_Oshoala_jqc9sd.jpg',
           date: '2022',
-          header: 'Ballon Dór Nomination',
+          header: 'Ballon D’Or Nomination',
           subheader:
             'Super Falcons striker, Asisat Lamina Oshoala got nominated for the 2022 Ballon dór Feminine player of the year following her impressive season with Fc Barcelona Femini in the Spanish League.',
           text: 'She also holds the record for most African Women’s Footballer of the Year awards, winning it five times.',
@@ -242,7 +242,7 @@ export default {
           date: '2022',
           header: 'ITTF TOP 10 Player',
           subheader:
-            'In 2014, Quadri Aruna was named Star player of the year by the ITTF and has only advanced ever since.',
+            'Quadri Aruna was named Star player of the year by the ITTF a few years ago and has only advanced ever since.',
           text: 'He is the first African and black player to be ranked in the top 10 in world table tennis ranking. This Nigerian is currently ranked number 10 globally and number 1 in Africa.',
           source: 'ChannelsTV'
         },
@@ -297,6 +297,19 @@ export default {
     setTimeout(() => {
       this.$timelineParagraph()
     }, 100)
+    this.resetCursor()
+  },
+
+  methods: {
+    resetCursor() {
+      const cursor = document.querySelector('.c-cursor')
+      const text = document.querySelector('.cursor-text')
+      cursor.classList.add('pastel-green')
+      cursor.classList.remove('cta')
+      cursor.classList.remove('link')
+      text.classList.remove('show')
+      text.textContent = ''
+    }
   }
 }
 </script>

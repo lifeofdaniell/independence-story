@@ -3,7 +3,7 @@
     <audio
       class="bg-music"
       loop
-      src="https://res.cloudinary.com/deljrzv80/video/upload/v1664781086/naija_media/55DDBWW-afrobeat_by2zmc.mp3"></audio>
+      src="https://res.cloudinary.com/deljrzv80/video/upload/v1664792117/naija_media/Afrobeat_u5ho3m.mp3"></audio>
 
     <CustomCursor />
 
@@ -20,6 +20,7 @@
     <transition v-if="loaderOpen" :css="false" @leave="loaderLeave">
       <Loader />
     </transition>
+
     <Nuxt v-else />
   </div>
 </template>

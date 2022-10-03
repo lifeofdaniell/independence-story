@@ -4,7 +4,7 @@ import { withHttp } from './utils'
 const type = 'Website'
 let url = process.env.SITE_URL
 const title = 'The Story of Nigeria'
-const siteName = 'The Story of What Was & What Is'
+const siteName = 'The Story of What Was And What Is'
 const description =
   'A celebration of Nigeria’s independence day and a time travel of the most significant events that have occurred since the country attained independence 62 years ago'
 let mainImage = '/open-graph.png'

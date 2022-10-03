@@ -40,3 +40,9 @@ export const mutations = {
     state.isPlaying = payload
   }
 }
+
+export const actions = {
+  setPlayingState({ commit }, payload) {
+    commit('updatePlayingState', payload)
+  }
+}

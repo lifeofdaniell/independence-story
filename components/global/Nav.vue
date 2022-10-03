@@ -95,6 +95,12 @@ export default {
     }
   },
 
+  data() {
+    return {
+      sound: null
+    }
+  },
+
   computed: {
     menuOpen() {
       return this.$store.getters.menuState
@@ -110,12 +116,12 @@ export default {
   },
 
   mounted() {
-    window.addEventListener('blur', function () {
-      document.querySelector('.bg-music').muted = true
-    })
-    window.addEventListener('focus', function () {
-      document.querySelector('.bg-music').muted = false
-    })
+    this.sound = document.querySelector('.bg-music')
+    document.addEventListener(
+      'visibilitychange',
+      this.handleVisibilityChange,
+      false
+    )
   },
 
   methods: {
@@ -129,13 +135,11 @@ export default {
     },
 
     toggleSound() {
-      const sound = document.querySelector('.bg-music')
-      sound.play()
       if (!this.isPlaying) {
-        sound.muted = false
+        this.sound.play()
         this.$store.commit('updatePlayingState', true)
       } else {
-        sound.muted = true
+        this.sound.pause()
         this.$store.commit('updatePlayingState', false)
       }
     },
@@ -143,6 +147,15 @@ export default {
     cursorOut() {
       const cursor = document.querySelector('.c-cursor')
       cursor.classList.remove('link')
+    },
+
+    handleVisibilityChange() {
+      if (document.visibilityState === 'hidden') {
+        this.sound.pause()
+      } else if (this.isPlaying) {
+        this.sound.play()
+        this.$store.commit('updatePlayingState', true)
+      }
     }
   }
 }

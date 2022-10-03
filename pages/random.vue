@@ -250,6 +250,19 @@ export default {
     setTimeout(() => {
       this.$timelineParagraph()
     }, 100)
+    this.resetCursor()
+  },
+
+  methods: {
+    resetCursor() {
+      const cursor = document.querySelector('.c-cursor')
+      const text = document.querySelector('.cursor-text')
+      cursor.classList.add('black')
+      cursor.classList.remove('cta')
+      cursor.classList.remove('link')
+      text.classList.remove('show')
+      text.textContent = ''
+    }
   }
 }
 </script>
