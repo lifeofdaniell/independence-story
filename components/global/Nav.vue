@@ -43,11 +43,15 @@
             {{ menuOpen ? 'Back To Home' : 'Select a category' }}
           </div>
         </div>
-        <div class="volume-btn" @mouseenter="cursorIn" @mouseleave="cursorOut">
+        <div
+          class="volume-btn"
+          @click="toggleSound"
+          @mouseenter="cursorIn"
+          @mouseleave="cursorOut">
           <div
             class="volume-text"
             :class="inverse & !menuOpen & !loaderOpen ? 'black' : ''">
-            Volume On
+            {{ isPlaying ? 'Sound On' : 'Sound Off' }}
           </div>
           <div class="volume-icon">
             <img
@@ -84,7 +88,20 @@ export default {
 
     loaderOpen() {
       return this.$store.getters.loadingState
+    },
+
+    isPlaying() {
+      return this.$store.getters.getPlayingState
     }
+  },
+
+  mounted() {
+    window.addEventListener('blur', function () {
+      document.querySelector('.bg-music').muted = true
+    })
+    window.addEventListener('focus', function () {
+      document.querySelector('.bg-music').muted = false
+    })
   },
 
   methods: {
@@ -95,6 +112,18 @@ export default {
     cursorIn() {
       const cursor = document.querySelector('.c-cursor')
       cursor.classList.add('link')
+    },
+
+    toggleSound() {
+      const sound = document.querySelector('.bg-music')
+      sound.play()
+      if (!this.isPlaying) {
+        sound.muted = false
+        this.$store.commit('updatePlayingState', true)
+      } else {
+        sound.muted = true
+        this.$store.commit('updatePlayingState', false)
+      }
     },
 
     cursorOut() {

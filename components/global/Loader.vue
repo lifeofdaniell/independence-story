@@ -1,5 +1,5 @@
 <template>
-  <div class="c-loader">
+  <div class="c-loader" @mouseenter="cursorIn" @mouseleave="cursorOut">
     <div class="c-loader__inner">
       <h4 class="no-margin">
         Where it all started
@@ -325,6 +325,22 @@ export default {
       } else {
         this.isMobile = false
       }
+    },
+
+    cursorIn() {
+      const cursor = document.querySelector('.c-cursor')
+      const text = document.querySelector('.cursor-text')
+      cursor.classList.add('cta')
+      text.textContent = 'Loading'
+      text.classList.add('show')
+    },
+
+    cursorOut() {
+      const cursor = document.querySelector('.c-cursor')
+      const text = document.querySelector('.cursor-text')
+      cursor.classList.remove('cta')
+      text.textContent = ''
+      text.classList.remove('show')
     }
   }
 }

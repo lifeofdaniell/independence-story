@@ -1,9 +1,9 @@
 <template>
   <div>
     <audio
-      id="bg-music"
+      class="bg-music"
       loop
-      src="https://res.cloudinary.com/deljrzv80/video/upload/v1642231670/check%20media/wrapped-low_rl1jnd.mp3"></audio>
+      src="https://res.cloudinary.com/deljrzv80/video/upload/v1664781086/naija_media/55DDBWW-afrobeat_by2zmc.mp3"></audio>
 
     <CustomCursor />
 
@@ -17,11 +17,10 @@
       <Menu v-if="menuOpen" />
     </transition>
 
-    <transition :css="false" @leave="loaderLeave">
-      <Loader v-if="loaderOpen" />
+    <transition v-if="loaderOpen" :css="false" @leave="loaderLeave">
+      <Loader />
     </transition>
-
-    <Nuxt />
+    <Nuxt v-else />
   </div>
 </template>
 
@@ -33,6 +32,9 @@ export default {
     },
     loaderOpen() {
       return this.$store.getters.loadingState
+    },
+    isPlaying() {
+      return this.$store.getters.getPlayingState
     }
   },
 

@@ -1,7 +1,7 @@
 export const state = () => ({
   menuOpen: false,
   loading: true,
-
+  isPlaying: false,
   gridColor: ''
 })
 
@@ -16,6 +16,10 @@ export const getters = {
 
   getGridColor: (state) => {
     return state.gridColor
+  },
+
+  getPlayingState: (state) => {
+    return state.isPlaying
   }
 }
 
@@ -30,5 +34,9 @@ export const mutations = {
 
   updateGridColor: (state, payload) => {
     state.gridColor = payload
+  },
+
+  updatePlayingState: (state, payload) => {
+    state.isPlaying = payload
   }
 }
