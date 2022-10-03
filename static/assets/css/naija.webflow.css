@@ -1609,7 +1609,7 @@ p {
 
 .line.vertical {
   left: 85px;
-  bottom: 30%;
+  bottom: 29%;
   z-index: 4;
   height: 12%;
 }
@@ -1621,7 +1621,7 @@ p {
 
 .line.horizontal {
   left: 85px;
-  bottom: 30%;
+  bottom: 29%;
   z-index: 3;
   width: 530px;
   height: 1px;
