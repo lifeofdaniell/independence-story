@@ -53,7 +53,7 @@
             :class="inverse & !menuOpen & !loaderOpen ? 'black' : ''">
             {{ isPlaying ? 'Sound On' : 'Sound Off' }}
           </div>
-          <div class="volume-icon">
+          <div v-if="isPlaying" class="volume-icon">
             <img
               v-if="inverse & !menuOpen & !loaderOpen"
               alt=""
@@ -66,6 +66,20 @@
               class="icon-img"
               loading="lazy"
               src="/assets/images/volume.svg" />
+          </div>
+          <div v-else class="volume-icon">
+            <img
+              v-if="inverse & !menuOpen & !loaderOpen"
+              alt=""
+              class="icon-img"
+              loading="lazy"
+              src="/assets/images/mute-black.svg" />
+            <img
+              v-else
+              alt=""
+              class="icon-img"
+              loading="lazy"
+              src="/assets/images/mute.svg" />
           </div>
         </div>
       </div>
