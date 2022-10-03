@@ -317,15 +317,15 @@ export default {
       const year = document.querySelector('[data-year]')
       this.$gsap.to(year, {
         textContent: 2022,
-        duration: 4,
-        ease: 'power1.in',
+        duration: 10,
+        ease: 'power1.inOut',
         snap: {
           textContent: 1
         }
       })
       setTimeout(() => {
         this.$store.commit('toggleLoading', false)
-      }, 4500)
+      }, 10500)
     },
 
     checkDevice() {
