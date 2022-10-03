@@ -114,13 +114,7 @@ p {
   top: 0%;
   right: 0%;
   bottom: 0%;
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#57867d),
-    to(#74e779)
-  );
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#57867d), to(#74e779));
   background-image: linear-gradient(180deg, #57867d, #74e779);
   opacity: 1;
 }
@@ -292,7 +286,7 @@ p {
   -webkit-transform: none;
   -ms-transform: none;
   transform: none;
-  font-family: Mazius, sans-serif;
+  font-family: Plain, sans-serif;
   font-size: 200px;
   line-height: 200px;
   font-weight: 400;
@@ -406,18 +400,8 @@ p {
   right: 0%;
   bottom: 0%;
   z-index: 2;
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(rgba(87, 134, 125, 0.91)),
-    color-stop(90%, rgba(0, 0, 0, 0.95))
-  );
-  background-image: linear-gradient(
-    180deg,
-    rgba(87, 134, 125, 0.91),
-    rgba(0, 0, 0, 0.95) 90%
-  );
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(87, 134, 125, 0.91)), color-stop(90%, rgba(0, 0, 0, 0.95)));
+  background-image: linear-gradient(180deg, rgba(87, 134, 125, 0.91), rgba(0, 0, 0, 0.95) 90%);
 }
 
 .hero-text__wrapper {
@@ -794,10 +778,8 @@ p {
   opacity: 0;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
-  -webkit-transition: height 5000ms linear, width 5000ms linear,
-    left 5000ms linear, top 5000ms linear, opacity 300ms ease-in;
-  transition: height 5000ms linear, width 5000ms linear, left 5000ms linear,
-    top 5000ms linear, opacity 300ms ease-in;
+  -webkit-transition: height 5000ms linear, width 5000ms linear, left 5000ms linear, top 5000ms linear, opacity 300ms ease-in;
+  transition: height 5000ms linear, width 5000ms linear, left 5000ms linear, top 5000ms linear, opacity 300ms ease-in;
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -1749,18 +1731,10 @@ p {
   border-color: #fff;
   border-radius: 50%;
   opacity: 0;
-  -webkit-transition: height 300ms ease-out, width 300ms ease-out,
-    opacity 300ms ease, background-color 300ms ease, top 300ms ease,
-    left 300ms ease, -webkit-transform 200ms ease-out;
-  transition: height 300ms ease-out, width 300ms ease-out, opacity 300ms ease,
-    background-color 300ms ease, top 300ms ease, left 300ms ease,
-    -webkit-transform 200ms ease-out;
-  transition: height 300ms ease-out, width 300ms ease-out, opacity 300ms ease,
-    background-color 300ms ease, top 300ms ease, left 300ms ease,
-    transform 200ms ease-out;
-  transition: height 300ms ease-out, width 300ms ease-out, opacity 300ms ease,
-    background-color 300ms ease, top 300ms ease, left 300ms ease,
-    transform 200ms ease-out, -webkit-transform 200ms ease-out;
+  -webkit-transition: height 300ms ease-out, width 300ms ease-out, opacity 300ms ease, background-color 300ms ease, top 300ms ease, left 300ms ease, -webkit-transform 200ms ease-out;
+  transition: height 300ms ease-out, width 300ms ease-out, opacity 300ms ease, background-color 300ms ease, top 300ms ease, left 300ms ease, -webkit-transform 200ms ease-out;
+  transition: height 300ms ease-out, width 300ms ease-out, opacity 300ms ease, background-color 300ms ease, top 300ms ease, left 300ms ease, transform 200ms ease-out;
+  transition: height 300ms ease-out, width 300ms ease-out, opacity 300ms ease, background-color 300ms ease, top 300ms ease, left 300ms ease, transform 200ms ease-out, -webkit-transform 200ms ease-out;
 }
 
 .cursor-text {
@@ -2530,6 +2504,11 @@ p {
     grid-column-gap: 5px;
   }
 
+  .loader-year {
+    font-size: 170px;
+    line-height: 170px;
+  }
+
   .loader-progress__bar {
     max-width: 70%;
   }
@@ -2923,7 +2902,7 @@ p {
   }
 
   .year-wrapper {
-    margin-top: -12px;
+    margin-top: 0px;
   }
 
   .start-btn {
@@ -2976,8 +2955,8 @@ p {
   }
 
   .loader-year {
-    font-size: 150px;
-    line-height: 150px;
+    font-size: 120px;
+    line-height: 120px;
     letter-spacing: -6px;
   }
 
@@ -3360,7 +3339,7 @@ p {
   }
 
   .start-btn {
-    bottom: 150px;
+    bottom: 170px;
     width: 90px;
     height: 90px;
     font-size: 10px;
@@ -3423,8 +3402,7 @@ p {
 }
 @font-face {
   font-family: 'Mazius Extra Italic';
-  src: url('../fonts/MAZIUS-REVIEW-20.09-Extra-italic-400.otf')
-    format('opentype');
+  src: url('../fonts/MAZIUS-REVIEW-20.09-Extra-italic-400.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;

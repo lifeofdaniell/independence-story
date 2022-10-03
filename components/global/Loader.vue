@@ -6,7 +6,7 @@
       </h4>
       <div class="year-wrapper">
         <div class="loader-year" data-year>
-          1960
+          <b> 1960 </b>
         </div>
         <!--      <div class="loader-year" data-current>
           2022
@@ -314,10 +314,10 @@ export default {
         },
         '<+0.25'
       ) */
-      const year = document.querySelector('[data-year]')
+      const year = document.querySelector('[data-year] > b')
       this.$gsap.to(year, {
         textContent: 2022,
-        duration: 10,
+        duration: 7,
         ease: 'power1.inOut',
         snap: {
           textContent: 1
@@ -325,7 +325,7 @@ export default {
       })
       setTimeout(() => {
         this.$store.commit('toggleLoading', false)
-      }, 10500)
+      }, 7500)
     },
 
     checkDevice() {
