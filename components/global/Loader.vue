@@ -8,9 +8,9 @@
         <div class="loader-year" data-year>
           1960
         </div>
-        <div class="loader-year" data-current>
+        <!--      <div class="loader-year" data-current>
           2022
-        </div>
+        </div> -->
       </div>
       <div class="loader-progress__bar">
         <div class="loader-progress__fill"></div>
@@ -283,14 +283,14 @@ export default {
     },
 
     doneLoading() {
-      const first = document.querySelector('[data-year]')
+      /*  const first = document.querySelector('[data-year]')
       const firstYear = this.$splittext({ target: first })
       const letters = firstYear[0].chars
       const second = document.querySelector('[data-current]')
       const currentYear = this.$splittext({ target: second })
       const secondLetters = currentYear[0].chars
       const tl = this.$gsap.timeline({})
-      tl.to(letters, {
+          tl.to(letters, {
         delay: 1.5,
         yPercent: -100,
         duration: 1,
@@ -313,10 +313,19 @@ export default {
           stagger: 0.1
         },
         '<+0.25'
-      )
+      ) */
+      const year = document.querySelector('[data-year]')
+      this.$gsap.to(year, {
+        textContent: 2022,
+        duration: 4,
+        ease: 'power1.in',
+        snap: {
+          textContent: 1
+        }
+      })
       setTimeout(() => {
         this.$store.commit('toggleLoading', false)
-      }, 3500)
+      }, 4500)
     },
 
     checkDevice() {

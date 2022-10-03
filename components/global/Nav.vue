@@ -117,6 +117,7 @@ export default {
 
   mounted() {
     this.sound = document.querySelector('.bg-music')
+    this.sound.volume = 0.2
     document.addEventListener(
       'visibilitychange',
       this.handleVisibilityChange,
@@ -152,9 +153,7 @@ export default {
     handleVisibilityChange() {
       if (document.visibilityState === 'hidden') {
         this.sound.pause()
-      } else if (this.isPlaying) {
-        this.sound.play()
-        this.$store.commit('updatePlayingState', true)
+        this.$store.commit('updatePlayingState', false)
       }
     }
   }

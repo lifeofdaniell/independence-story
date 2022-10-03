@@ -18,7 +18,7 @@
                 We are telling the story of
               </h3>
               <h1 class="hero-text" data-header>
-                What was and What is
+                What Was & What Is
               </h1>
               <h3 data-header>
                 A tale of <span class="dgreen-text">62 years</span> of a nation
