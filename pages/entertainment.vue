@@ -335,10 +335,10 @@ export default {
   color: black;
 }
 
-@media screen and (min-width: 992px) {
+/* @media screen and (min-width: 992px) {
   .storyline-header {
-    font-size: 48px;
+    font-size: 50px;
     line-height: 55px;
   }
-}
+} */
 </style>
