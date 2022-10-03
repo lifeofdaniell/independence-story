@@ -2250,6 +2250,8 @@ p {
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
+    font-size: 19px;
+    line-height: 29px;
     text-align: center;
   }
 
@@ -2670,6 +2672,11 @@ p {
 
   .storyline-subheader {
     max-width: 320px;
+    font-size: 17px;
+    line-height: 27px;
+  }
+
+  .storyline-subheader.top {
     font-size: 17px;
     line-height: 27px;
   }
