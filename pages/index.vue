@@ -45,7 +45,7 @@
               @mouseup="unfillCircle"
               @touchend="unfillCircle"
               @touchstart="fillCircle">
-              <div>Start</div>
+              <div>Hold Down To Start</div>
               <div class="btn-fill"></div>
             </div>
           </div>
@@ -358,6 +358,12 @@ export default {
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 200;
+  letter-spacing: 1px;
+  font-size: 10px;
+  line-height: 15px;
 }
 
 @media screen and (max-width: 479px) {
