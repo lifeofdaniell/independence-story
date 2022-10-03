@@ -41,6 +41,8 @@
               class="start-btn"
               @long-press-start="onLongTouchStart"
               @long-press-stop="onLongTouchStop"
+              @mousedown="fillCircle"
+              @mouseup="unfillCircle"
               @touchend="unfillCircle"
               @touchstart="fillCircle">
               <div>Start</div>
@@ -347,17 +349,6 @@ export default {
   .home {
     pointer-events: none;
   }
-}
-
-.btn-fill {
-  width: 130%;
-  top: 100%;
-  bottom: 0%;
-  right: 0%;
-  left: 50%;
-  transform: translateX(-50%);
-  position: absolute;
-  background-color: white;
 }
 
 .start-btn {

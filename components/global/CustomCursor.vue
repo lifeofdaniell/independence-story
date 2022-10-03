@@ -52,17 +52,6 @@ export default {
   pointer-events: none;
 }
 
-.cursor-fill {
-  width: 130%;
-  top: 100%;
-  bottom: 0%;
-  right: 0%;
-  left: 50%;
-  transform: translateX(-50%);
-  position: absolute;
-  background-color: white;
-}
-
 .c-cursor.green {
   border-color: black;
 }
