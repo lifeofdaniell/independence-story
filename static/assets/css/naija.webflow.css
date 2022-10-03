@@ -428,7 +428,7 @@ p {
   margin-top: 5px;
   margin-bottom: 5px;
   padding-top: 0px;
-  font-family: 'Mazius Italic', sans-serif;
+  font-family: Mazius, sans-serif;
   line-height: 7vw;
   font-weight: 400;
 }
@@ -691,7 +691,7 @@ p {
 .category-header {
   width: 100%;
   padding: 20px 50px;
-  font-family: 'Mazius Italic', sans-serif;
+  font-family: Mazius, sans-serif;
   color: #74e779;
   font-size: 38px;
   line-height: 44px;
@@ -706,7 +706,7 @@ p {
   flex: 1;
   -webkit-transition: margin 300ms ease;
   transition: margin 300ms ease;
-  font-family: 'Mazius Italic', sans-serif;
+  font-family: Mazius, sans-serif;
   color: #000;
   font-size: 32px;
   font-weight: 400;
@@ -739,8 +739,8 @@ p {
   border-top: 1px solid #bde7be;
   border-bottom: 1px solid #bde7be;
   font-family: 'Mazius Italic', sans-serif;
-  font-size: 20px;
-  line-height: 25px;
+  font-size: 25px;
+  line-height: 29px;
   font-weight: 400;
   text-transform: capitalize;
 }
@@ -1068,7 +1068,7 @@ p {
   z-index: 1;
   height: 156px;
   max-width: 600px;
-  font-family: 'Mazius Italic', sans-serif;
+  font-family: Mazius, sans-serif;
   color: #bde7be;
   font-size: 65px;
   line-height: 70px;
@@ -1156,8 +1156,8 @@ p {
   -webkit-align-self: flex-end;
   -ms-flex-item-align: end;
   align-self: flex-end;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 22px;
+  line-height: 34px;
   font-weight: 100;
 }
 
@@ -1173,6 +1173,8 @@ p {
   -webkit-align-self: flex-start;
   -ms-flex-item-align: start;
   align-self: flex-start;
+  font-size: 22px;
+  line-height: 34px;
 }
 
 .c-timeline__wrapper {
@@ -1559,7 +1561,7 @@ p {
 
 .footer-header {
   margin-bottom: 100px;
-  font-family: 'Mazius Italic', sans-serif;
+  font-family: Mazius, sans-serif;
   color: #74e779;
   font-size: 200px;
   line-height: 200px;
@@ -1790,8 +1792,8 @@ p {
 }
 
 .timeline-text {
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 22px;
+  line-height: 34px;
   font-weight: 100;
 }
 
@@ -2133,9 +2135,12 @@ p {
     padding-top: 20px;
   }
 
+  .category-header.inner {
+    padding-left: 30px;
+  }
+
   .category-header.small {
     margin-bottom: 25px;
-    font-size: 16px;
   }
 
   .category-description {
@@ -2596,7 +2601,6 @@ p {
 
   .category-header.small {
     margin-bottom: 15px;
-    font-size: 18px;
     line-height: 23px;
   }
 
@@ -3060,6 +3064,7 @@ p {
 
   .category-header.small {
     margin-bottom: 30px;
+    padding-bottom: 13px;
     color: #74e779;
   }
 
@@ -3120,6 +3125,8 @@ p {
   .storyline-header {
     width: 350px;
     max-width: 90%;
+    font-size: 45px;
+    line-height: 50px;
   }
 
   .header-img__block {

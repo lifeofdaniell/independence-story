@@ -49,6 +49,7 @@ export default {
 </script>
 <style>
 .c-cursor {
+  /* padding-top: 3px; */
   pointer-events: none;
 }
 
@@ -109,10 +110,13 @@ export default {
 }
 
 .cursor-text {
+  max-width: 80px;
+  text-align: center;
   text-transform: uppercase;
   font-weight: 200;
   letter-spacing: 1px;
-  font-size: 12px;
+  font-size: 10px;
+  line-height: 15px;
 }
 
 .cursor-text.show {

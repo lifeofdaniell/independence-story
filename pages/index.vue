@@ -278,7 +278,7 @@ export default {
       const cursor = document.querySelector('.c-cursor')
       const text = document.querySelector('.cursor-text')
       cursor.classList.add('cta')
-      text.textContent = 'Start'
+      text.textContent = 'Hold Down To Start'
       text.classList.add('show')
     },
 
