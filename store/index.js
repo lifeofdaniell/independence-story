@@ -1,7 +1,7 @@
 export const state = () => ({
   menuOpen: false,
   loading: true,
-  hover: false,
+
   gridColor: ''
 })
 
@@ -12,10 +12,6 @@ export const getters = {
 
   loadingState: (state) => {
     return state.loading
-  },
-
-  hoverState: (state) => {
-    return state.hover
   },
 
   getGridColor: (state) => {
@@ -30,10 +26,6 @@ export const mutations = {
 
   toggleLoading: (state, payload) => {
     state.loading = payload
-  },
-
-  toggleHover: (state, payload) => {
-    state.hover = payload
   },
 
   updateGridColor: (state, payload) => {

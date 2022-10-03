@@ -6,8 +6,8 @@
           aria-current="page"
           class="home-link w-inline-block w--current"
           to="/"
-          @mouseout.native="hoverOut"
-          @mouseover.native="hoverIn">
+          @mouseenter.native="cursorIn"
+          @mouseleave.native="cursorOut">
           <div
             class="c-nav__text"
             :class="inverse & !menuOpen & !loaderOpen ? 'black' : ''">
@@ -21,8 +21,8 @@
           v-if="!loaderOpen"
           class="category-btn"
           @click="toggleMenu"
-          @mouseout="hoverOut"
-          @mouseover="hoverIn">
+          @mouseenter="cursorIn"
+          @mouseleave="cursorOut">
           <div class="category-icon" :class="menuOpen ? 'active' : ''">
             <img
               v-if="inverse & !menuOpen & !loaderOpen"
@@ -43,7 +43,7 @@
             {{ menuOpen ? 'Back To Home' : 'Select a category' }}
           </div>
         </div>
-        <div class="volume-btn" @mouseout="hoverOut" @mouseover="hoverIn">
+        <div class="volume-btn" @mouseenter="cursorIn" @mouseleave="cursorOut">
           <div
             class="volume-text"
             :class="inverse & !menuOpen & !loaderOpen ? 'black' : ''">
@@ -92,13 +92,26 @@ export default {
       this.$store.commit('toggleMenu', !this.menuOpen)
     },
 
-    hoverIn() {
-      this.$store.commit('toggleHover', true)
+    cursorIn() {
+      const cursor = document.querySelector('.c-cursor')
+      cursor.classList.add('link')
     },
 
-    hoverOut() {
-      this.$store.commit('toggleHover', false)
+    cursorOut() {
+      const cursor = document.querySelector('.c-cursor')
+      cursor.classList.remove('link')
     }
   }
 }
 </script>
+
+<style scoped>
+.c-nav {
+  pointer-events: none;
+}
+.home-link,
+.category-btn,
+.volume-btn {
+  pointer-events: all;
+}
+</style>

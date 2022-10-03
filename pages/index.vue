@@ -1,9 +1,12 @@
 <template>
-  <!-- v-longpress="gotoCategory" -->
   <div>
     <Nav />
     <div class="scroller">
-      <div class="l-section hero-section home">
+      <nuxt-link
+        class="l-section hero-section home"
+        to="/politics"
+        @mouseenter.native="cursorIn"
+        @mouseleave.native="cursorOut">
         <div class="l-container">
           <div class="c-hero">
             <div class="hero-text__wrapper">
@@ -29,6 +32,9 @@
                 Against All Odds
               </div>
             </div>
+            <nuxt-link class="start-btn" to="/politics">
+              Start
+            </nuxt-link>
           </div>
         </div>
         <div class="hero-gradient"></div>
@@ -75,7 +81,7 @@
             A
           </div>
         </div>
-      </div>
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -246,6 +252,22 @@ export default {
       } else {
         this.isMobile = false
       }
+    },
+
+    cursorIn() {
+      const cursor = document.querySelector('.c-cursor')
+      const text = document.querySelector('.cursor-text')
+      cursor.classList.add('cta')
+      text.textContent = 'Start'
+      text.classList.add('show')
+    },
+
+    cursorOut() {
+      const cursor = document.querySelector('.c-cursor')
+      const text = document.querySelector('.cursor-text')
+      cursor.classList.remove('cta')
+      text.textContent = ''
+      text.classList.remove('show')
     }
   }
 }
@@ -254,6 +276,15 @@ export default {
 <style scoped>
 :root {
   --app-height: 100%;
+}
+
+.home {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.start-btn {
+  text-decoration: none;
 }
 
 @media screen and (max-width: 479px) {

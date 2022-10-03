@@ -1,19 +1,20 @@
 <template>
   <div class="l-section footer">
     <div class="l-container">
-      <div class="c-section w-inline-block">
-        <nuxt-link
+      <nuxt-link
+        class="c-section w-inline-block"
+        :to="link"
+        @mouseenter.native="cursorIn"
+        @mouseleave.native="cursorOut">
+        <div
           class="footer-header"
           :class="[
             category === 'Entertainment' ? 'ent' : '',
             category === 'Random Facts' ? 'tech' : '',
             page
-          ]"
-          :to="link"
-          @mouseout.native="hoverOut"
-          @mouseover.native="hoverIn">
+          ]">
           <div>{{ category }}</div>
-        </nuxt-link>
+        </div>
         <div class="footer-text__wrapper" :class="page">
           <div>
             <slot name="description" />
@@ -31,7 +32,7 @@
             :src="imgCenter" />
           <img alt="" class="footer-img right" loading="lazy" :src="imgRight" />
         </div>
-      </div>
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -130,6 +131,22 @@ export default {
       } else {
         this.isMobile = false
       }
+    },
+
+    cursorIn() {
+      const cursor = document.querySelector('.c-cursor')
+      const text = document.querySelector('.cursor-text')
+      cursor.classList.add('cta')
+      text.textContent = 'View'
+      text.classList.add('show')
+    },
+
+    cursorOut() {
+      const cursor = document.querySelector('.c-cursor')
+      const text = document.querySelector('.cursor-text')
+      cursor.classList.remove('cta')
+      text.textContent = ''
+      text.classList.remove('show')
     }
   }
 }

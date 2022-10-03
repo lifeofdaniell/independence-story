@@ -53,7 +53,7 @@
           </template>
         </category>
       </div>
-      <marquee-text v-else :duration="30" :paused="isHovering" :repeat="4">
+      <marquee-text v-else :duration="35" :paused="isHovering" :repeat="4">
         <div
           class="menu-slider__inner"
           @mouseenter="isHovering = true"

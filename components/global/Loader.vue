@@ -52,6 +52,7 @@
 export default {
   data() {
     return {
+      isMobile: false,
       imagesLoaded: 0,
       totalImages: 0,
       percent: 0,
@@ -143,6 +144,8 @@ export default {
 
   mounted() {
     this.loadingAnimation()
+    this.checkDevice()
+    window.addEventListener('resize', this.checkDevice)
     setTimeout(() => {
       this.preloadImages(this.img)
     }, 7500)
@@ -155,30 +158,6 @@ export default {
         autoAlpha: 1,
         duration: 1.5
       })
-      /*  this.$gsap.from(
-        '.letter-bg.load',
-        {
-          delay: 1,
-          bottom: '50%',
-          fontSize: '17vw',
-          lineHeight: '18vw',
-          duration: 3,
-          ease: 'bounce.out'
-        },
-        '>'
-      )
-      this.$gsap.from(
-        '.fall',
-        {
-          translateX: '0vw',
-          translateY: '0vw',
-          rotate: 0,
-          duration: 7,
-          ease: 'none'
-        },
-        '<'
-      ) */
-
       this.$gsap.to(
         '.letter-bg.load',
         {
@@ -328,7 +307,7 @@ export default {
       tl.to(
         secondLetters,
         {
-          yPercent: -77,
+          y: this.isMobile ? -100 : -190,
           duration: 1,
           ease: 'power3.outIn',
           stagger: 0.1
@@ -338,6 +317,14 @@ export default {
       setTimeout(() => {
         this.$store.commit('toggleLoading', false)
       }, 3500)
+    },
+
+    checkDevice() {
+      if (window.innerWidth <= 767) {
+        this.isMobile = true
+      } else {
+        this.isMobile = false
+      }
     }
   }
 }

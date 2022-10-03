@@ -22,7 +22,6 @@ export default {
   css: [],
   plugins: [
     '@/plugins/components',
-    '@/plugins/directives',
     '@/plugins/locomotive',
     '@/plugins/mixins',
     '@/plugins/prototype',

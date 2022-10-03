@@ -1,7 +1,14 @@
 <template>
   <div>
+    <audio
+      id="bg-music"
+      loop
+      src="https://res.cloudinary.com/deljrzv80/video/upload/v1642231670/check%20media/wrapped-low_rl1jnd.mp3"></audio>
+
     <CustomCursor />
+
     <CategoryGrid />
+
     <transition
       :css="false"
       @before-enter="menuBEnter"
@@ -51,6 +58,7 @@ export default {
           break
       }
       this.closeMenu()
+      this.resetCursor()
     }
   },
 
@@ -104,6 +112,20 @@ export default {
         },
         '>'
       )
+    },
+
+    resetCursor() {
+      const cursor = document.querySelector('.c-cursor')
+      const text = document.querySelector('.cursor-text')
+      cursor.classList.remove('cta')
+      cursor.classList.remove('link')
+      cursor.classList.remove('pastel-green')
+      cursor.classList.remove('green')
+      cursor.classList.remove('dark-cyan')
+      cursor.classList.remove('black')
+      cursor.classList.remove('white')
+      text.classList.remove('show')
+      text.textContent = ''
     }
   }
 }

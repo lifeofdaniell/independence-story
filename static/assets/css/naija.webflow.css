@@ -164,6 +164,8 @@ p {
 .letter-bg.load {
   bottom: 50%;
   opacity: 1;
+  -webkit-transition: font-size 300ms ease;
+  transition: font-size 300ms ease;
   font-size: 17vw;
   line-height: 18vw;
 }
@@ -273,13 +275,21 @@ p {
   text-align: center;
 }
 
+.c-loader__inner.show {
+  opacity: 1;
+}
+
 .loader-year {
-  height: 185px;
+  overflow: hidden;
+  height: 150px;
   margin-bottom: 0px;
   padding-top: 5px;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
   font-family: Grifter, sans-serif;
-  font-size: 250px;
-  line-height: 250px;
+  font-size: 200px;
+  line-height: 200px;
   font-weight: 700;
   letter-spacing: -6px;
 }
@@ -1544,7 +1554,7 @@ p {
   font-family: Grifter, sans-serif;
   color: #74e779;
   font-size: 200px;
-  line-height: 241px;
+  line-height: 200px;
   font-weight: 700;
   text-align: center;
   text-decoration: none;
@@ -1687,16 +1697,16 @@ p {
 
 .c-cursor {
   position: fixed;
-  left: -5px;
-  top: -5px;
+  left: -15px;
+  top: -15px;
   z-index: 99999;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -1709,9 +1719,11 @@ p {
   border-width: 1px;
   border-color: #fff;
   border-radius: 50%;
-  opacity: 1;
-  -webkit-transition: height 300ms ease, width 300ms ease, opacity 200ms ease;
-  transition: height 300ms ease, width 300ms ease, opacity 200ms ease;
+  opacity: 0;
+  -webkit-transition: height 300ms ease-out, width 300ms ease-out, opacity 300ms ease, background-color 300ms ease, top 300ms ease, left 300ms ease, -webkit-transform 200ms ease-out;
+  transition: height 300ms ease-out, width 300ms ease-out, opacity 300ms ease, background-color 300ms ease, top 300ms ease, left 300ms ease, -webkit-transform 200ms ease-out;
+  transition: height 300ms ease-out, width 300ms ease-out, opacity 300ms ease, background-color 300ms ease, top 300ms ease, left 300ms ease, transform 200ms ease-out;
+  transition: height 300ms ease-out, width 300ms ease-out, opacity 300ms ease, background-color 300ms ease, top 300ms ease, left 300ms ease, transform 200ms ease-out, -webkit-transform 200ms ease-out;
 }
 
 .cursor-text {
@@ -1720,6 +1732,12 @@ p {
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   opacity: 0;
+  -webkit-transition: opacity 300ms ease;
+  transition: opacity 300ms ease;
+  font-size: 12px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .global-embed {
@@ -1962,10 +1980,46 @@ p {
 
 .year-wrapper {
   overflow: hidden;
-  height: 185px;
+  height: 150px;
   min-width: 300px;
   margin-top: 30px;
   margin-bottom: 45px;
+}
+
+.start-btn {
+  position: absolute;
+  bottom: 70px;
+  z-index: 3;
+  display: none;
+  width: 75px;
+  height: 75px;
+  padding-bottom: 2px;
+  padding-left: 1px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #fff;
+  border-radius: 50%;
+  -webkit-transition: height 400ms ease-out, width 400ms ease-out;
+  transition: height 400ms ease-out, width 400ms ease-out;
+  font-size: 11px;
+  line-height: 11px;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.start-btn:hover {
+  width: 90px;
+  height: 90px;
 }
 
 @media screen and (min-width: 1440px) {
@@ -2008,12 +2062,6 @@ p {
   .c-nav__inner {
     padding-right: 30px;
     padding-left: 30px;
-  }
-
-  .loader-year {
-    height: 150px;
-    font-size: 200px;
-    line-height: 200px;
   }
 
   .hero-text {
@@ -2240,10 +2288,6 @@ p {
     min-width: 350px;
   }
 
-  .c-section {
-    text-decoration: none;
-  }
-
   .c-section.dark-cyan {
     text-decoration: none;
   }
@@ -2252,6 +2296,7 @@ p {
     margin-bottom: 20px;
     font-size: 150px;
     line-height: 170px;
+    text-decoration: underline;
   }
 
   .footer-header.ent {
@@ -2360,6 +2405,14 @@ p {
     margin-top: 25px;
     margin-bottom: 40px;
   }
+
+  .start-btn {
+    bottom: 40px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -2413,9 +2466,13 @@ p {
   }
 
   .loader-year {
-    height: 120px;
-    font-size: 150px;
-    line-height: 150px;
+    height: 100px;
+    font-size: 120px;
+    line-height: 120px;
+  }
+
+  .loader-progress__bar {
+    max-width: 70%;
   }
 
   .c-loader__period {
@@ -2789,7 +2846,12 @@ p {
   }
 
   .year-wrapper {
-    height: 120px;
+    height: 100px;
+    margin-bottom: 25px;
+  }
+
+  .start-btn {
+    bottom: 200px;
   }
 }
 
@@ -2834,15 +2896,12 @@ p {
   }
 
   .loader-year {
-    height: 98px;
-    font-size: 120px;
-    line-height: 120px;
-    font-weight: 700;
     letter-spacing: -6px;
   }
 
   .loader-progress__bar {
     width: 200px;
+    max-width: none;
   }
 
   .category-btn {
@@ -2869,8 +2928,8 @@ p {
   .c-hero {
     overflow: hidden;
     min-height: 700px;
-    padding-top: 30px;
-    padding-bottom: 70px;
+    padding-top: 0px;
+    padding-bottom: 150px;
   }
 
   .hero-text__wrapper {
@@ -2886,7 +2945,7 @@ p {
   .hero-subtext__wrapper {
     left: 20px;
     bottom: 70px;
-    max-width: 48%;
+    max-width: 30%;
   }
 
   .hero-subtext__wrapper.right {
@@ -3206,10 +3265,16 @@ p {
     align-items: center;
   }
 
-  .year-wrapper {
-    height: 98px;
-    min-width: 300px;
-    margin-bottom: 30px;
+  .start-btn {
+    bottom: 180px;
+    width: 70px;
+    height: 70px;
+    font-size: 10px;
+  }
+
+  .start-btn:hover {
+    width: 70px;
+    height: 70px;
   }
 }
 
