@@ -231,8 +231,8 @@ export default {
           date: 'October 2020',
           header: '#EndSARS Protests',
           subheader:
-            'The #EndSARS Protests broke out to demand the end of police brutality, extortion, harassment and extra-judicial killings perpetrated by the Special Anti-Robbery Squad (SARS). It was a decentralised movement that involved a series of mass protests spanning weeks in different parts of the country. The protests garnered international attention and support and about 28 million tweets bearing #EndSARS have been made on Twitter alone.',
-          text: 'The most devastating incident during the protests, which is referred to as the Lekki Massacre occurred on 20th, October 2020 when the Nigerian army fired live bullets at unarmed protesters at the Lekki toll gate.',
+            'The #EndSARS Protests broke out to demand the end of police brutality, extortion, harassment and extra-judicial killings perpetrated by the Special Anti-Robbery Squad (SARS). It was a decentralised movement that involved a series of mass protests spanning weeks in different parts of the country.',
+          text: ' The protests garnered international attention and support and about 28 million tweets bearing #EndSARS have been made on Twitter alone. The most devastating incident during the protests, which is referred to as the Lekki Massacre occurred on 20th, October 2020 when the Nigerian army fired live bullets at unarmed protesters at the Lekki toll gate.',
           source: ''
         }
       ]
